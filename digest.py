@@ -6,9 +6,11 @@ Fetches RSS feeds, summarizes with Claude, sends via email.
 
 import os
 import re
+import json
 import smtplib
 import feedparser
 import anthropic
+import urllib.request
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -180,7 +182,6 @@ def build_language_corner(articles: list[dict], already_covered: list[dict] = No
         system="You curate fun, lighthearted news stories for language learners."
     )
 
-    import json
     try:
         stories = json.loads(chosen)[:3]
     except Exception:
@@ -229,9 +230,86 @@ def build_language_corner(articles: list[dict], already_covered: list[dict] = No
     return fr, ja, zh
 
 
+# ── Quote / Photo / Poem ──────────────────────────────────────────────────────
+
+def build_quote() -> str:
+    today = datetime.now().strftime("%B %d")
+    result = claude(
+        f"Today is {today}. Choose one memorable, thought-provoking quote — it can be from any era, "
+        "any field (philosophy, science, literature, sport, etc.). "
+        "Avoid overused clichés like 'Be the change' or 'Carpe diem'. Aim for something that surprises. "
+        "Return ONLY a JSON object with keys: quote, author, author_search_url (a Google search URL for the author). "
+        "No markdown fences.",
+        system="You are a thoughtful curator of memorable quotations."
+    )
+    try:
+        data = json.loads(result)
+        q = data.get("quote", "")
+        a = data.get("author", "")
+        url = data.get("author_search_url", f"https://www.google.com/search?q={a.replace(' ', '+')}")
+        return f"""<blockquote class="qotd">
+  <p class="qotd-text">"{q}"</p>
+  <cite>— <a href="{url}" target="_blank">{a}</a></cite>
+</blockquote>"""
+    except Exception:
+        return ""
+
+
+def build_photo_of_day() -> str:
+    nasa_key = os.environ.get("NASA_API_KEY", "DEMO_KEY")
+    try:
+        url = f"https://api.nasa.gov/planetary/apod?api_key={nasa_key}"
+        with urllib.request.urlopen(url, timeout=10) as r:
+            data = json.loads(r.read())
+        if data.get("media_type") != "image":
+            return ""
+        img_url   = data.get("hdurl") or data.get("url", "")
+        title     = data.get("title", "NASA Picture of the Day")
+        caption   = data.get("explanation", "")[:300] + "…"
+        copyright = data.get("copyright", "NASA")
+        return f"""<div class="potd">
+  <img src="{img_url}" alt="{title}" style="width:100%;border-radius:6px;display:block;">
+  <p class="potd-title">{title}</p>
+  <p class="potd-caption">{caption}</p>
+  <p class="potd-credit">📷 {copyright} · <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">NASA APOD</a></p>
+</div>"""
+    except Exception as e:
+        print(f"Warning: could not fetch NASA APOD: {e}")
+        return ""
+
+
+def build_poem_of_day() -> str:
+    try:
+        url = "https://poetrydb.org/random/1"
+        with urllib.request.urlopen(url, timeout=10) as r:
+            poems = json.loads(r.read())
+        poem = poems[0]
+        title  = poem.get("title", "")
+        author = poem.get("author", "")
+        lines  = poem.get("lines", [])
+        # Keep to ~20 lines for readability
+        display_lines = lines[:20]
+        truncated = len(lines) > 20
+        lines_html = "\n".join(
+            f'<span class="poem-line">{l if l.strip() else "&nbsp;"}</span>'
+            for l in display_lines
+        )
+        more = '<p class="poem-more">… <a href="https://poetrydb.org" target="_blank">read full poem</a></p>' if truncated else ""
+        search_url = f"https://www.google.com/search?q={author.replace(' ', '+')}+poet"
+        return f"""<div class="poem">
+  <p class="poem-title">{title}</p>
+  <p class="poem-author">by <a href="{search_url}" target="_blank">{author}</a></p>
+  <div class="poem-body">{lines_html}</div>
+  {more}
+</div>"""
+    except Exception as e:
+        print(f"Warning: could not fetch poem: {e}")
+        return ""
+
+
 # ── Email Builder ─────────────────────────────────────────────────────────────
 
-def build_html(skim, tech, laliga, sg, fr, ja, zh, web_url="") -> str:
+def build_html(skim, tech, laliga, sg, fr, ja, zh, quote="", photo="", poem="", web_url="") -> str:
     today = datetime.now().strftime("%A, %d %B %Y")
     browser_button = (
         f'<div class="view-browser"><a href="{web_url}" target="_blank">🌐 Read in Browser</a></div>'
@@ -262,6 +340,39 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh, web_url="") -> str:
   .section h2 {{ margin: 0 0 16px; font-size: 18px; }}
   .section h4 {{ margin: 16px 0 4px; font-size: 15px; }}
   .section h4 a {{ color: #1a1a2e; }}
+  /* Skim items */
+  .skim-item {{ padding: 16px 0; border-bottom: 1px solid #f0ede6; }}
+  .skim-item:last-child {{ border-bottom: none; }}
+  .skim-item strong {{ display: block; font-size: 15px; margin-bottom: 6px; }}
+  .skim-body {{ margin: 0 0 8px; line-height: 1.65; font-size: 14px; }}
+  .skim-analysis {{ background: #f8f5ef; border-left: 3px solid #f5c842; padding: 10px 14px;
+                    margin: 8px 0; font-size: 13px; line-height: 1.6; color: #444; border-radius: 0 4px 4px 0; }}
+  .skim-analysis em {{ font-family: sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px;
+                       text-transform: uppercase; font-style: normal; color: #aaa; display: block; margin-bottom: 4px; }}
+  .skim-sources {{ font-family: sans-serif; font-size: 11px; color: #aaa; margin: 6px 0 0; }}
+  .skim-sources a {{ color: #666; text-decoration: none; border-bottom: 1px solid #ddd; }}
+  /* Quote */
+  .qotd {{ margin: 0; padding: 20px 24px; background: #f0ece4; border-left: 4px solid #1a1a2e;
+           border-radius: 0 6px 6px 0; }}
+  .qotd-text {{ font-family: Georgia, serif; font-size: 17px; font-style: italic; line-height: 1.7;
+                color: #1a1a2e; margin: 0 0 10px; }}
+  .qotd cite {{ font-family: sans-serif; font-size: 12px; color: #888; font-style: normal; }}
+  .qotd cite a {{ color: #555; }}
+  /* Photo */
+  .potd {{ margin: 0; }}
+  .potd-title {{ font-family: Georgia, serif; font-size: 15px; font-weight: 700; margin: 10px 0 4px; }}
+  .potd-caption {{ font-size: 13px; color: #555; line-height: 1.6; margin: 0 0 6px; }}
+  .potd-credit {{ font-family: sans-serif; font-size: 11px; color: #aaa; margin: 0; }}
+  .potd-credit a {{ color: #888; }}
+  /* Poem */
+  .poem {{ background: #faf8f4; border: 1px solid #e8e4dc; border-radius: 6px; padding: 20px 24px; }}
+  .poem-title {{ font-family: Georgia, serif; font-size: 16px; font-weight: 700; margin: 0 0 4px; }}
+  .poem-author {{ font-family: sans-serif; font-size: 12px; color: #888; margin: 0 0 16px; }}
+  .poem-author a {{ color: #666; }}
+  .poem-body {{ display: flex; flex-direction: column; }}
+  .poem-line {{ font-size: 14px; line-height: 1.9; color: #333; }}
+  .poem-more {{ font-family: sans-serif; font-size: 12px; color: #aaa; margin: 12px 0 0; }}
+  /* Lang */
   .lang-block {{ background: #f4f0eb; border-left: 4px solid #c0392b; padding: 16px 20px;
                   margin: 12px 0; border-radius: 0 6px 6px 0; }}
   .lang-block.ja {{ border-left-color: #e74c3c; }}
@@ -283,6 +394,9 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh, web_url="") -> str:
   </div>
 
   {browser_button}
+
+  <!-- QUOTE OF THE DAY -->
+  {"" if not quote else f'<div class="section"><div class="section-label">💬 Quote of the Day</div>{quote}</div>'}
 
   <!-- THE SKIM -->
   <div class="section">
@@ -334,6 +448,12 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh, web_url="") -> str:
     </div>
   </div>
 
+  <!-- PHOTO OF THE DAY -->
+  {"" if not photo else f'<div class="section"><div class="section-label">🔭 Photo of the Day</div>{photo}</div>'}
+
+  <!-- POEM OF THE DAY -->
+  {"" if not poem else f'<div class="section"><div class="section-label">📜 Poem of the Day</div>{poem}</div>'}
+
   <div class="footer">
     Built with Claude · Delivered daily · Singapore 🇸🇬
   </div>
@@ -374,20 +494,25 @@ def main():
     quirky_articles   = fetch_articles(FEEDS["quirky"])
 
     print("🤖 Building sections with Claude...")
-    skim   = build_skim(general_articles)
+    skim, used_titles = build_skim(general_articles)
     tech   = build_tech_asia(tech_articles)
     laliga = build_laliga_opinion(laliga_articles)
     sg     = build_singapore(sg_articles)
     fr, ja, zh = build_language_corner(quirky_articles, already_covered=general_articles)
+    quote  = build_quote()
+    photo  = build_photo_of_day()
+    poem   = build_poem_of_day()
 
     print("📧 Sending email...")
     # HTML file (GitHub Pages) — full ruby tags for furigana/pinyin rendered on top
-    html_web = build_html(skim, tech, laliga, sg, fr, ja, zh, web_url="")
+    html_web = build_html(skim, tech, laliga, sg, fr, ja, zh,
+                          quote=quote, photo=photo, poem=poem, web_url="")
 
     # Email — convert ruby tags to parentheses (Gmail strips ruby)
     ja_email = ruby_to_parens(ja)
     zh_email = ruby_to_parens(zh)
-    html_email = build_html(skim, tech, laliga, sg, fr, ja_email, zh_email, web_url=GITHUB_PAGES_URL)
+    html_email = build_html(skim, tech, laliga, sg, fr, ja_email, zh_email,
+                            quote=quote, photo=photo, poem=poem, web_url=GITHUB_PAGES_URL)
 
     # Save HTML for GitHub Pages (workflow will commit this file)
     os.makedirs("docs", exist_ok=True)
