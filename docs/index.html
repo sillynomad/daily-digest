@@ -23,6 +23,39 @@
   .section h2 { margin: 0 0 16px; font-size: 18px; }
   .section h4 { margin: 16px 0 4px; font-size: 15px; }
   .section h4 a { color: #1a1a2e; }
+  /* Skim items */
+  .skim-item { padding: 16px 0; border-bottom: 1px solid #f0ede6; }
+  .skim-item:last-child { border-bottom: none; }
+  .skim-item strong { display: block; font-size: 15px; margin-bottom: 6px; }
+  .skim-body { margin: 0 0 8px; line-height: 1.65; font-size: 14px; }
+  .skim-analysis { background: #f8f5ef; border-left: 3px solid #f5c842; padding: 10px 14px;
+                    margin: 8px 0; font-size: 13px; line-height: 1.6; color: #444; border-radius: 0 4px 4px 0; }
+  .skim-analysis em { font-family: sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px;
+                       text-transform: uppercase; font-style: normal; color: #aaa; display: block; margin-bottom: 4px; }
+  .skim-sources { font-family: sans-serif; font-size: 11px; color: #aaa; margin: 6px 0 0; }
+  .skim-sources a { color: #666; text-decoration: none; border-bottom: 1px solid #ddd; }
+  /* Quote */
+  .qotd { margin: 0; padding: 20px 24px; background: #f0ece4; border-left: 4px solid #1a1a2e;
+           border-radius: 0 6px 6px 0; }
+  .qotd-text { font-family: Georgia, serif; font-size: 17px; font-style: italic; line-height: 1.7;
+                color: #1a1a2e; margin: 0 0 10px; }
+  .qotd cite { font-family: sans-serif; font-size: 12px; color: #888; font-style: normal; }
+  .qotd cite a { color: #555; }
+  /* Photo */
+  .potd { margin: 0; }
+  .potd-title { font-family: Georgia, serif; font-size: 15px; font-weight: 700; margin: 10px 0 4px; }
+  .potd-caption { font-size: 13px; color: #555; line-height: 1.6; margin: 0 0 6px; }
+  .potd-credit { font-family: sans-serif; font-size: 11px; color: #aaa; margin: 0; }
+  .potd-credit a { color: #888; }
+  /* Poem */
+  .poem { background: #faf8f4; border: 1px solid #e8e4dc; border-radius: 6px; padding: 20px 24px; }
+  .poem-title { font-family: Georgia, serif; font-size: 16px; font-weight: 700; margin: 0 0 4px; }
+  .poem-author { font-family: sans-serif; font-size: 12px; color: #888; margin: 0 0 16px; }
+  .poem-author a { color: #666; }
+  .poem-body { display: flex; flex-direction: column; }
+  .poem-line { font-size: 14px; line-height: 1.9; color: #333; }
+  .poem-more { font-family: sans-serif; font-size: 12px; color: #aaa; margin: 12px 0 0; }
+  /* Lang */
   .lang-block { background: #f4f0eb; border-left: 4px solid #c0392b; padding: 16px 20px;
                   margin: 12px 0; border-radius: 0 6px 6px 0; }
   .lang-block.ja { border-left-color: #e74c3c; }
@@ -45,11 +78,50 @@
 
   
 
+  <!-- QUOTE OF THE DAY -->
+  <div class="section"><div class="section-label">💬 Quote of the Day</div><blockquote class="qotd">
+  <p class="qotd-text">"The cave you fear to enter holds the treasure you seek."</p>
+  <cite>— <a href="https://www.google.com/search?q=Joseph+Campbell+mythologist" target="_blank">Joseph Campbell</a></cite>
+</blockquote></div>
+
   <!-- THE SKIM -->
   <div class="section">
     <div class="section-label">📰 World News</div>
     <h2>The Skim</h2>
-    ("<div class='skim-item'>\n  <strong>Iran Gets a New Supreme Leader</strong>\n  <p class='skim-body'>Meet Mojtaba Khamenei, Iran's new 56-year-old supreme leader who just inherited one of the world's most powerful political positions from his father. The succession comes as Iran faces mounting international pressure over its nuclear program, proxy conflicts across the Middle East, and domestic unrest following years of economic sanctions and social restrictions.</p>\n  <p class='skim-analysis'><em>What This Means:</em> Don't expect a reformist makeover—analysts predict Mojtaba will double down on his father's hardline policies, potentially escalating tensions with the West. This dynastic handover also signals that Iran's theocratic system is prioritizing regime survival over any meaningful political opening.</p>\n  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/c78xxg05w0zo?at_medium=RSS&at_campaign=rss'>BBC News</a></p>\n</div>\n\n<div class='skim-item'>\n  <strong>G7 Scrambles as Markets Tank on Oil Fears</strong>\n  <p class='skim-body'>The G7 is calling an emergency meeting as oil prices spike and stock markets nosedive, with Chancellor Rachel Reeves joining talks about potentially releasing strategic oil reserves. The panic stems from escalating Middle East tensions following Iran's leadership transition and broader concerns about global supply chain disruptions hitting energy markets.</p>\n  <p class='skim-analysis'><em>What This Means:</em> When the world's richest economies hold emergency oil meetings, it's rarely good news for your gas bill. This coordinated response suggests officials are genuinely worried about sustained energy price shocks that could derail economic recovery and fuel inflation just as central banks thought they had it under control.</p>\n  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/c79542n0grwo?at_medium=RSS&at_campaign=rss'>BBC News</a></p>\n</div>\n\n<div class='skim-item'>\n  <strong>Gunfire Hits Rihanna's Beverly Hills Home</strong>\n  <p class='skim-body'>Someone opened fire on Rihanna's Beverly Hills residence Sunday afternoon, prompting a police response and one arrest. While details remain scarce, the incident highlights ongoing security concerns for high-profile celebrities, particularly following a string of similar incidents targeting prominent figures in Los Angeles.</p>\n  <p class='skim-analysis'><em>What This Means:</em> Celebrity home invasions and targeted attacks have been rising in LA's affluent neighborhoods, reflecting broader issues with stalking, mental health crises, and the intersection of fame and violence. This incident will likely prompt other A-listers to reassess their security protocols.</p>\n  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/ckg2pm2kvkeo?at_medium=RSS&at_campaign=rss'>BBC News</a></p>\n</div>\n\n<div class='skim-item'>\n  <strong>Istanbul's Mayor Faces Corruption Trial</strong>\n  <p class='skim-body'>Ekrem Imamoglu, Istanbul's popular mayor and President Erdogan's biggest political threat, is heading to trial on corruption charges. The case comes as Erdogan's party has been systematically targeting opposition leaders through the courts, using Turkey's judicial system to sideline potential challengers ahead of future elections.</p>\n  <p class='skim-analysis'><em>What This Means:</em> This is textbook authoritarian playbook—when you can't beat your rivals at the ballot box, prosecute them in the courtroom. Imamoglu's fate will be a key test of whether Turkey's democratic institutions can withstand Erdogan's increasingly heavy-handed tactics against dissent.</p>\n  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/c204ymjnn80o?at_medium=RSS&at_campaign=rss'>BBC News</a></p>\n</div>\n\n<div class='skim-item'>\n  <strong>Australia Cracks Down on Online Adult Content</strong>\n  <p class='skim-body'>Australia is forcing porn sites like Pornhub to verify that all users are over 18, threatening million-dollar fines for non-compliance. The move is part of a broader push by the Australian government to protect minors online, following similar age verification debates in the UK and other countries grappling with children's digital safety.</p>\n  <p class='skim-analysis'><em>What This Means:</em> Australia is becoming the test case for whether democracies can effectively regulate online adult content without creating privacy nightmares or driving users to shadier corners of the internet. The tech industry is watching closely, as success here could inspire copycat legislation globally.</p>\n  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/cwy92qpv424o?at_medium=RSS&at_campaign=rss'>BBC News</a></p>\n</div>", "Who is Mojtaba Khamenei, Iran's new supreme leader?|G7 nations to hold emergency meeting on oil as stock markets sink|Rihanna's Beverly Hills home hit by gunfire, police say|Istanbul's ex-mayor to stand trial on corruption charges|Australians must prove they are over 18 to access porn under new laws")
+    <div class='skim-item'>
+  <strong>Iran's New Supreme Leader Takes the Throne</strong>
+  <p class='skim-body'>Mojtaba Khamenei, the 56-year-old son of Iran's previous supreme leader, has officially assumed power as the country's new top authority. The transition comes after his father's death, with Mojtaba having operated largely behind the scenes for years while gradually consolidating influence within Iran's clerical establishment and security apparatus.</p>
+  <p class='skim-analysis'><em>What This Means:</em> Don't expect any major policy pivots from Tehran. Mojtaba's ascension signals continuity in Iran's hardline approach to nuclear negotiations, regional proxy conflicts, and domestic repression. The hereditary nature of this succession also underscores how Iran's theocracy increasingly resembles a traditional monarchy wrapped in religious rhetoric.</p>
+  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/c78xxg05w0zo?at_medium=RSS&at_campaign=rss'>BBC News</a></p>
+</div>
+
+<div class='skim-item'>
+  <strong>G7 Scrambles as Oil Markets Go Haywire</strong>
+  <p class='skim-body'>The G7 is holding an emergency meeting as oil prices spike and stock markets tumble, with Chancellor Rachel Reeves joining talks about potentially releasing strategic oil reserves. The volatility appears linked to escalating Middle East tensions and concerns about supply disruptions following Iran's leadership transition and regional instability.</p>
+  <p class='skim-analysis'><em>What This Means:</em> When finance ministers drop everything for an emergency huddle, it's serious. Oil price shocks have historically triggered recessions, and with global inflation still a concern, coordinated intervention from strategic reserves could be the difference between market jitters and economic crisis. Watch for announcements about reserve releases in the coming days.</p>
+  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/c79542n0grwo?at_medium=RSS&at_campaign=rss'>BBC News</a></p>
+</div>
+
+<div class='skim-item'>
+  <strong>Gunfire Hits Rihanna's Beverly Hills Mansion</strong>
+  <p class='skim-body'>Shots were fired at Rihanna's Beverly Hills home on Sunday afternoon, with police arresting a suspect shortly after the incident. While details remain limited, the shooting appears to be targeted rather than random, though authorities haven't confirmed whether the pop star was home at the time.</p>
+  <p class='skim-analysis'><em>What This Means:</em> Celebrity home invasions and attacks have been escalating in recent years, highlighting how social media and online stalking can translate into real-world danger. This incident will likely prompt other high-profile figures to reassess their security protocols and public presence.</p>
+  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/ckg2pm2kvkeo?at_medium=RSS&at_campaign=rss'>BBC News</a></p>
+</div>
+
+<div class='skim-item'>
+  <strong>Erdogan's Main Rival Faces Corruption Trial</strong>
+  <p class='skim-body'>Istanbul's popular ex-mayor Ekrem Imamoglu is heading to trial on corruption charges, in what many see as President Erdogan's latest attempt to sideline his biggest political threat. Imamoglu gained national prominence by defeating Erdogan's party in Istanbul twice and has been positioning himself as a democratic alternative to Turkey's increasingly authoritarian leader.</p>
+  <p class='skim-analysis'><em>What This Means:</em> This is classic authoritarian playbook stuff—when you can't beat your opponents at the ballot box, drag them through the courts instead. If convicted, Imamoglu could be barred from politics, eliminating Erdogan's most viable challenger ahead of future elections. Turkey's democracy hangs in the balance.</p>
+  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/c204ymjnn80o?at_medium=RSS&at_campaign=rss'>BBC News</a></p>
+</div>
+
+<div class='skim-item'>
+  <strong>Australia Cracks Down on Porn Access</strong>
+  <p class='skim-body'>Australia is implementing new laws requiring porn sites like Pornhub to verify that all users are over 18, with million-dollar fines for non-compliance. The move comes amid growing global concern about minors accessing explicit content online and follows similar legislative efforts in other countries to impose stricter age verification requirements.</p>
+  <p class='skim-analysis'><em>What This Means:</em> This represents a major shift toward treating online spaces like physical ones when it comes to age restrictions. While supporters argue it protects children, critics worry about privacy implications and enforcement challenges. Expect other nations to watch closely as Australia becomes a test case for digital age verification at scale.</p>
+  <p class='skim-sources'>Read more: <a href='https://www.bbc.com/news/articles/cwy92qpv424o?at_medium=RSS&at_campaign=rss'>BBC News</a></p>
+</div>
   </div>
 
   <!-- TECH ASIA -->
@@ -57,44 +129,44 @@
     <div class="section-label">💻 Tech · Asia</div>
     <h2>Tech In Asia</h2>
     <h4><a href="https://e27.co/how-a-crypto-insider-in-thailand-sold-deals-that-never-existed-20260309/">How a crypto 'insider' in Thailand sold deals that never existed</a></h4>
-This exposé reveals how a polished venture capitalist used his credibility from speaking at prestigious events like Singapore FinTech Festival to allegedly defraud investors with non-existent crypto deals. It highlights the ongoing trust crisis in Asia's crypto ecosystem, where sophisticated fraudsters exploit the region's growing appetite for digital asset investments and the prestige associated with major fintech conferences.
+This exposé reveals how a polished crypto VC with impressive credentials allegedly defrauded investors through fabricated deals, highlighting the persistent trust issues plaguing Asia's digital asset ecosystem. The case underscores how even sophisticated investors at major fintech events can fall victim to elaborate scams, raising questions about due diligence standards in the region's booming crypto sector.
 
 <h4><a href="https://e27.co/singapore-smes-must-prepare-for-the-new-collar-workforce-linkedins-elsie-ng-20260309/">Singapore SMEs must prepare for the 'new collar' workforce: LinkedIn's Elsie Ng</a></h4>
-LinkedIn's research indicates that 75% of Singapore SMEs are struggling to find qualified talent, suggesting a structural shift rather than temporary hiring challenges in Southeast Asia's job market. The emergence of "new collar" workers—those with skills acquired through alternative education paths rather than traditional degrees—represents a critical opportunity for SMEs to bridge talent gaps in the region's competitive landscape.
+Singapore's SMEs are facing a structural talent shortage that's fundamentally reshaping hiring strategies, with three-quarters reporting increased difficulty finding qualified workers. This shift toward "new collar" workers—those with non-traditional skill combinations bridging technical and soft skills—signals a major transformation in Southeast Asia's labor market that could redefine competitive advantage.
 
 <h4><a href="https://e27.co/asias-new-cyber-threat-ai-that-speaks-your-language-20260309/">Asia's new cyber threat: AI that speaks your language</a></h4>
-Cybercriminals are leveraging AI to create highly sophisticated, localized attacks including voice cloning and deepfakes specifically targeting Asia-Pacific markets with culturally and linguistically tailored scams. This represents a paradigm shift in cybersecurity threats, as traditional security measures become inadequate against AI-powered attacks that can convincingly impersonate trusted contacts and speak local languages fluently.
+Cybercriminals are leveraging AI to create highly sophisticated, localized attacks including voice cloning and deepfakes tailored to Asian languages and cultural contexts. This represents a dangerous escalation where traditional security awareness training becomes inadequate, as AI-powered social engineering attacks become virtually indistinguishable from legitimate communications.
   </div>
 
   <!-- LA LIGA OPINION -->
   <div class="section">
     <div class="section-label">⚽ Fútbol · Opinión</div>
     <h2>La Liga Opinión</h2>
-    <h4><a href="https://www.marca.com/radio/2026/03/09/roberto-gomez-senala-messi-palabras-xavi-dice-verdad-tiembla-barcelonismo.html">Roberto Gómez señala a Messi tras las palabras de Xavi: "Si dice que todo es verdad, tiembla el barcelonismo"</a></h4>
+    <h4><a href="https://www.marca.com/radio/2026/03/09/raul-varela-palabras-xavi-cambiar-voto-barcelona.html">¿Las palabras de Xavi pueden cambiar el voto del Barcelona?</a></h4>
 
-Roberto Gómez analiza el potencial impacto devastador que podrían tener las declaraciones de Xavi sobre el regreso frustrado de Messi al Barcelona. El periodista sugiere que si Messi confirma las versiones del exentrenador sobre lo ocurrido durante las negociaciones, esto podría generar un terremoto en el barcelonismo. Las revelaciones de Xavi sobre la gestión de Laporta cobrarían una dimensión mucho mayor si reciben el respaldo del astro argentino.
+Raúl Varela analiza el impacto político que pueden tener las declaraciones críticas de Xavi Hernández contra Joan Laporta en el proceso electoral del Barcelona. El director de La Tribu se pregunta si las revelaciones del exentrenador sobre la gestión de Laporta podrían influir decisivamente en el voto de los socios. Un tema candente que mezcla fútbol y política interna barcelonista en un momento clave para el futuro del club.
 
-<h4><a href="https://www.marca.com/radio/2026/03/09/raul-varela-palabras-xavi-cambiar-voto-barcelona.html">Raúl Varela: "¿Las palabras de Xavi pueden cambiar el voto del Barcelona?"</a></h4>
+<h4><a href="https://www.marca.com/radio/2026/03/09/roberto-gomez-senala-messi-palabras-xavi-dice-verdad-tiembla-barcelonismo.html">Roberto Gómez señala a Messi tras las palabras de Xavi: "Si dice que todo es verdad, tiembla el barcelonismo"</a></h4>
 
-Raúl Varela reflexiona sobre el posible efecto electoral de las duras críticas de Xavi Hernández hacia Joan Laporta en plena campaña para las elecciones barcelonistas. El director de La Tribu analiza si estas declaraciones pueden influir decisivamente en el voto de los socios culés. Varela examina cómo el testimonio de una figura tan respetada como Xavi podría alterar el equilibrio de una carrera electoral donde Laporta partía como favorito.
+Roberto Gómez advierte sobre las posibles consecuencias devastadoras que tendrían las declaraciones de Xavi si Messi las confirma como verdaderas. El periodista sugiere que una validación del argentino sobre el regreso frustrado y la gestión de Laporta podría generar un terremoto en el barcelonismo. La credibilidad de Messi como figura histórica del club convertiría sus palabras en un factor decisivo para el futuro político del Barcelona.
 
-<h4><a href="https://www.marca.com/radio/2026/03/09/miguel-quintana-elche-equipo-roto-perdido-cambiar.html">Miguel Quintana: "El Elche no es un equipo roto ni perdido, pero algo tiene que cambiar"</a></h4>
+<h4><a href="https://www.marca.com/radio/2026/03/06/david-sanchez-elecciones-barca-veo-favorito-laporta-semana.html">David Sánchez y las elecciones del Barça: "Veo menos favorito a Laporta que hace una semana"</a></h4>
 
-Miguel Quintana ofrece un análisis matizado sobre la situación del Elche bajo la dirección de Eder Sarabia, evitando el alarmismo pero reconociendo la necesidad de cambios. El director de La Pizarra identifica la pérdida de confianza como el principal problema del grupo, una dinámica preocupante que requiere atención inmediata. Quintana mantiene que el equipo conserva su potencial, pero advierte que la inercia negativa actual puede ser peligrosa si no se corrige a tiempo.
+David Sánchez percibe un cambio en la dinámica electoral barcelonista, considerando que Laporta ha perdido fuerza como candidato favorito. Aunque el actual presidente sigue siendo el favorito, el analista observa que el cara a cara electoral está beneficiando a la oposición. Un análisis que refleja la volatilidad del momento político en el Camp Nou y la incertidumbre sobre el futuro liderazgo del club.
   </div>
 
   <!-- SINGAPORE -->
   <div class="section">
     <div class="section-label">🇸🇬 Local · Singapore</div>
     <h2>Singapore Kopi</h2>
-    <h4><a href="https://www.channelnewsasia.com/singapore/public-service-division-head-civil-service-leo-yip-retire-chan-heng-kee-take-over-5981201">Head of Civil Service Leo Yip to retire, Permanent Secretary for Defence Chan Heng Kee to take over</a></h4>
-Leo Yip will step down as Head of Civil Service after an impressive 43-year career in Singapore's public sector, with his retirement taking effect on April 1, 2026. Chan Heng Kee, currently Permanent Secretary for Defence, will assume the top civil service role in what represents a significant leadership transition in Singapore's government machinery.
-
-<h4><a href="https://www.channelnewsasia.com/singapore/middle-east-war-riyadh-saudi-arabia-repatriation-flight-evacuation-rsaf-5981126">Singapore to deploy RSAF aircraft to evacuate Singaporeans from Saudi Arabia on Mar 10</a></h4>
-The Republic of Singapore Air Force will conduct evacuation flights to bring Singaporeans home from Saudi Arabia amid escalating Middle East tensions, with the first flight scheduled for March 10. A second repatriation flight is being planned for March 12, demonstrating Singapore's commitment to protecting its citizens abroad during regional conflicts.
+    <h4><a href="https://www.channelnewsasia.com/singapore/middle-east-war-riyadh-saudi-arabia-repatriation-flight-evacuation-rsaf-5981126">Singapore to deploy RSAF aircraft to evacuate Singaporeans from Saudi Arabia on Mar 10</a></h4>
+The Singapore government is organizing emergency repatriation flights to bring home Singaporeans from Saudi Arabia amid escalating Middle East tensions. A second evacuation flight is already being planned for March 12, demonstrating the government's proactive approach to citizen safety abroad.
 
 <h4><a href="https://www.channelnewsasia.com/singapore/capital-asia-investments-mas-spf-money-laundering-5981191">Fund management company probed for suspected money laundering; more than S$160m in assets seized</a></h4>
-Authorities have seized over S$160 million in assets from Capital Asia Investments as part of a money laundering investigation, with two company directors arrested in connection with the case. The probe highlights Singapore's continued efforts to maintain its reputation as a clean financial hub while cracking down on illicit financial activities.
+Authorities have arrested two directors of Capital Asia Investments and seized over S$160 million in assets as part of a money laundering investigation. This case adds to Singapore's ongoing efforts to combat financial crimes and maintain its reputation as a clean financial hub.
+
+<h4><a href="https://www.channelnewsasia.com/singapore/public-service-division-head-civil-service-leo-yip-retire-chan-heng-kee-take-over-5981201">Head of Civil Service Leo Yip to retire, Permanent Secretary for Defence Chan Heng Kee to take over</a></h4>
+After 43 years of distinguished public service, Leo Yip will step down as Head of Civil Service on April 1, 2026. Chan Heng Kee, currently Permanent Secretary for Defence, will succeed him in leading Singapore's civil service transformation.
   </div>
 
   <!-- LANGUAGE CORNER -->
@@ -105,66 +177,72 @@ Authorities have seized over S$160 million in assets from Capital Asia Investmen
 
     <div class="lang-block">
       <div class="lang-label">🇫🇷 French · Niveau avancé</div>
-      <h4>Un Russe laisse sa fenêtre ouverte trois ans : son appartement transformé en pigeonnier géant</h4>
+      <h4>Un Russe laisse sa fenêtre ouverte trois ans et découvre son appartement envahi par les pigeons</h4>
 
-<p>L'histoire pourrait prêter à sourire si elle n'était pas authentique. Un homme d'affaires russe vient de vivre l'une des plus désagréables surprises de sa vie en rentrant chez lui après trois années d'absence pour le travail. En ouvrant la porte de son appartement, il a découvert un spectacle digne d'un film d'horreur : son logis entièrement recouvert de fientes et de plumes, transformé en véritable colonie de pigeons urbains.</p>
+<p>Voilà ce qui s'appelle une mauvaise surprise de retour de voyage ! Un homme russe qui avait quitté son appartement pendant trois longues années a eu le choc de sa vie en poussant la porte de son logis. Sa négligence – avoir laissé une fenêtre ouverte – s'est transformée en catastrophe ornithologique d'envergure. L'appartement tout entier était recouvert d'une épaisse couche de fientes et de plumes, transformant ce qui était autrefois un foyer en véritable pigeonnier urbain.</p>
 
-<p>Le propriétaire des lieux avait commis une erreur qui lui coûte aujourd'hui très cher : avant son départ prolongé, il avait laissé une fenêtre entrouverte pour aérer l'appartement. Ce qui devait être un simple geste d'entretien s'est mué en invitation permanente pour toute la gent ailée du quartier. Pendant trois longues années, les pigeons ont eu carte blanche pour s'installer, nicher, se reproduire et... faire leurs besoins dans chaque recoin de l'habitation.</p>
+<p>Les volatiles n'avaient pas fait les choses à moitié. Profitant de cette aubaine immobilière gratuite, des générations entières de pigeons s'étaient succédé dans ce nouveau palace à ciel ouvert. Les murs, le sol, les meubles – tout était blanc de leurs déjections, créant un paysage désolant digne d'un film d'horreur pour propriétaires négligents. L'odeur, paraît-il, était à la hauteur du spectacle visuel.</p>
 
-<p>Les images de l'appartement, devenues virales sur les réseaux sociaux russes, révèlent l'ampleur du désastre. Sols, murs, meubles, électroménager : tout disparaît sous une épaisse couche de déjections séchées. Les volatiles ont même eu l'audace d'élire domicile dans les placards et de transformer le salon en nurserie géante. Certains experts estiment qu'il a fallu au moins une centaine de pigeons pour produire un tel carnage.</p>
+<p>Cette mésaventure soulève une question existentielle : comment oublie-t-on de fermer une fenêtre avant de partir trois ans ? Les voisins, eux, n'ont apparemment pas jugé utile de signaler l'étrange ballet aérien qui se déroulait quotidiennement dans l'appartement voisin. Peut-être ont-ils simplement pensé que leur voisin était devenu un passionné d'ornithologie urbaine particulièrement accueillant.</p>
 
-<p>Face à cette catastrophe ornithologique, le malheureux locataire a dû faire appel à une entreprise spécialisée dans le nettoyage de sites contaminés. Les professionnels, équipés de combinaisons intégrales et de masques respiratoires, ont passé plusieurs jours à désinfecter les lieux. Le coût de l'opération s'élèverait à plusieurs milliers d'euros, sans compter le remplacement total du mobilier et des équipements électroniques.</p>
+<p>Le pauvre homme se retrouve désormais face à un défi de taille : transformer son appartement-volière en logement habitable. Entre les frais de nettoyage spécialisé, de désinfection et probablement de rénovation complète, cette fenêtre ouverte risque de lui coûter bien plus cher qu'un simple courant d'air. Sans compter qu'il devra sans doute négocier âprement avec ses nouveaux colocataires à plumes pour récupérer son territoire.</p>
 
-<p>Cette mésaventure, aussi cocasse soit-elle, soulève une question pratique pour tous les grands voyageurs : comment sécuriser son logement lors d'absences prolongées ? Les spécialistes recommandent désormais de vérifier scrupuleusement toutes les ouvertures avant le départ. Car comme le prouve cette histoire, trois années suffisent amplement aux pigeons pour transformer n'importe quel appartement en leur résidence secondaire favorite.</p>
+<p>Cette histoire rocambolesque rappelle l'importance de vérifier ses ouvertures avant de partir en voyage, même court. Car si trois jours d'absence peuvent suffire à faire jaunir les plantes, trois années d'hospitalité involontaire peuvent transformer votre salon en réserve ornithologique. Une leçon que ce Russe n'est pas près d'oublier, et qui devrait inspirer tous ceux qui ont tendance à partir précipitamment sans faire le tour du propriétaire.</p>
     </div>
 
     <div class="lang-block ja">
       <div class="lang-label">🇯🇵 日本語 · JLPT N2</div>
-      <p><strong><ruby>科学者<rt>かがくしゃ</rt></ruby>が<ruby>開発<rt>かいはつ</rt></ruby>した<ruby>新<rt>あたら</rt></ruby>しいトマト、バターポップコーンの<ruby>香<rt>かお</rt></ruby>りがする</strong></p>
+      <h1><ruby>科学者<rt>かがくしゃ</rt></ruby>が<ruby>遺伝子<rt>いでんし</rt></ruby>を<ruby>変化<rt>へんか</rt></ruby>させて、バター<ruby>味<rt>あじ</rt></ruby>のポップコーンの<ruby>匂い<rt>におい</rt></ruby>がするトマトを<ruby>作<rt>つく</rt></ruby>った</h1>
 
-<p><ruby>中国<rt>ちゅうごく</rt></ruby>とオーストラリアの<ruby>研究者<rt>けんきゅうしゃ</rt></ruby>たちが、<ruby>世界<rt>せかい</rt></ruby>で<ruby>初<rt>はじ</rt></ruby>めてポップコーンのような<ruby>香<rt>かお</rt></ruby>りがするトマトを<ruby>作<rt>つく</rt></ruby>ることに<ruby>成功<rt>せいこう</rt></ruby>した。このトマトは<ruby>遺伝子<rt>いでんし</rt></ruby>を<ruby>変<rt>か</rt></ruby>えて<ruby>作<rt>つく</rt></ruby>られたもので、バター<ruby>味<rt>あじ</rt></ruby>のポップコーンのような<ruby>良<rt>よ</rt></ruby>い<ruby>香<rt>かお</rt></ruby>りを<ruby>出<rt>だ</rt></ruby>す。</p>
+<p><ruby>中国<rt>ちゅうごく</rt></ruby>と<ruby>豪州<rt>ごうしゅう</rt></ruby>の<ruby>研究者<rt>けんきゅうしゃ</rt></ruby>たちが、<ruby>遺伝子<rt>いでんし</rt></ruby><ruby>改変<rt>かいへん</rt></ruby>という<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って、<ruby>世界<rt>せかい</rt></ruby>で<ruby>初<rt>はじ</rt></ruby>めて<ruby>香<rt>かお</rt></ruby>りを<ruby>持<rt>も</rt></ruby>つトマトの<ruby>開発<rt>かいはつ</rt></ruby>に<ruby>成功<rt>せいこう</rt></ruby>した。このトマトからは、バター<ruby>味<rt>あじ</rt></ruby>のポップコーンのような<ruby>美味<rt>おい</rt></ruby>しそうな<ruby>香<rt>かお</rt></ruby>りがする。</p>
 
-<p>この<ruby>特別<rt>とくべつ</rt></ruby>なトマトは、<ruby>多<rt>おお</rt></ruby>くの<ruby>人<rt>ひと</rt></ruby>に<ruby>愛<rt>あい</rt></ruby>されている<ruby>二<rt>ふた</rt></ruby>つの<ruby>味<rt>あじ</rt></ruby>を<ruby>一<rt>ひと</rt></ruby>つの<ruby>果物<rt>くだもの</rt></ruby>で<ruby>楽<rt>たの</rt></ruby>しめるように<ruby>開発<rt>かいはつ</rt></ruby>された。<ruby>研究者<rt>けんきゅうしゃ</rt></ruby>たちは<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby><ruby>研究<rt>けんきゅう</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けて、この<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>完成<rt>かんせい</rt></ruby>させた。</p>
+<p>この<ruby>特別<rt>とくべつ</rt></ruby>なトマトは、<ruby>普通<rt>ふつう</rt></ruby>のトマトとは<ruby>違<rt>ちが</rt></ruby>って、<ruby>甘<rt>あま</rt></ruby>くて<ruby>良<rt>よ</rt></ruby>い<ruby>匂い<rt>におい</rt></ruby>を<ruby>出<rt>だ</rt></ruby>す。<ruby>研究者<rt>けんきゅうしゃ</rt></ruby>たちは<ruby>長<rt>なが</rt></ruby>い<ruby>間<rt>あいだ</rt></ruby><ruby>実験<rt>じっけん</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けて、ついにこの<ruby>結果<rt>けっか</rt></ruby>を<ruby>得<rt>え</rt></ruby>ることができた。</p>
 
-<p>このトマトは<ruby>普通<rt>ふつう</rt></ruby>のトマトと<ruby>同<rt>おな</rt></ruby>じように<ruby>食<rt>た</rt></ruby>べることができるが、<ruby>香<rt>かお</rt></ruby>りだけが<ruby>違<rt>ちが</rt></ruby>う。<ruby>今後<rt>こんご</rt></ruby>、この<ruby>技術<rt>ぎじゅつ</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って、<ruby>他<rt>ほか</rt></ruby>の<ruby>野菜<rt>やさい</rt></ruby>や<ruby>果物<rt>くだもの</rt></ruby>でも<ruby>面白<rt>おもしろ</rt></ruby>い<ruby>香<rt>かお</rt></ruby>りのものが<ruby>作<rt>つく</rt></ruby>られるかもしれない。</p>
+<p><ruby>遺伝子<rt>いでんし</rt></ruby><ruby>改変<rt>かいへん</rt></ruby>の<ruby>技術<rt>ぎじゅつ</rt></ruby>により、トマトの<ruby>遺伝子<rt>いでんし</rt></ruby>に<ruby>新<rt>あたら</rt></ruby>しい<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>加<rt>くわ</rt></ruby>えて、<ruby>香<rt>かお</rt></ruby>りを<ruby>作<rt>つく</rt></ruby>る<ruby>成分<rt>せいぶん</rt></ruby>を<ruby>生<rt>う</rt></ruby>み<ruby>出<rt>だ</rt></ruby>すことに<ruby>成功<rt>せいこう</rt></ruby>した。この<ruby>発見<rt>はっけん</rt></ruby>は<ruby>食品<rt>しょくひん</rt></ruby><ruby>業界<rt>ぎょうかい</rt></ruby>に<ruby>大<rt>おお</rt></ruby>きな<ruby>変化<rt>へんか</rt></ruby>をもたらす<ruby>可能性<rt>かのうせい</rt></ruby>がある。</p>
 
+<p><ruby>将来<rt>しょうらい</rt></ruby>、このような<ruby>香<rt>かお</rt></ruby>りの<ruby>強<rt>つよ</rt></ruby>いトマトが<ruby>市場<rt>しじょう</rt></ruby>に<ruby>出<rt>で</rt></ruby>れば、<ruby>消費者<rt>しょうひしゃ</rt></ruby>は<ruby>新<rt>あたら</rt></ruby>しい<ruby>味<rt>あじ</rt></ruby>わいを<ruby>楽<rt>たの</rt></ruby>しむことができるかもしれない。ただし、<ruby>安全性<rt>あんぜんせい</rt></ruby>についてはさらなる<ruby>研究<rt>けんきゅう</rt></ruby>が<ruby>必要<rt>ひつよう</rt></ruby>だと<ruby>専門家<rt>せんもんか</rt></ruby>たちは<ruby>話<rt>はな</rt></ruby>している。</p>
+
+<h2>語彙リスト</h2>
 <ul>
-<li><ruby>遺伝子<rt>いでんし</rt></ruby> — gene</li>
-<li><ruby>研究者<rt>けんきゅうしゃ</rt></ruby> — researcher</li>
-<li><ruby>開発<rt>かいはつ</rt></ruby> — development</li>
-<li><ruby>香<rt>かお</rt></ruby>り — aroma, scent</li>
-<li><ruby>技術<rt>ぎじゅつ</rt></ruby> — technology</li>
-</ul>
+<li><ruby>遺伝子<rt>いでんし</rt></ruby> — gene, genetic material</li>
+<li><ruby>改変<rt>かいへん</rt></ruby> — modification, alteration</li>
+<li><ruby>香<rt>かお</rt></ruby>り — fragrance, aroma</li>
+<li><ruby>成分<rt>せいぶん
     </div>
 
     <div class="lang-block zh">
       <div class="lang-label">🇨🇳 中文 · HSK A2 (拼音)</div>
-      <h1><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>问题<rt>wèntí</rt></ruby></h1>
+      <h1><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>美容<rt>měiróng</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>问题<rt>wèntí</rt></ruby></h1>
 
-<p><ruby>阿曼<rt>Āmàn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一个<rt>yīgè</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby>。<ruby>这个<rt>zhègè</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>有名<rt>yǒumíng</rt></ruby>。</p>
+<p><ruby>阿曼<rt>Āmàn</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>一个<rt>yīgè</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby>。<ruby>这个<rt>zhègè</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>特别<rt>tèbié</rt></ruby>。</p>
 
-<p><ruby>今年<rt>jīnnián</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>二十<rt>èrshí</rt></ruby><ruby>只<rt>zhī</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>不能<rt>bùnéng</rt></ruby><ruby>参加<rt>cānjiā</rt></ruby>。<ruby>为什么<rt>wèishénme</rt></ruby>呢？</p>
+<p><ruby>人们<rt>rénmen</rt></ruby><ruby>看<rt>kàn</rt></ruby><ruby>哪个<rt>nǎgè</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>最<rt>zuì</rt></ruby><ruby>漂亮<rt>piàoliang</rt></ruby>。<ruby>这<rt>zhè</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>传统<rt>chuántǒng</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby>。</p>
 
-<p><ruby>这些<rt>zhèxiē</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>做了<rt>zuòle</rt></ruby><ruby>手术<rt>shǒushù</rt></ruby>。<ruby>主人<rt>zhǔrén</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>让<rt>ràng</rt></ruby><ruby>它们<rt>tāmen</rt></ruby><ruby>更<rt>gèng</rt></ruby><ruby>漂亮<rt>piàoliang</rt></ruby>。</p>
+<p><ruby>但是<rt>dànshì</rt></ruby><ruby>今年<rt>jīnnián</rt></ruby><ruby>有<rt>yǒu</rt></ruby><ruby>问题<rt>wèntí</rt></ruby>。<ruby>二十<rt>èrshí</rt></ruby><ruby>只<rt>zhī</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>不能<rt>bùnéng</rt></ruby><ruby>参加<rt>cānjiā</rt></ruby>。</p>
 
-<p><ruby>主人<rt>zhǔrén</rt></ruby><ruby>给<rt>gěi</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>打针<rt>dǎzhēn</rt></ruby>。<ruby>还<rt>hái</rt></ruby><ruby>做了<rt>zuòle</rt></ruby><ruby>美容<rt>měiróng</rt></ruby><ruby>手术<rt>shǒushù</rt></ruby>。</p>
+<p><ruby>为什么<rt>wèishénme</rt></ruby><ruby>呢<rt>ne</rt></ruby>？<ruby>因为<rt>yīnwèi</rt></ruby><ruby>它们<rt>tāmen</rt></ruby><ruby>做了<rt>zuòle</rt></ruby><ruby>美容<rt>měiróng</rt></ruby><ruby>手术<rt>shǒushù</rt></ruby>。</p>
 
-<p><ruby>比赛<rt>bǐsài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>人<rt>rén</rt></ruby><ruby>说<rt>shuō</rt></ruby>：<ruby>这<rt>zhè</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>对<rt>duì</rt></ruby>。<ruby>这些<rt>zhèxiē</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>不能<rt>bùnéng</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby>。</p>
+<p><ruby>主人<rt>zhǔrén</rt></ruby><ruby>给<rt>gěi</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>打<rt>dǎ</rt></ruby><ruby>针<rt>zhēn</rt></ruby>。<ruby>让<rt>ràng</rt></ruby><ruby>它们<rt>tāmen</rt></ruby><ruby>看起来<rt>kànqǐlái</rt></ruby><ruby>更<rt>gèng</rt></ruby><ruby>漂亮<rt>piàoliang</rt></ruby>。</p>
 
-<p><ruby>现在<rt>xiànzài</rt></ruby><ruby>很多<rt>hěnduō</rt></ruby><ruby>主人<rt>zhǔrén</rt></ruby><ruby>都<rt>dōu</rt></ruby><ruby>这样<rt>zhèyàng</rt></ruby><ruby>做<rt>zuò</rt></ruby>。<ruby>他们<rt>tāmen</rt></ruby><ruby>想<rt>xiǎng</rt></ruby><ruby>赢<rt>yíng</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby>。</p>
+<p><ruby>比赛<rt>bǐsài</rt></ruby><ruby>的<rt>de</rt></ruby><ruby>规则<rt>guīzé</rt></ruby><ruby>说<rt>shuō</rt></ruby>：<ruby>不能<rt>bùnéng</rt></ruby><ruby>这样<rt>zhèyàng</rt></ruby><ruby>做<rt>zuò</rt></ruby>。</p>
 
-<p><ruby>这个<rt>zhègè</rt></ruby><ruby>问题<rt>wèntí</rt></ruby><ruby>让<rt>ràng</rt></ruby><ruby>人们<rt>rénmen</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>担心<rt>dānxīn</rt></ruby>。</p>
+<p><ruby>所以<rt>suǒyǐ</rt></ruby><ruby>这些<rt>zhèxiē</rt></ruby><ruby>骆驼<rt>luòtuó</rt></ruby><ruby>不能<rt>bùnéng</rt></ruby><ruby>比赛<rt>bǐsài</rt></ruby>了<rt>le</rt></ruby>。<ruby>主人<rt>zhǔrén</rt></ruby><ruby>很<rt>hěn</rt></ruby><ruby>不<rt>bù</rt></ruby><ruby>高兴<rt>gāoxìng</rt></ruby>。</p>
 
-<h3><ruby>生词<rt>shēngcí</rt></ruby></h3>
 <ul>
 <li><ruby>骆驼<rt>luòtuó</rt></ruby> — camel</li>
+<li><ruby>美容<rt>měiróng</rt></ruby> — beauty treatment</li>
 <li><ruby>比赛<rt>bǐsài</rt></ruby> — competition/contest</li>
 <li><ruby>手术<rt>shǒushù</rt></ruby> — surgery</li>
-<li><ruby>主人<rt>zhǔrén</rt></ruby> — owner</li>
-<li><ruby>美容<rt>měiróng</rt></ruby> — beauty treatment</li>
+<li><ruby>规则<rt>guīzé</rt></ruby> — rules</li>
 </ul>
     </div>
   </div>
+
+  <!-- PHOTO OF THE DAY -->
+  
+
+  <!-- POEM OF THE DAY -->
+  
 
   <div class="footer">
     Built with Claude · Delivered daily · Singapore 🇸🇬
