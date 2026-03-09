@@ -10,6 +10,9 @@ jobs:
   send-digest:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: write  # needed to push the HTML file back to the repo
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -28,4 +31,13 @@ jobs:
           EMAIL_SENDER: ${{ secrets.EMAIL_SENDER }}
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
+          GITHUB_PAGES_URL: ${{ secrets.GITHUB_PAGES_URL }}
         run: python digest.py
+
+      - name: Publish to GitHub Pages
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/index.html
+          git commit -m "Daily digest $(date +'%Y-%m-%d')" || echo "Nothing to commit"
+          git push
