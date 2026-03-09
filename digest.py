@@ -11,6 +11,7 @@ import smtplib
 import feedparser
 import anthropic
 import urllib.request
+import urllib.parse
 from datetime import datetime
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
@@ -256,55 +257,128 @@ def build_quote() -> str:
 
 
 def build_photo_of_day() -> str:
-    nasa_key = os.environ.get("NASA_API_KEY", "DEMO_KEY")
+    """Fetch Wikimedia Commons Picture of the Day — no API key required."""
     try:
-        url = f"https://api.nasa.gov/planetary/apod?api_key={nasa_key}"
-        with urllib.request.urlopen(url, timeout=10) as r:
+        date_str = datetime.now().strftime("%Y-%m-%d")
+
+        # Step 1: get the POTD template to find today's filename
+        potd_url = (
+            "https://commons.wikimedia.org/w/api.php"
+            f"?action=query&titles=Template:Potd/{date_str}"
+            "&prop=revisions&rvprop=content&format=json"
+        )
+        req = urllib.request.Request(potd_url, headers={"User-Agent": "DailyDigestBot/1.0"})
+        with urllib.request.urlopen(req, timeout=10) as r:
             data = json.loads(r.read())
-        if data.get("media_type") != "image":
-            return ""
-        img_url   = data.get("hdurl") or data.get("url", "")
-        title     = data.get("title", "NASA Picture of the Day")
-        caption   = data.get("explanation", "")[:300] + "…"
-        copyright = data.get("copyright", "NASA")
+
+        pages = data["query"]["pages"]
+        content = next(iter(pages.values()))["revisions"][0]["*"]
+
+        # Extract filename from template content e.g. {{Potd filename|Some_File.jpg|...}}
+        match = re.search(r'\{\{Potd filename\|([^|}\n]+)', content)
+        if not match:
+            # fallback: try bare wikitext filename pattern
+            match = re.search(r'([A-Za-z0-9_\-]+\.(jpg|jpeg|png|gif|svg))', content, re.IGNORECASE)
+        if not match:
+            raise ValueError("Could not parse POTD filename")
+        filename = match.group(1).replace(" ", "_")
+
+        # Step 2: get image URL and metadata for that file
+        file_url = (
+            "https://commons.wikimedia.org/w/api.php"
+            f"?action=query&titles=File:{urllib.parse.quote(filename)}"
+            "&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1200&format=json"
+        )
+        req2 = urllib.request.Request(file_url, headers={"User-Agent": "DailyDigestBot/1.0"})
+        with urllib.request.urlopen(req2, timeout=10) as r:
+            fdata = json.loads(r.read())
+
+        fpage = next(iter(fdata["query"]["pages"].values()))
+        info  = fpage["imageinfo"][0]
+        img_url   = info.get("thumburl") or info.get("url", "")
+        page_url  = info.get("descriptionurl", "https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day")
+        meta      = info.get("extmetadata", {})
+        title     = meta.get("ObjectName", {}).get("value", filename.replace("_", " ").rsplit(".", 1)[0])
+        desc_raw  = meta.get("ImageDescription", {}).get("value", "")
+        # Strip HTML tags from description
+        desc      = re.sub(r'<[^>]+>', '', desc_raw)[:280].strip()
+        if desc:
+            desc += "…"
+        credit_raw = meta.get("Artist", {}).get("value", "Wikimedia Commons")
+        credit    = re.sub(r'<[^>]+>', '', credit_raw).strip()
+
         return f"""<div class="potd">
-  <img src="{img_url}" alt="{title}" style="width:100%;border-radius:6px;display:block;">
+  <a href="{page_url}" target="_blank">
+    <img src="{img_url}" alt="{title}" style="width:100%;border-radius:6px;display:block;">
+  </a>
   <p class="potd-title">{title}</p>
-  <p class="potd-caption">{caption}</p>
-  <p class="potd-credit">📷 {copyright} · <a href="https://apod.nasa.gov/apod/astropix.html" target="_blank">NASA APOD</a></p>
+  {"" if not desc else f'<p class="potd-caption">{desc}</p>'}
+  <p class="potd-credit">📷 {credit} · <a href="{page_url}" target="_blank">Wikimedia Commons</a></p>
 </div>"""
+
     except Exception as e:
-        print(f"Warning: could not fetch NASA APOD: {e}")
+        print(f"Warning: could not fetch Wikimedia POTD: {e}")
         return ""
 
 
 def build_poem_of_day() -> str:
+    FALLBACK_POEMS = [
+        {"title": "The Road Not Taken", "author": "Robert Frost",
+         "lines": ["Two roads diverged in a yellow wood,", "And sorry I could not travel both",
+                   "And be one traveler, long I stood", "And looked down one as far as I could",
+                   "To where it bent in the undergrowth;", "", "Then took the other, as just as fair,",
+                   "And having perhaps the better claim,", "Because it was grassy and wanted wear;",
+                   "Though as for that the passing there", "Had worn them really about the same,"]},
+        {"title": "i carry your heart with me", "author": "E.E. Cummings",
+         "lines": ["i carry your heart with me(i carry it in", "my heart)i am never without it(anywhere",
+                   "i go you go,my dear;and whatever is done", "by only me is your doing,my darling)",
+                   "", "i fear no fate(for you are my fate,my sweet)i want", "no world(for beautiful you are my world,my true)",
+                   "and it's you are whatever a moon has always meant", "and whatever a sun will always sing is you"]},
+        {"title": "Still I Rise", "author": "Maya Angelou",
+         "lines": ["You may write me down in history", "With your bitter, twisted lies,",
+                   "You may trod me in the very dirt", "But still, like dust, I'll rise.", "",
+                   "Does my sassiness upset you?", "Why are you beset with gloom?",
+                   "'Cause I walk like I've got oil wells", "Pumping in my living room."]},
+    ]
     try:
         url = "https://poetrydb.org/random/1"
-        with urllib.request.urlopen(url, timeout=10) as r:
-            poems = json.loads(r.read())
-        poem = poems[0]
-        title  = poem.get("title", "")
-        author = poem.get("author", "")
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=8) as r:
+            data = json.loads(r.read())
+        # PoetryDB returns a list or sometimes a dict with an error key
+        if isinstance(data, list) and len(data) > 0:
+            poem = data[0]
+        elif isinstance(data, dict) and "lines" in data:
+            poem = data
+        else:
+            raise ValueError("Unexpected PoetryDB response")
+        title  = poem.get("title", "Untitled")
+        author = poem.get("author", "Unknown")
         lines  = poem.get("lines", [])
-        # Keep to ~20 lines for readability
-        display_lines = lines[:20]
-        truncated = len(lines) > 20
-        lines_html = "\n".join(
-            f'<span class="poem-line">{l if l.strip() else "&nbsp;"}</span>'
-            for l in display_lines
-        )
-        more = '<p class="poem-more">… <a href="https://poetrydb.org" target="_blank">read full poem</a></p>' if truncated else ""
-        search_url = f"https://www.google.com/search?q={author.replace(' ', '+')}+poet"
-        return f"""<div class="poem">
+        if not lines:
+            raise ValueError("Empty poem")
+    except Exception as e:
+        print(f"Warning: PoetryDB failed ({e}), using fallback poem")
+        import random
+        poem   = random.choice(FALLBACK_POEMS)
+        title  = poem["title"]
+        author = poem["author"]
+        lines  = poem["lines"]
+
+    display_lines = lines[:20]
+    truncated = len(lines) > 20
+    lines_html = "\n".join(
+        f'<span class="poem-line">{l if l.strip() else "&nbsp;"}</span>'
+        for l in display_lines
+    )
+    more = '<p class="poem-more">… <a href="https://poetrydb.org" target="_blank">read full poem</a></p>' if truncated else ""
+    search_url = f"https://www.google.com/search?q={urllib.parse.quote(author)}+poet"
+    return f"""<div class="poem">
   <p class="poem-title">{title}</p>
   <p class="poem-author">by <a href="{search_url}" target="_blank">{author}</a></p>
   <div class="poem-body">{lines_html}</div>
   {more}
 </div>"""
-    except Exception as e:
-        print(f"Warning: could not fetch poem: {e}")
-        return ""
 
 
 # ── Email Builder ─────────────────────────────────────────────────────────────
@@ -337,9 +411,11 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh, quote="", photo="", poem="", 
   .section {{ padding: 24px 32px; border-bottom: 1px solid #efefef; }}
   .section-label {{ font-family: sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px;
                     text-transform: uppercase; color: #888; margin-bottom: 12px; }}
-  .section h2 {{ margin: 0 0 16px; font-size: 18px; }}
-  .section h4 {{ margin: 16px 0 4px; font-size: 15px; }}
-  .section h4 a {{ color: #1a1a2e; }}
+  .section h2 {{ font-family: Georgia, serif; margin: 0 0 16px; font-size: 20px; color: #1a1a1a; }}
+  .section h4 {{ font-family: Georgia, serif; margin: 18px 0 5px; font-size: 15px; font-weight: 700; color: #1a1a1a; }}
+  .section h4 a {{ color: #1a1a2e; text-decoration: none; border-bottom: 1px solid #ddd; }}
+  .section h4 a:hover {{ border-bottom-color: #1a1a2e; }}
+  .section p {{ font-family: Georgia, serif; font-size: 14px; line-height: 1.7; color: #333; margin: 0 0 10px; }}
   /* Skim items */
   .skim-item {{ padding: 16px 0; border-bottom: 1px solid #f0ede6; }}
   .skim-item:last-child {{ border-bottom: none; }}
@@ -449,7 +525,7 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh, quote="", photo="", poem="", 
   </div>
 
   <!-- PHOTO OF THE DAY -->
-  {"" if not photo else f'<div class="section"><div class="section-label">🔭 Photo of the Day</div>{photo}</div>'}
+  {"" if not photo else f'<div class="section"><div class="section-label">🖼️ Photo of the Day · Wikimedia Commons</div>{photo}</div>'}
 
   <!-- POEM OF THE DAY -->
   {"" if not poem else f'<div class="section"><div class="section-label">📜 Poem of the Day</div>{poem}</div>'}
