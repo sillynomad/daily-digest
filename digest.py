@@ -5,6 +5,7 @@ Fetches RSS feeds, summarizes with Claude, sends via email.
 """
 
 import os
+import re
 import smtplib
 import feedparser
 import anthropic
@@ -18,6 +19,10 @@ FEEDS = {
     "general": [
         "https://feeds.bbci.co.uk/news/world/rss.xml",
         "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
+        "https://feeds.reuters.com/reuters/worldNews",
+        "https://www.theguardian.com/world/rss",
+        "https://feeds.npr.org/1004/rss.xml",
+        "https://www.aljazeera.com/xml/rss/all.xml",
     ],
     "tech_asia": [
         "https://www.techinasia.com/feed",
@@ -35,16 +40,24 @@ FEEDS = {
         "https://www.straitstimes.com/news/singapore/rss.xml",
     ],
     "quirky": [
-        "https://feeds.bbci.co.uk/news/world/rss.xml",
-        "https://www.theguardian.com/world/rss",
-        "https://feeds.npr.org/1001/rss.xml",
+        "https://www.odditycentral.com/feed",
+        "https://feeds.feedburner.com/universetoday/feer",
+        "https://www.mentalfloss.com/feeds/all",
+        "https://feeds.bbci.co.uk/news/magazine/rss.xml",
+        "https://www.atlasobscura.com/feeds/latest",
+        "https://feeds.feedburner.com/ColosseumFeed",  # Ripley's Believe It or Not
     ],
 }
 
 MAX_ARTICLES = 8  # per category, before Claude selects the best
 
 # Your GitHub Pages URL — update with your actual GitHub username
-GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "https://yourusername.github.io/daily-digest/")
+GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "")
+
+
+def ruby_to_parens(html: str) -> str:
+    """Convert <ruby>漢字<rt>かんじ</rt></ruby> to 漢字(かんじ) for email clients."""
+    return re.sub(r'<ruby>(.*?)<rt>(.*?)</rt></ruby>', r'\1(\2)', html, flags=re.DOTALL)
 
 
 # ── Feed Fetching ─────────────────────────────────────────────────────────────
@@ -87,9 +100,9 @@ def claude(prompt: str, system: str = "") -> str:
     return msg.content[0].text.strip()
 
 
-def build_skim(articles: list[dict]) -> str:
+def build_skim(articles: list[dict]) -> tuple[str, str]:
     raw = articles_to_text(articles)
-    return claude(
+    result = claude(
         f"Here are today's top news articles:\n\n{raw}\n\n"
         "Write a 5-story global news summary in the style of The Daily Skimm — punchy, witty, conversational. "
         "For each story output the following HTML structure:\n"
@@ -101,9 +114,19 @@ def build_skim(articles: list[dict]) -> str:
         "  <p class='skim-analysis'><em>What This Means:</em> 2-3 sentence analytical paragraph on broader significance or implications.</p>\n"
         "  <p class='skim-sources'>Read more: <a href='URL1'>Source Name 1</a> · <a href='URL2'>Source Name 2</a></p>\n"
         "</div>\n"
-        "Use the article URLs provided as the source links. Return only the HTML, no wrapper tags.",
+        "After all 5 stories, add a line starting with 'TITLES_USED:' followed by a pipe-separated list of the "
+        "original article titles you selected (e.g. TITLES_USED: Title one|Title two|Title three|Title four|Title five). "
+        "Use the article URLs provided as the source links. Return only the HTML and the TITLES_USED line.",
         system="You are a witty, analytically sharp news summarizer in the style of The Daily Skimm meets The Economist."
     )
+    # Split out the titles line from the HTML
+    if "TITLES_USED:" in result:
+        html_part, titles_part = result.rsplit("TITLES_USED:", 1)
+        used_titles = titles_part.strip()
+    else:
+        html_part = result
+        used_titles = ""
+    return html_part.strip(), used_titles
 
 
 def build_tech_asia(articles: list[dict]) -> str:
@@ -138,13 +161,20 @@ def build_singapore(articles: list[dict]) -> str:
     )
 
 
-def build_language_corner(articles: list[dict]) -> str:
+def build_language_corner(articles: list[dict], already_covered: list[dict] = None) -> tuple:
     raw = articles_to_text(articles)
+    excluded = "\n".join(f"- {a['title']}" for a in (already_covered or []))
+    exclusion_note = (
+        f"\n\nIMPORTANT: The reader has already seen these stories in today's World News section — "
+        f"do NOT pick any of these or anything similar:\n{excluded}"
+        if excluded else ""
+    )
 
-    # Step 1: pick 3 fun/quirky stories
+    # Step 1: pick 3 fun/quirky stories not already covered
     chosen = claude(
-        f"Here are world news articles:\n\n{raw}\n\n"
-        "Pick exactly 3 of the most fun, playful, or quirky stories — nothing tragic or political. "
+        f"Here are fun and quirky world news articles:\n\n{raw}{exclusion_note}\n\n"
+        "Pick exactly 3 of the most fun, playful, or quirky stories — nothing tragic or political, "
+        "and nothing already covered in today's main news section. "
         "Return ONLY a JSON array with objects: [{\"title\": ..., \"summary\": ..., \"link\": ...}]. "
         "No markdown fences.",
         system="You curate fun, lighthearted news stories for language learners."
@@ -170,28 +200,28 @@ def build_language_corner(articles: list[dict]) -> str:
         system="You write natural, fluent French for an advanced French language learner."
     )
 
-    # Japanese — N2
+    # Japanese — N2 (ruby tags for HTML; email gets auto-converted to parens)
     ja = claude(
         f"Rewrite this fun news story in Japanese at JLPT N2 level. "
         f"Story:\n{s2}\n\n"
         "Rules: N2-appropriate grammar, no N1 expressions. "
-        "For EVERY kanji or kanji compound, write the reading in parentheses immediately after, "
-        "e.g. 食事(しょくじ)、確認(かくにん)、日本語(にほんご). Do NOT use ruby tags. "
-        "After the article, add a <ul> vocab glossary of 5 key words in this format: "
-        "<li>単語(reading) — English meaning</li>. "
+        "Wrap EVERY kanji or kanji compound in ruby tags with furigana, "
+        "e.g. <ruby>食事<rt>しょくじ</rt></ruby>、<ruby>確認<rt>かくにん</rt></ruby>. "
+        "After the article, add a <ul> vocab glossary of 5 key words: "
+        "<li><ruby>単語<rt>reading</rt></ruby> — English meaning</li>. "
         "Format the whole thing as HTML with <p> tags for paragraphs.",
         system="You are a Japanese language teacher writing N2-level news for learners."
     )
 
-    # Mandarin — A2
+    # Mandarin — A2 (ruby tags for HTML; email gets auto-converted to parens)
     zh = claude(
         f"Rewrite this fun news story in Mandarin Chinese at HSK 2-3 (A2) level. "
         f"Story:\n{s3}\n\n"
         "Rules: very simple short sentences (max 12 characters each). "
-        "For EVERY character or word, write the pinyin in parentheses immediately after, "
-        "e.g. 我(wǒ)是(shì)学生(xuésheng)。Do NOT use ruby tags. "
-        "After the article, add a <ul> glossary of 5 key words in this format: "
-        "<li>词(pīnyīn) — English meaning</li>. "
+        "Wrap EVERY character or word in ruby tags with pinyin, "
+        "e.g. <ruby>我<rt>wǒ</rt></ruby><ruby>是<rt>shì</rt></ruby><ruby>学生<rt>xuésheng</rt></ruby>。 "
+        "After the article, add a <ul> glossary of 5 key words: "
+        "<li><ruby>词<rt>pīnyīn</rt></ruby> — English meaning</li>. "
         "Format the whole thing as HTML with <p> tags for paragraphs.",
         system="You are a Mandarin teacher writing HSK A2-level news for beginners."
     )
@@ -201,8 +231,12 @@ def build_language_corner(articles: list[dict]) -> str:
 
 # ── Email Builder ─────────────────────────────────────────────────────────────
 
-def build_html(skim, tech, laliga, sg, fr, ja, zh) -> str:
+def build_html(skim, tech, laliga, sg, fr, ja, zh, web_url="") -> str:
     today = datetime.now().strftime("%A, %d %B %Y")
+    browser_button = (
+        f'<div class="view-browser"><a href="{web_url}" target="_blank">🌐 Read in Browser</a></div>'
+        if web_url else ""
+    )
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,9 +282,7 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh) -> str:
     <p>{today} · Personalised for you</p>
   </div>
 
-  <div class="view-browser">
-    <a href="{GITHUB_PAGES_URL}" target="_blank">🌐 Read in Browser</a>
-  </div>
+  {browser_button}
 
   <!-- THE SKIM -->
   <div class="section">
@@ -346,18 +378,24 @@ def main():
     tech   = build_tech_asia(tech_articles)
     laliga = build_laliga_opinion(laliga_articles)
     sg     = build_singapore(sg_articles)
-    fr, ja, zh = build_language_corner(quirky_articles)
+    fr, ja, zh = build_language_corner(quirky_articles, already_covered=general_articles)
 
     print("📧 Sending email...")
-    html = build_html(skim, tech, laliga, sg, fr, ja, zh)
+    # HTML file (GitHub Pages) — full ruby tags for furigana/pinyin rendered on top
+    html_web = build_html(skim, tech, laliga, sg, fr, ja, zh, web_url="")
+
+    # Email — convert ruby tags to parentheses (Gmail strips ruby)
+    ja_email = ruby_to_parens(ja)
+    zh_email = ruby_to_parens(zh)
+    html_email = build_html(skim, tech, laliga, sg, fr, ja_email, zh_email, web_url=GITHUB_PAGES_URL)
 
     # Save HTML for GitHub Pages (workflow will commit this file)
     os.makedirs("docs", exist_ok=True)
     with open("docs/index.html", "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html_web)
     print("💾 Saved docs/index.html for GitHub Pages")
 
-    send_email(html)
+    send_email(html_email)
 
 
 if __name__ == "__main__":
