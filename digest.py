@@ -55,12 +55,18 @@ FEEDS = {
 MAX_ARTICLES = 8  # per category, before Claude selects the best
 
 # Your GitHub Pages URL — update with your actual GitHub username
-GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "")
+GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "https://sillynomad.github.io/daily-digest/")
 
 
 def ruby_to_parens(html: str) -> str:
     """Convert <ruby>漢字<rt>かんじ</rt></ruby> to 漢字(かんじ) for email clients."""
     return re.sub(r'<ruby>(.*?)<rt>(.*?)</rt></ruby>', r'\1(\2)', html, flags=re.DOTALL)
+
+def ruby_strip(html: str) -> str:
+    """Remove ruby annotations entirely for email — keep only base characters, drop readings."""
+    html = re.sub(r'<rt>.*?</rt>', '', html, flags=re.DOTALL)
+    html = re.sub(r'</?ruby[^>]*>', '', html)
+    return html
 
 
 # ── Feed Fetching ─────────────────────────────────────────────────────────────
@@ -136,9 +142,14 @@ def build_tech_asia(articles: list[dict]) -> str:
     raw = articles_to_text(articles)
     return claude(
         f"Here are tech news articles from Asia:\n\n{raw}\n\n"
-        "Pick the 3 most interesting and write a short digest. For each: "
-        "<h4> title (hyperlinked to URL), then 2 sentences explaining why it matters. "
-        "Return valid HTML.",
+        "Pick the 3 most interesting and write a short digest. "
+        "For each article output this exact HTML structure:\n"
+        "<div class='article-card'>\n"
+        "  <div class='article-source'>Source Name</div>\n"
+        "  <h4><a href='URL'>Article title here</a></h4>\n"
+        "  <p>2 sentences explaining why it matters.</p>\n"
+        "</div>\n"
+        "Use the source name from the article metadata. Return only the HTML.",
         system="You are a sharp tech journalist covering Asia's startup and tech ecosystem."
     )
 
@@ -147,9 +158,13 @@ def build_laliga_opinion(articles: list[dict]) -> str:
     raw = articles_to_text(articles)
     return claude(
         f"Aquí hay artículos de opinión sobre fútbol español de Marca, Sport, Mundo Deportivo y As:\n\n{raw}\n\n"
-        "Selecciona las 3 piezas de opinión más interesantes y escribe un resumen en español de cada una: "
-        "título en <h4> con enlace, luego 2-3 frases que capturen el argumento principal del columnista. "
-        "Devuelve HTML válido.",
+        "Selecciona las 3 piezas de opinión más interesantes y para cada una genera esta estructura HTML exacta:\n"
+        "<div class='article-card'>\n"
+        "  <div class='article-source'>Nombre del medio</div>\n"
+        "  <h4><a href='URL'>Título del artículo</a></h4>\n"
+        "  <p>2-3 frases que capturen el argumento principal del columnista.</p>\n"
+        "</div>\n"
+        "Devuelve solo el HTML.",
         system="Eres un periodista deportivo español especializado en análisis y opinión sobre La Liga."
     )
 
@@ -158,8 +173,14 @@ def build_singapore(articles: list[dict]) -> str:
     raw = articles_to_text(articles)
     return claude(
         f"Here are Singapore local news articles:\n\n{raw}\n\n"
-        "Pick the 3 most relevant and write a short local news digest. For each: "
-        "<h4> title (hyperlinked), then 2 sentences of context. Return valid HTML.",
+        "Pick the 3 most relevant and write a short local news digest. "
+        "For each article output this exact HTML structure:\n"
+        "<div class='article-card'>\n"
+        "  <div class='article-source'>Source Name</div>\n"
+        "  <h4><a href='URL'>Article title here</a></h4>\n"
+        "  <p>2 sentences of context.</p>\n"
+        "</div>\n"
+        "Return only the HTML.",
         system="You are a local Singapore news correspondent writing for an expat-friendly morning briefing."
     )
 
@@ -261,51 +282,40 @@ def build_photo_of_day() -> str:
     try:
         date_str = datetime.now().strftime("%Y-%m-%d")
 
-        # Step 1: get the POTD template to find today's filename
-        potd_url = (
-            "https://commons.wikimedia.org/w/api.php"
-            f"?action=query&titles=Template:Potd/{date_str}"
-            "&prop=revisions&rvprop=content&format=json"
+        # Use the FeaturedFeed API which is more reliable than parsing templates
+        feed_url = (
+            "https://en.wikipedia.org/w/api.php"
+            "?action=featuredfeed&feed=potd&feedformat=atom&format=json"
         )
-        req = urllib.request.Request(potd_url, headers={"User-Agent": "DailyDigestBot/1.0"})
+        # Actually use the direct Commons API for today's POTD image
+        api_url = (
+            f"https://commons.wikimedia.org/w/api.php?action=query"
+            f"&generator=images&titles=Template:Potd/{date_str}"
+            f"&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1200&format=json"
+        )
+        req = urllib.request.Request(api_url, headers={"User-Agent": "DailyDigestBot/1.0"})
         with urllib.request.urlopen(req, timeout=10) as r:
             data = json.loads(r.read())
 
-        pages = data["query"]["pages"]
-        content = next(iter(pages.values()))["revisions"][0]["*"]
+        pages = data.get("query", {}).get("pages", {})
+        if not pages:
+            raise ValueError("No images found in POTD template")
 
-        # Extract filename from template content e.g. {{Potd filename|Some_File.jpg|...}}
-        match = re.search(r'\{\{Potd filename\|([^|}\n]+)', content)
-        if not match:
-            # fallback: try bare wikitext filename pattern
-            match = re.search(r'([A-Za-z0-9_\-]+\.(jpg|jpeg|png|gif|svg))', content, re.IGNORECASE)
-        if not match:
-            raise ValueError("Could not parse POTD filename")
-        filename = match.group(1).replace(" ", "_")
-
-        # Step 2: get image URL and metadata for that file
-        file_url = (
-            "https://commons.wikimedia.org/w/api.php"
-            f"?action=query&titles=File:{urllib.parse.quote(filename)}"
-            "&prop=imageinfo&iiprop=url|extmetadata&iiurlwidth=1200&format=json"
-        )
-        req2 = urllib.request.Request(file_url, headers={"User-Agent": "DailyDigestBot/1.0"})
-        with urllib.request.urlopen(req2, timeout=10) as r:
-            fdata = json.loads(r.read())
-
-        fpage = next(iter(fdata["query"]["pages"].values()))
-        info  = fpage["imageinfo"][0]
-        img_url   = info.get("thumburl") or info.get("url", "")
-        page_url  = info.get("descriptionurl", "https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day")
-        meta      = info.get("extmetadata", {})
-        title     = meta.get("ObjectName", {}).get("value", filename.replace("_", " ").rsplit(".", 1)[0])
-        desc_raw  = meta.get("ImageDescription", {}).get("value", "")
-        # Strip HTML tags from description
-        desc      = re.sub(r'<[^>]+>', '', desc_raw)[:280].strip()
+        # Get the first image page
+        img_page = next(iter(pages.values()))
+        info = img_page.get("imageinfo", [{}])[0]
+        img_url  = info.get("thumburl") or info.get("url", "")
+        page_url = info.get("descriptionurl", "https://commons.wikimedia.org/wiki/Commons:Picture_of_the_day")
+        meta     = info.get("extmetadata", {})
+        title    = re.sub(r'<[^>]+>', '', meta.get("ObjectName", {}).get("value", img_page.get("title", "Picture of the Day").replace("File:", "").rsplit(".", 1)[0]))
+        desc_raw = meta.get("ImageDescription", {}).get("value", "")
+        desc     = re.sub(r'<[^>]+>', '', desc_raw)[:280].strip()
         if desc:
             desc += "…"
-        credit_raw = meta.get("Artist", {}).get("value", "Wikimedia Commons")
-        credit    = re.sub(r'<[^>]+>', '', credit_raw).strip()
+        credit   = re.sub(r'<[^>]+>', '', meta.get("Artist", {}).get("value", "Wikimedia Commons")).strip()
+
+        if not img_url:
+            raise ValueError("No image URL found")
 
         return f"""<div class="potd">
   <a href="{page_url}" target="_blank">
@@ -367,8 +377,8 @@ def build_poem_of_day() -> str:
 
     display_lines = lines[:20]
     truncated = len(lines) > 20
-    lines_html = "\n".join(
-        f'<span class="poem-line">{l if l.strip() else "&nbsp;"}</span>'
+    lines_html = "<br>\n".join(
+        l if l.strip() else "<br>"
         for l in display_lines
     )
     more = '<p class="poem-more">… <a href="https://poetrydb.org" target="_blank">read full poem</a></p>' if truncated else ""
@@ -416,6 +426,11 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh, quote="", photo="", poem="", 
   .section h4 a {{ color: #1a1a2e; text-decoration: none; border-bottom: 1px solid #ddd; }}
   .section h4 a:hover {{ border-bottom-color: #1a1a2e; }}
   .section p {{ font-family: Georgia, serif; font-size: 14px; line-height: 1.7; color: #333; margin: 0 0 10px; }}
+  /* Article cards (Tech, La Liga, Singapore) */
+  .article-card {{ padding: 16px 0; border-bottom: 1px solid #f0ede6; }}
+  .article-card:last-child {{ border-bottom: none; }}
+  .article-source {{ font-family: sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+                     text-transform: uppercase; color: #aaa; margin-bottom: 4px; }}
   /* Skim items */
   .skim-item {{ padding: 16px 0; border-bottom: 1px solid #f0ede6; }}
   .skim-item:last-child {{ border-bottom: none; }}
@@ -584,9 +599,9 @@ def main():
     html_web = build_html(skim, tech, laliga, sg, fr, ja, zh,
                           quote=quote, photo=photo, poem=poem, web_url="")
 
-    # Email — convert ruby tags to parentheses (Gmail strips ruby)
-    ja_email = ruby_to_parens(ja)
-    zh_email = ruby_to_parens(zh)
+    # Email — strip ruby annotations entirely (no inline readings in email)
+    ja_email = ruby_strip(ja)
+    zh_email = ruby_strip(zh)
     html_email = build_html(skim, tech, laliga, sg, fr, ja_email, zh_email,
                             quote=quote, photo=photo, poem=poem, web_url=GITHUB_PAGES_URL)
 
