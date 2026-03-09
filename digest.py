@@ -43,6 +43,9 @@ FEEDS = {
 
 MAX_ARTICLES = 8  # per category, before Claude selects the best
 
+# Your GitHub Pages URL — update with your actual GitHub username
+GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "https://yourusername.github.io/daily-digest/")
+
 
 # ── Feed Fetching ─────────────────────────────────────────────────────────────
 
@@ -92,7 +95,9 @@ def build_skim(articles: list[dict]) -> str:
         "For each story output the following HTML structure:\n"
         "<div class='skim-item'>\n"
         "  <strong>Bold headline phrase</strong>\n"
-        "  <p class='skim-body'>1-2 sentence summary of what happened.</p>\n"
+        "  <p class='skim-body'>2-3 sentences: first state what happened, then give 1-2 sentences of essential background "
+        "context explaining WHY it's happening — e.g. what caused it, what led up to it, why now. "
+        "Never leave the reader asking 'but why?'.</p>\n"
         "  <p class='skim-analysis'><em>What This Means:</em> 2-3 sentence analytical paragraph on broader significance or implications.</p>\n"
         "  <p class='skim-sources'>Read more: <a href='URL1'>Source Name 1</a> · <a href='URL2'>Source Name 2</a></p>\n"
         "</div>\n"
@@ -160,7 +165,8 @@ def build_language_corner(articles: list[dict]) -> str:
     fr = claude(
         f"Rewrite this fun news story in natural, fluent French (like a native journalist would write it). "
         f"Story:\n{s1}\n\n"
-        "Format as HTML: <h4> title in French, then 3 short paragraphs. No vocabulary glossary needed.",
+        "Format as HTML: <h4> title in French, then exactly 5 paragraphs — develop the story fully, "
+        "add colour, context, and a touch of wit. No vocabulary glossary needed.",
         system="You write natural, fluent French for an advanced French language learner."
     )
 
@@ -168,10 +174,12 @@ def build_language_corner(articles: list[dict]) -> str:
     ja = claude(
         f"Rewrite this fun news story in Japanese at JLPT N2 level. "
         f"Story:\n{s2}\n\n"
-        "Rules: use kanji with furigana in ruby tags (e.g. <ruby>食<rt>た</rt></ruby>), "
-        "N2-appropriate grammar, no N1 expressions. "
-        "After the article, add a <ul> vocab glossary of 5 key words with their reading and English meaning. "
-        "Format as HTML.",
+        "Rules: N2-appropriate grammar, no N1 expressions. "
+        "For EVERY kanji or kanji compound, write the reading in parentheses immediately after, "
+        "e.g. 食事(しょくじ)、確認(かくにん)、日本語(にほんご). Do NOT use ruby tags. "
+        "After the article, add a <ul> vocab glossary of 5 key words in this format: "
+        "<li>単語(reading) — English meaning</li>. "
+        "Format the whole thing as HTML with <p> tags for paragraphs.",
         system="You are a Japanese language teacher writing N2-level news for learners."
     )
 
@@ -179,10 +187,12 @@ def build_language_corner(articles: list[dict]) -> str:
     zh = claude(
         f"Rewrite this fun news story in Mandarin Chinese at HSK 2-3 (A2) level. "
         f"Story:\n{s3}\n\n"
-        "Rules: very simple short sentences (max 12 characters each), "
-        "add pinyin above every character using ruby tags (e.g. <ruby>我<rt>wǒ</rt></ruby>), "
-        "after the article add a <ul> glossary of 5 key words with pinyin + English. "
-        "Format as HTML.",
+        "Rules: very simple short sentences (max 12 characters each). "
+        "For EVERY character or word, write the pinyin in parentheses immediately after, "
+        "e.g. 我(wǒ)是(shì)学生(xuésheng)。Do NOT use ruby tags. "
+        "After the article, add a <ul> glossary of 5 key words in this format: "
+        "<li>词(pīnyīn) — English meaning</li>. "
+        "Format the whole thing as HTML with <p> tags for paragraphs.",
         system="You are a Mandarin teacher writing HSK A2-level news for beginners."
     )
 
@@ -204,6 +214,14 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh) -> str:
   .header {{ background: #1a1a2e; color: white; padding: 28px 32px; }}
   .header h1 {{ margin: 0; font-size: 22px; letter-spacing: 1px; text-transform: uppercase; }}
   .header p {{ margin: 4px 0 0; font-size: 13px; color: #aaa; font-family: sans-serif; }}
+  .view-browser {{ display:block; text-align:center; padding: 12px 32px; }}
+  .view-browser a {{
+    display: inline-block;
+    background: #f5c842; color: #0f0f1a;
+    font-family: sans-serif; font-size: 12px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase; text-decoration: none;
+    padding: 10px 24px; border-radius: 4px;
+  }}
   .section {{ padding: 24px 32px; border-bottom: 1px solid #efefef; }}
   .section-label {{ font-family: sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 2px;
                     text-transform: uppercase; color: #888; margin-bottom: 12px; }}
@@ -228,6 +246,10 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh) -> str:
   <div class="header">
     <h1>☀️ Your Daily Digest</h1>
     <p>{today} · Personalised for you</p>
+  </div>
+
+  <div class="view-browser">
+    <a href="{GITHUB_PAGES_URL}" target="_blank">🌐 Read in Browser</a>
   </div>
 
   <!-- THE SKIM -->
@@ -328,6 +350,13 @@ def main():
 
     print("📧 Sending email...")
     html = build_html(skim, tech, laliga, sg, fr, ja, zh)
+
+    # Save HTML for GitHub Pages (workflow will commit this file)
+    os.makedirs("docs", exist_ok=True)
+    with open("docs/index.html", "w", encoding="utf-8") as f:
+        f.write(html)
+    print("💾 Saved docs/index.html for GitHub Pages")
+
     send_email(html)
 
 
