@@ -35,27 +35,30 @@ TODAY_SHORT = TODAY.strftime("%d %B %Y")
 # ---------------------------------------------------------------------------
 
 def _extract_json(content_blocks) -> dict:
-    """Pull JSON out of a Claude response, stripping any markdown fences."""
-    raw = ""
-    for block in content_blocks:
-        if hasattr(block, "text"):
-            raw += block.text
-    raw = raw.strip()
+    """Pull JSON out of a Claude response using only the LAST text block."""
+    text_blocks = [b.text for b in content_blocks if hasattr(b, "text")]
+    if not text_blocks:
+        raise ValueError("No text block found in response")
+    raw = text_blocks[-1].strip()          # ← last block = Claude's final answer
     if raw.startswith("```"):
         raw = raw.split("```", 2)[1]
         if raw.startswith("json"):
             raw = raw[4:]
         raw = raw.rsplit("```", 1)[0].strip()
+    # Find the first { or [ in case Claude prefixed with stray text
+    for i, ch in enumerate(raw):
+        if ch in "{[":
+            raw = raw[i:]
+            break
     return json.loads(raw)
 
 
 def fetch_articles() -> list[dict]:
-    """Use Claude + web search to find 3 real, recent Russian-language articles."""
-    response = client.messages.create(
-        model=MODEL,
-        max_tokens=4000,
-        tools=[{"type": "web_search_20250305", "name": "web_search"}],
-        system="""You are curating a daily Russian-language reading digest for a B2-level learner.
+    """Use Claude + web search to find 3 real, recent Russian-language articles.
+    Implements a full agentic loop so tool_use / tool_result blocks are handled
+    correctly before we try to parse Claude's final JSON answer.
+    """
+    SYSTEM = """You are curating a daily Russian-language reading digest for a B2-level learner.
 Find exactly 3 real, recently published articles written IN RUSSIAN — one per topic:
   1. World News / Current Affairs
   2. Culture & Arts
@@ -63,33 +66,58 @@ Find exactly 3 real, recently published articles written IN RUSSIAN — one per 
 
 Preferred sources (use the Russian-language versions):
   News: meduza.io, rbc.ru, kommersant.ru, novayagazeta.ru
-  Culture: arzamas.academy, kultура.рф, theoryandpractice.ru
-  Travel/Lifestyle: vokrugsveta.ru, national-geographic.ru, afisha.ru
+  Culture: arzamas.academy, kultura.rf, theoryandpractice.ru
+  Travel/Lifestyle: vokrugsveta.ru, nat-geo.ru, afisha.ru
 
 For each article return:
   - topic: exactly one of "World News", "Culture & Arts", "Travel & Lifestyle"
   - title: article headline in Russian
   - source: outlet name
   - url: direct article URL
-  - english_teaser: 2–3 sentences in English summarising what the article is about
-    (this helps the reader decide whether to open it)
-  - russian_excerpt: 3–4 sentence excerpt or summary IN RUSSIAN, B2 accessible —
-    avoid overly complex subordinate clauses; prefer active voice
+  - english_teaser: 2-3 sentences in English summarising what the article is about
+  - russian_excerpt: 3-4 sentence summary IN RUSSIAN, B2 accessible
 
-Return ONLY valid JSON, no markdown fences, no preamble:
-{
-  "articles": [ { "topic": "...", "title": "...", "source": "...", "url": "...",
-                  "english_teaser": "...", "russian_excerpt": "..." }, ... ]
-}""",
-        messages=[
-            {
-                "role": "user",
-                "content": f"Today is {TODAY_SHORT}. Search and return 3 Russian articles as specified."
-            }
-        ],
-    )
-    data = _extract_json(response.content)
-    return data["articles"]
+After searching, respond with ONLY valid JSON (no markdown fences, no preamble):
+{"articles": [{"topic":"...","title":"...","source":"...","url":"...","english_teaser":"...","russian_excerpt":"..."}, ...]}"""
+
+    tools = [{"type": "web_search_20250305", "name": "web_search"}]
+    messages = [{"role": "user", "content": f"Today is {TODAY_SHORT}. Search and return 3 Russian articles as specified."}]
+
+    # Agentic loop — keep going while Claude wants to use tools
+    while True:
+        response = client.messages.create(
+            model=MODEL,
+            max_tokens=4000,
+            tools=tools,
+            system=SYSTEM,
+            messages=messages,
+        )
+
+        # Append assistant turn to history
+        messages.append({"role": "assistant", "content": response.content})
+
+        if response.stop_reason == "end_turn":
+            # Claude is done — parse the final JSON
+            return _extract_json(response.content)["articles"]
+
+        if response.stop_reason == "tool_use":
+            # Build tool_result blocks for every tool_use block
+            tool_results = []
+            for block in response.content:
+                if block.type == "tool_use":
+                    # The web_search tool is server-side; its result is already
+                    # embedded in the response as a tool_result block automatically.
+                    # We just need to acknowledge and continue the loop.
+                    tool_results.append({
+                        "type": "tool_result",
+                        "tool_use_id": block.id,
+                        "content": "Search executed.",
+                    })
+            if tool_results:
+                messages.append({"role": "user", "content": tool_results})
+        else:
+            # Unexpected stop reason — try to parse whatever we have
+            return _extract_json(response.content)["articles"]
 
 
 def fetch_poem() -> dict:
