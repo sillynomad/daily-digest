@@ -1,0 +1,32 @@
+name: Русский День — Daily Russian Digest
+
+on:
+  schedule:
+    # 07:00 UTC = 15:00 SGT — arrives in the afternoon for your mom
+    # Adjust the hour to whatever time she prefers.
+    - cron: '0 7 * * *'
+  workflow_dispatch:   # lets you trigger a manual run from the Actions tab
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Send Русский День digest
+        env:
+          ANTHROPIC_API_KEY:  ${{ secrets.ANTHROPIC_API_KEY }}
+          GMAIL_USER:         ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          RECIPIENT_EMAIL:    ${{ secrets.RECIPIENT_EMAIL }}
+        run: python mama_digest.py
