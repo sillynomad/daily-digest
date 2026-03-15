@@ -32,6 +32,23 @@ TODAY_SHORT = TODAY.strftime("%d %B %Y")
 
 
 # ---------------------------------------------------------------------------
+# Rate-limit retry helper
+# ---------------------------------------------------------------------------
+
+def retry_with_backoff(fn, *args, max_retries=5, base_wait=60, **kwargs):
+    """Call fn(*args, **kwargs), retrying on RateLimitError with exponential backoff."""
+    for attempt in range(max_retries):
+        try:
+            return fn(*args, **kwargs)
+        except anthropic.RateLimitError as e:
+            if attempt == max_retries - 1:
+                raise
+            wait = base_wait * (2 ** attempt)   # 60s, 120s, 240s …
+            print(f"  ⚠️  Rate limit hit — waiting {wait}s before retry {attempt + 1}/{max_retries}…")
+            time.sleep(wait)
+
+
+# ---------------------------------------------------------------------------
 # Content generation helpers
 # ---------------------------------------------------------------------------
 
@@ -538,19 +555,13 @@ if __name__ == "__main__":
     print(f"🔄  Building Русский День digest for {TODAY_SHORT}…")
 
     print("  • Fetching articles (web search)…")
-    articles = fetch_articles()
-
-    print("  • Cooling down (rate limit)…")
-    time.sleep(30)   # wait 30s after the token-heavy web search loop
+    articles = retry_with_backoff(fetch_articles)
 
     print("  • Selecting poem of the day…")
-    poem = fetch_poem()
-
-    print("  • Cooling down…")
-    time.sleep(15)
+    poem = retry_with_backoff(fetch_poem)
 
     print("  • Picking слово дня…")
-    word = fetch_word_of_day(articles)
+    word = retry_with_backoff(fetch_word_of_day, articles)
 
     print("  • Rendering HTML…")
     html = build_html(articles, poem, word)
