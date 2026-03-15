@@ -14,6 +14,7 @@ Delivery: GitHub Actions on a daily schedule
 
 import os
 import json
+import time
 import smtplib
 import datetime
 import anthropic
@@ -539,8 +540,14 @@ if __name__ == "__main__":
     print("  • Fetching articles (web search)…")
     articles = fetch_articles()
 
+    print("  • Cooling down (rate limit)…")
+    time.sleep(30)   # wait 30s after the token-heavy web search loop
+
     print("  • Selecting poem of the day…")
     poem = fetch_poem()
+
+    print("  • Cooling down…")
+    time.sleep(15)
 
     print("  • Picking слово дня…")
     word = fetch_word_of_day(articles)
