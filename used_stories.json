@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Dozens Dead in Pakistani Airstrike on Kabul",
-    "Top US counterterrorism official resigns over Iran war, urging Trump to 'reverse course'",
-    "At least 23 people killed in suspected suicide attacks in north-eastern Nigeria",
-    "Belgian court sends ex-diplomat, 93, to trial over 1961 murder of Congo leader",
-    "The Voss Model in West Lafayette, Indiana",
-    "My dream holiday was a $30,000 scam",
-    "Iran's intelligence minister Esmail Khatib killed in air strike",
     "Iran War Live Updates: Oil Prices Spike as Gulf Energy Sites Are Struck",
     "Belgian court sends ex-diplomat, 93, to trial over 1961 murder of Congo leader",
     "One killed as ski gondola crashes down mountain at Swiss resort",
@@ -19,7 +12,14 @@
     "Some of the world's poorest countries to lose UK aid due to 56% budget cut",
     "The Soldier Who Came Back From the Dead",
     "China's Youngest Professional Racecar Driver Got His Licence When He Was Only Five Years Old",
-    "The Graveyard That Made Me Kiss a Frog"
+    "The Graveyard That Made Me Kiss a Frog",
+    "Iranian strikes on bases used by US caused $800m in damage, new analysis shows",
+    "Trump Says U.S. Is Considering 'Winding Down' War",
+    "Madagascar's military ruler decrees that ministers must pass lie detector tests",
+    "Some of the world's poorest countries to lose UK aid due to 56% budget cut",
+    "Elon Musk misled Twitter investors, jury finds",
+    "'Human 3D Printer' Carves Intricate Carrot Sculptures with Her Teeth",
+    "15-Year-Old Teenager Steals Bus, Drives It 80 Miles to Take Girlfriend to School"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -27,7 +27,8 @@
     "Joseph Campbell",
     "Isak Dinesen",
     "J.B.S. Haldane",
-    "Arthur Conan Doyle"
+    "Arthur Conan Doyle",
+    "Isak Dinesen"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -35,6 +36,7 @@
     "The Road Not Taken",
     "Still I Rise",
     "Ode on Solitude.",
-    "The Hope Of My Heart"
+    "The Hope Of My Heart",
+    "To Tirzah"
   ]
 }
