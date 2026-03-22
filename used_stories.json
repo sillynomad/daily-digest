@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Iran War Live Updates: As Attacks Shake Markets, Trump Seeks to Reassure Americans",
-    "Denmark planned to blow up Greenland runways if US invaded, reports say",
-    "Some of the world's poorest countries to lose UK aid due to 56% budget cut",
-    "The Soldier Who Came Back From the Dead",
-    "China's Youngest Professional Racecar Driver Got His Licence When He Was Only Five Years Old",
-    "The Graveyard That Made Me Kiss a Frog",
-    "Iranian strikes on bases used by US caused $800m in damage, new analysis shows",
     "Trump Says U.S. Is Considering 'Winding Down' War",
     "Madagascar's military ruler decrees that ministers must pass lie detector tests",
     "Some of the world's poorest countries to lose UK aid due to 56% budget cut",
@@ -19,7 +12,14 @@
     "BTS make live return in front of huge crowd",
     "Some of the world's poorest countries to lose UK aid due to 56% budget cut",
     "Arcade Draws Criticism for Using Live Hamsters as Prizes in Claw Machine Game",
-    "Paul's Vintage Bicycle Museum in Elizabeth, Illinois"
+    "Paul's Vintage Bicycle Museum in Elizabeth, Illinois",
+    "Israel to expand ground and air attacks against Hezbollah in Lebanon",
+    "Israel's Missile Defense Under Scrutiny After Iranian Attack",
+    "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports",
+    "National blackout hits Cuba for second time in a week",
+    "Madagascar's military ruler decrees that ministers must pass lie detector tests",
+    "This Country Offers Residents $29,000 to Give Up Their Driver's Licenses for Five Years",
+    "The Largest Coffee Cup in Colombia"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -29,7 +29,8 @@
     "J.B.S. Haldane",
     "Arthur Conan Doyle",
     "Isak Dinesen",
-    "Joseph Campbell"
+    "Joseph Campbell",
+    "Isak Dinesen"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -39,6 +40,7 @@
     "Ode on Solitude.",
     "The Hope Of My Heart",
     "To Tirzah",
-    "To a Young Child"
+    "To a Young Child",
+    "The Waning Moon"
   ]
 }
