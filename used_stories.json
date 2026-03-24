@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Zelensky Sends Negotiators to the U.S., Hoping to Revive Peace Talks",
-    "Madagascar's military ruler decrees that ministers must pass lie detector tests",
-    "BTS make live return in front of huge crowd",
-    "Some of the world's poorest countries to lose UK aid due to 56% budget cut",
-    "Arcade Draws Criticism for Using Live Hamsters as Prizes in Claw Machine Game",
-    "Paul's Vintage Bicycle Museum in Elizabeth, Illinois",
-    "Israel to expand ground and air attacks against Hezbollah in Lebanon",
     "Israel's Missile Defense Under Scrutiny After Iranian Attack",
     "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports",
     "National blackout hits Cuba for second time in a week",
@@ -19,7 +12,14 @@
     "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports",
     "A Choice of Deadly Drones Is Only a Few Clicks Away for Ukrainian Troops",
     "Site of the Invention of Irn-Bru in Glasgow, Scotland",
-    "Meet Jessica Foster, the Wholesome US Soldier and Donald Trump Fan Who Doesn't Exist"
+    "Meet Jessica Foster, the Wholesome US Soldier and Donald Trump Fan Who Doesn't Exist",
+    "Iran War Live Updates: U.S. Is Said to Have Sent Iran a Peace Plan",
+    "Russia launches 948 drones at Ukraine in largest attack over 24-hour period",
+    "Madagascar's military ruler decrees that ministers must pass lie detector tests",
+    "Australia and EU agree sweeping trade deal in face of global uncertainty",
+    "The U.S. Military Said It Helped Bomb a Drug Camp in Ecuador. It Was a Dairy Farm.",
+    "'Human 3D Printer' Carves Intricate Carrot Sculptures with Her Teeth",
+    "15-Year-Old Teenager Steals Bus, Drives It 80 Miles to Take Girlfriend to School"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -31,7 +31,8 @@
     "Isak Dinesen",
     "Joseph Campbell",
     "Isak Dinesen",
-    "J.B.S. Haldane"
+    "J.B.S. Haldane",
+    "Joanna Macy"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -43,6 +44,7 @@
     "To Tirzah",
     "To a Young Child",
     "The Waning Moon",
-    "Hope is the Thing with Feathers"
+    "Hope is the Thing with Feathers",
+    "Sonnet 129: The expense of spirit in a waste of shame"
   ]
 }
