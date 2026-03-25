@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Israel's Missile Defense Under Scrutiny After Iranian Attack",
-    "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports",
-    "National blackout hits Cuba for second time in a week",
-    "Madagascar's military ruler decrees that ministers must pass lie detector tests",
-    "This Country Offers Residents $29,000 to Give Up Their Driver's Licenses for Five Years",
-    "The Largest Coffee Cup in Colombia",
-    "Iran War Live Updates: U.S. and Iran Send Conflicting Signals on Peace Prospects",
     "'Like the plane got cut in half': LaGuardia crash that killed two pilots now under investigation",
     "Slovenia becomes first EU country to introduce fuel rationing",
     "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports",
@@ -19,7 +12,14 @@
     "Australia and EU agree sweeping trade deal in face of global uncertainty",
     "The U.S. Military Said It Helped Bomb a Drug Camp in Ecuador. It Was a Dairy Farm.",
     "'Human 3D Printer' Carves Intricate Carrot Sculptures with Her Teeth",
-    "15-Year-Old Teenager Steals Bus, Drives It 80 Miles to Take Girlfriend to School"
+    "15-Year-Old Teenager Steals Bus, Drives It 80 Miles to Take Girlfriend to School",
+    "Meta and YouTube found liable in landmark social media addiction trial",
+    "UN votes to describe slave trade as 'gravest crime against humanity'",
+    "Iran War Live Updates: Tehran Dismisses U.S. Cease-Fire Conditions as Israel Orders 48 Hours of Attacks",
+    "Democrats flip Florida state seat that includes Trump's Mar-a-Lago home",
+    "'Extraordinary event' for mountain gorillas as new twins born in DRC",
+    "The World's Narrowest House Is Only 63 Centimetres Wide",
+    "Man Passes Theoretical Driving Test After 9 Years and 139 Attempts"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -32,7 +32,8 @@
     "Joseph Campbell",
     "Isak Dinesen",
     "J.B.S. Haldane",
-    "Joanna Macy"
+    "Joanna Macy",
+    "Joseph Campbell"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -45,6 +46,7 @@
     "To a Young Child",
     "The Waning Moon",
     "Hope is the Thing with Feathers",
-    "Sonnet 129: The expense of spirit in a waste of shame"
+    "Sonnet 129: The expense of spirit in a waste of shame",
+    "To My Wife - With A Copy Of My Poems"
   ]
 }
