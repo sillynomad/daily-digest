@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "'Like the plane got cut in half': LaGuardia crash that killed two pilots now under investigation",
-    "Slovenia becomes first EU country to introduce fuel rationing",
-    "Strike on Sudan hospital kills at least 64 and wounds 89 more, WHO reports",
-    "A Choice of Deadly Drones Is Only a Few Clicks Away for Ukrainian Troops",
-    "Site of the Invention of Irn-Bru in Glasgow, Scotland",
-    "Meet Jessica Foster, the Wholesome US Soldier and Donald Trump Fan Who Doesn't Exist",
-    "Iran War Live Updates: U.S. Is Said to Have Sent Iran a Peace Plan",
     "Russia launches 948 drones at Ukraine in largest attack over 24-hour period",
     "Madagascar's military ruler decrees that ministers must pass lie detector tests",
     "Australia and EU agree sweeping trade deal in face of global uncertainty",
@@ -19,7 +12,14 @@
     "Democrats flip Florida state seat that includes Trump's Mar-a-Lago home",
     "'Extraordinary event' for mountain gorillas as new twins born in DRC",
     "The World's Narrowest House Is Only 63 Centimetres Wide",
-    "Man Passes Theoretical Driving Test After 9 Years and 139 Attempts"
+    "Man Passes Theoretical Driving Test After 9 Years and 139 Attempts",
+    "Iran War Live Updates: Trump Again Extends Deadline for Iran to Open Strait or Face Strikes on Power Grid",
+    "Zelensky visits Saudi Arabia after offering Ukraine's drone expertise",
+    "Hungary Opens Espionage Case Against Journalist",
+    "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas",
+    "Two drone strikes on civilian targets kill 28 people in Sudan",
+    "Bizarre Power Suit Transforms Wearer Into a Half-Human Half-Robot Centaur",
+    "The Cheeky Boy at Hummel Fountain"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -33,7 +33,8 @@
     "Isak Dinesen",
     "J.B.S. Haldane",
     "Joanna Macy",
-    "Joseph Campbell"
+    "Joseph Campbell",
+    "Albert Einstein"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -47,6 +48,7 @@
     "The Waning Moon",
     "Hope is the Thing with Feathers",
     "Sonnet 129: The expense of spirit in a waste of shame",
-    "To My Wife - With A Copy Of My Poems"
+    "To My Wife - With A Copy Of My Poems",
+    "Infant Sorrow"
   ]
 }
