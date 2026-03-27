@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Russia launches 948 drones at Ukraine in largest attack over 24-hour period",
-    "Madagascar's military ruler decrees that ministers must pass lie detector tests",
-    "Australia and EU agree sweeping trade deal in face of global uncertainty",
-    "The U.S. Military Said It Helped Bomb a Drug Camp in Ecuador. It Was a Dairy Farm.",
-    "'Human 3D Printer' Carves Intricate Carrot Sculptures with Her Teeth",
-    "15-Year-Old Teenager Steals Bus, Drives It 80 Miles to Take Girlfriend to School",
-    "Meta and YouTube found liable in landmark social media addiction trial",
     "UN votes to describe slave trade as 'gravest crime against humanity'",
     "Iran War Live Updates: Tehran Dismisses U.S. Cease-Fire Conditions as Israel Orders 48 Hours of Attacks",
     "Democrats flip Florida state seat that includes Trump's Mar-a-Lago home",
@@ -19,7 +12,14 @@
     "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas",
     "Two drone strikes on civilian targets kill 28 people in Sudan",
     "Bizarre Power Suit Transforms Wearer Into a Half-Human Half-Robot Centaur",
-    "The Cheeky Boy at Hummel Fountain"
+    "The Cheeky Boy at Hummel Fountain",
+    "Iran-backed hackers breach FBI director Kash Patel's personal emails",
+    "Iran War Live Updates: Rubio Says U.S. Can Achieve Its Goals Without Ground Troops",
+    "UN's landmark slavery ruling energises African Union's fight for reparations",
+    "Nepal's New Prime Minister, Former Rapper Balendra Shah, Sworn In",
+    "Trump orders paycheques for TSA workers as Congress stalls and airport chaos grinds on",
+    "$5 Million Mansion Rented on Airbnb for Small Private Event, Vandalized by 800 Partying Teens",
+    "Chinese Film Studio Sparks Controversy by Officially Introducing AI Actors"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -34,7 +34,8 @@
     "J.B.S. Haldane",
     "Joanna Macy",
     "Joseph Campbell",
-    "Albert Einstein"
+    "Albert Einstein",
+    "H.P. Lovecraft"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -49,6 +50,7 @@
     "Hope is the Thing with Feathers",
     "Sonnet 129: The expense of spirit in a waste of shame",
     "To My Wife - With A Copy Of My Poems",
-    "Infant Sorrow"
+    "Infant Sorrow",
+    "i carry your heart with me"
   ]
 }
