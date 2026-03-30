@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "UN votes to describe slave trade as 'gravest crime against humanity'",
-    "Iran War Live Updates: Tehran Dismisses U.S. Cease-Fire Conditions as Israel Orders 48 Hours of Attacks",
-    "Democrats flip Florida state seat that includes Trump's Mar-a-Lago home",
-    "'Extraordinary event' for mountain gorillas as new twins born in DRC",
-    "The World's Narrowest House Is Only 63 Centimetres Wide",
-    "Man Passes Theoretical Driving Test After 9 Years and 139 Attempts",
-    "Iran War Live Updates: Trump Again Extends Deadline for Iran to Open Strait or Face Strikes on Power Grid",
     "Zelensky visits Saudi Arabia after offering Ukraine's drone expertise",
     "Hungary Opens Espionage Case Against Journalist",
     "Ukraine war briefing: Zelenskyy says US has linked security guarantees to ceding of Donbas",
@@ -19,7 +12,14 @@
     "Nepal's New Prime Minister, Former Rapper Balendra Shah, Sworn In",
     "Trump orders paycheques for TSA workers as Congress stalls and airport chaos grinds on",
     "$5 Million Mansion Rented on Airbnb for Small Private Event, Vandalized by 800 Partying Teens",
-    "Chinese Film Studio Sparks Controversy by Officially Introducing AI Actors"
+    "Chinese Film Studio Sparks Controversy by Officially Introducing AI Actors",
+    "Spain closes airspace to US aircraft involved in Iran war",
+    "They've Been Accused of Running a 'Covert' Operation in Greenland. It's No Secret.",
+    "News outlets falsely report Somaliland called for extradition of Ilhan Omar",
+    "Palestinians convicted of deadly attacks face death penalty under new Israeli law",
+    "Barbie Dream Fest in Florida to issue refunds after fan complaints",
+    "Influencer Allegedly Stages Her Own Kidnapping at Gunpoint for Attention",
+    "Frankie the Chrome Gnome in Langwarrin, Australia"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -35,7 +35,8 @@
     "Joanna Macy",
     "Joseph Campbell",
     "Albert Einstein",
-    "H.P. Lovecraft"
+    "H.P. Lovecraft",
+    "Isak Dinesen"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -51,6 +52,7 @@
     "Sonnet 129: The expense of spirit in a waste of shame",
     "To My Wife - With A Copy Of My Poems",
     "Infant Sorrow",
-    "i carry your heart with me"
+    "i carry your heart with me",
+    "Lines to a Reviewer"
   ]
 }
