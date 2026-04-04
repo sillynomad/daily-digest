@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Mass robotaxi malfunction halts traffic in Chinese city",
-    "U.S. Plans Military Expansion in Greenland",
-    "In UK Prisons, Drones Fly In Contraband 'As if by Uber Eats'",
-    "News outlets falsely report Somaliland called for extradition of Ilhan Omar",
-    "Girl Power! 9-Year-Old Girl Weighs 60 Lbs, Deadlifts Three Times Her Body Weight",
-    "Ego's Karaoke Bar in Austin",
-    "Trump removes US Attorney General Pam Bondi",
     "Iran War Live Updates: Macron Voices European Frustration With Trump for Criticizing NATO",
     "Uganda receives first US deportation flight under third-country agreement",
     "Iran's two largest steel plants shut down due to air strikes, companies say",
@@ -19,7 +12,14 @@
     "Uganda receives first US deportation flight under third-country agreement",
     "Myanmar Junta Chief Ascends to President, Five Years After Coup",
     "The World's Largest Hotel Features Over 7,000 Rooms",
-    "Dutch Politician Expelled from Her Party for Editing Her Publicity Photo Too Much"
+    "Dutch Politician Expelled from Her Party for Editing Her Publicity Photo Too Much",
+    "US and Iran trade threats to unleash 'hell' as search for missing US airman continues",
+    "Trump Wants to Make Deportation Deals. Autocrats Are Ready to Listen.",
+    "People of Burkina Faso should forget about democracy, says military ruler",
+    "German males under 45 may need military approval for long stays abroad",
+    "News outlets falsely report Somaliland called for extradition of Ilhan Omar",
+    "Hangry Planet in San Bruno, California",
+    "The Devil on Linnégatan in Gothenburg, Sweden"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -40,7 +40,8 @@
     "Isak Dinesen",
     "B.F. Skinner",
     "Isak Dinesen",
-    "Isak Dinesen"
+    "Isak Dinesen",
+    "Marvin Minsky"
   ],
   "poem_titles": [
     "i carry your heart with me",
@@ -61,6 +62,7 @@
     "How know it from a Summer's Day?",
     "Still I Rise",
     "Sonnet 91: Some glory in their birth, some in their skill",
-    "Trusty as the stars"
+    "Trusty as the stars",
+    "The Road Not Taken"
   ]
 }
