@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Iran War Live Updates: Macron Voices European Frustration With Trump for Criticizing NATO",
-    "Uganda receives first US deportation flight under third-country agreement",
-    "Iran's two largest steel plants shut down due to air strikes, companies say",
-    "Brazil grants joint custody over pets in new law for separated couples",
-    "The World's Spiciest Plant Makes the Hottest Chilli Pepper Feel Mild in Comparison",
-    "$5 Million Mansion Rented on Airbnb for Small Private Event, Vandalized by 800 Partying Teens",
-    "Iran War Live Updates: Downed U.S. Jet and Missing Crew Member Raise Stakes in War",
     "People of Burkina Faso should forget about democracy, says military ruler",
     "Artemis II crew take 'spectacular' image of Earth",
     "Uganda receives first US deportation flight under third-country agreement",
@@ -19,10 +12,16 @@
     "German males under 45 may need military approval for long stays abroad",
     "News outlets falsely report Somaliland called for extradition of Ilhan Omar",
     "Hangry Planet in San Bruno, California",
-    "The Devil on Linnégatan in Gothenburg, Sweden"
+    "The Devil on Linnégatan in Gothenburg, Sweden",
+    "Trump issues expletive-laden threat to Iran over Hormuz Strait blockage",
+    "Pope Leo XIV Calls for Peace in First Easter Mass",
+    "People of Burkina Faso should forget about democracy, says military ruler",
+    "More Than 70 Migrants Missing After Boat Capsizes Off Libya",
+    "Uganda receives first US deportation flight under third-country agreement",
+    "Girl Power! 9-Year-Old Girl Weighs 60 Lbs, Deadlifts Three Times Her Body Weight",
+    "Mäusebunker in Berlin, Germany"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Albert Einstein",
     "Joseph Campbell",
     "Isak Dinesen",
@@ -41,10 +40,10 @@
     "B.F. Skinner",
     "Isak Dinesen",
     "Isak Dinesen",
-    "Marvin Minsky"
+    "Marvin Minsky",
+    "H.P. Lovecraft"
   ],
   "poem_titles": [
-    "i carry your heart with me",
     "Fragment: \"Amor Aeternus\"",
     "The Road Not Taken",
     "Still I Rise",
@@ -63,6 +62,7 @@
     "Still I Rise",
     "Sonnet 91: Some glory in their birth, some in their skill",
     "Trusty as the stars",
-    "The Road Not Taken"
+    "The Road Not Taken",
+    "Time was upon"
   ]
 }
