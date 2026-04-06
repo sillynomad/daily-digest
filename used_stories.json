@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "People of Burkina Faso should forget about democracy, says military ruler",
-    "Artemis II crew take 'spectacular' image of Earth",
-    "Uganda receives first US deportation flight under third-country agreement",
-    "Myanmar Junta Chief Ascends to President, Five Years After Coup",
-    "The World's Largest Hotel Features Over 7,000 Rooms",
-    "Dutch Politician Expelled from Her Party for Editing Her Publicity Photo Too Much",
-    "US and Iran trade threats to unleash 'hell' as search for missing US airman continues",
     "Trump Wants to Make Deportation Deals. Autocrats Are Ready to Listen.",
     "People of Burkina Faso should forget about democracy, says military ruler",
     "German males under 45 may need military approval for long stays abroad",
@@ -19,10 +12,16 @@
     "More Than 70 Migrants Missing After Boat Capsizes Off Libya",
     "Uganda receives first US deportation flight under third-country agreement",
     "Girl Power! 9-Year-Old Girl Weighs 60 Lbs, Deadlifts Three Times Her Body Weight",
-    "Mäusebunker in Berlin, Germany"
+    "Mäusebunker in Berlin, Germany",
+    "Trump threatens to take out Iran in 'one night' if no deal before deadline",
+    "People of Burkina Faso should forget about democracy, says military ruler",
+    "Epstein in Paris: How a Sex Offender Hustled for Access to France's Elite",
+    "Uganda receives first US deportation flight under third-country agreement",
+    "A Hidden Russian Hand in Hungary's Election? Actually, It's Quite Open.",
+    "The World's Spiciest Plant Makes the Hottest Chilli Pepper Feel Mild in Comparison",
+    "Janine Iron and Washing Museum in Mossel Bay, South Africa"
   ],
   "quote_authors": [
-    "Albert Einstein",
     "Joseph Campbell",
     "Isak Dinesen",
     "J.B.S. Haldane",
@@ -41,10 +40,10 @@
     "Isak Dinesen",
     "Isak Dinesen",
     "Marvin Minsky",
-    "H.P. Lovecraft"
+    "H.P. Lovecraft",
+    "Joseph Campbell"
   ],
   "poem_titles": [
-    "Fragment: \"Amor Aeternus\"",
     "The Road Not Taken",
     "Still I Rise",
     "Ode on Solitude.",
@@ -63,6 +62,7 @@
     "Sonnet 91: Some glory in their birth, some in their skill",
     "Trusty as the stars",
     "The Road Not Taken",
-    "Time was upon"
+    "Time was upon",
+    "Young Lambs"
   ]
 }
