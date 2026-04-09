@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "People of Burkina Faso should forget about democracy, says military ruler",
-    "Epstein in Paris: How a Sex Offender Hustled for Access to France's Elite",
-    "Uganda receives first US deportation flight under third-country agreement",
-    "A Hidden Russian Hand in Hungary's Election? Actually, It's Quite Open.",
-    "The World's Spiciest Plant Makes the Hottest Chilli Pepper Feel Mild in Comparison",
-    "Janine Iron and Washing Museum in Mossel Bay, South Africa",
-    "Iran War Live Updates: U.S. and Iran Agree to Cease-Fire, Avoiding Trump's Threats of Imminent Devastation",
     "JD Vance backs Orbán's re-election bid in Budapest visit and hits out at EU",
     "Kanye West 'Should Never Have Been Invited,' Starmer Says After Barring Rapper From UK",
     "People of Burkina Faso should forget about democracy, says military ruler",
@@ -19,10 +12,16 @@
     "US seeks to deport Kilmar Ábrego García to Liberia despite new Costa Rica deal",
     "People of Burkina Faso should forget about democracy, says military ruler",
     "The World's Oldest Pigeon in Captivity Lived Over 44 Years",
-    "Chinese Students Increasingly Renting AI Smart Glasses to Cheat on University Exams"
+    "Chinese Students Increasingly Renting AI Smart Glasses to Cheat on University Exams",
+    "Ceasefire or no ceasefire, the Middle East's reshuffling is not yet done",
+    "Iran's Battered Leaders Emerge From War Confident — and With New Cards",
+    "Wild chimpanzees recorded waging 'civil war' with coordinated attacks between two groups",
+    "UK says Russia ran submarine operation over cables and pipelines",
+    "US has let in 4,499 refugees since October - all but three were South African",
+    "Over 100 Self-Driving Robotaxis Stop Working Simultaneously And No One Really Knows Why",
+    "Gator Country in Beaumont, Texas"
   ],
   "quote_authors": [
-    "J.B.S. Haldane",
     "Arthur Conan Doyle",
     "Isak Dinesen",
     "Joseph Campbell",
@@ -41,10 +40,10 @@
     "H.P. Lovecraft",
     "Joseph Campbell",
     "Alfred Korzybski",
-    "Alan Watts"
+    "Alan Watts",
+    "Joseph Campbell"
   ],
   "poem_titles": [
-    "Ode on Solitude.",
     "The Hope Of My Heart",
     "To Tirzah",
     "To a Young Child",
@@ -63,6 +62,7 @@
     "Time was upon",
     "Young Lambs",
     "Happy Is England! I Could Be Content",
-    "Patriotism 01 Innominatus"
+    "Patriotism 01 Innominatus",
+    "A Tale"
   ]
 }
