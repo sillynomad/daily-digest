@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "JD Vance backs Orbán's re-election bid in Budapest visit and hits out at EU",
-    "Kanye West 'Should Never Have Been Invited,' Starmer Says After Barring Rapper From UK",
-    "People of Burkina Faso should forget about democracy, says military ruler",
-    "'We still deserve due process,' says Cambodian man deported by US to Eswatini",
-    "The World's Largest Hotel Features Over 7,000 Rooms",
-    "Dutch Politician Expelled from Her Party for Editing Her Publicity Photo Too Much",
-    "Iran ceasefire deal gives Trump a way out of war - but at a high cost",
     "At least 182 killed across Lebanon in large wave of Israeli strikes",
     "Greece Plans to Block Social Media for Children Under 15",
     "US seeks to deport Kilmar Ábrego García to Liberia despite new Costa Rica deal",
@@ -19,10 +12,16 @@
     "UK says Russia ran submarine operation over cables and pipelines",
     "US has let in 4,499 refugees since October - all but three were South African",
     "Over 100 Self-Driving Robotaxis Stop Working Simultaneously And No One Really Knows Why",
-    "Gator Country in Beaumont, Texas"
+    "Gator Country in Beaumont, Texas",
+    "Lebanon and Israel officials to meet in US on Tuesday",
+    "Iran War Live Updates: Iranian Delegation Arrives at Peace Talks, With Vance en Route",
+    "Prince Harry sued for defamation by charity he co-founded",
+    "This Hungarian Town Explains Why Orban Could Lose on Sunday",
+    "Wild chimpanzees recorded waging 'civil war' with coordinated attacks between two groups",
+    "The Octoauto – A Legendary Eight-Wheel Automobile Built for Comfort",
+    "Woman Caught Hanging on to Husband's Moving Truck to Catch Him Cheating"
   ],
   "quote_authors": [
-    "Arthur Conan Doyle",
     "Isak Dinesen",
     "Joseph Campbell",
     "Isak Dinesen",
@@ -41,10 +40,10 @@
     "Joseph Campbell",
     "Alfred Korzybski",
     "Alan Watts",
-    "Joseph Campbell"
+    "Joseph Campbell",
+    "H.P. Lovecraft"
   ],
   "poem_titles": [
-    "The Hope Of My Heart",
     "To Tirzah",
     "To a Young Child",
     "The Waning Moon",
@@ -63,6 +62,7 @@
     "Young Lambs",
     "Happy Is England! I Could Be Content",
     "Patriotism 01 Innominatus",
-    "A Tale"
+    "A Tale",
+    "Digging"
   ]
 }
