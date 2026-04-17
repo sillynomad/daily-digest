@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Hamas rejects Gaza disarmament plan, Palestinian official says",
-    "Mark Carney Seals a Majority Government and Remakes Canada's Liberal Party",
-    "Survivors ask why busy market bombed in Nigerian anti-terror campaign",
-    "Anger at 'bloody unacceptable' efforts to end Sudan's war as conflict enters fourth year",
-    "Chinese Company Sets New World Record with Over 22,000 Drones Flying at the Same Time",
-    "Woman Suffering from Chronic Cough Discovers Nose Piercing Stuck in Her Lungs",
-    "Iran War Live Updates: Pakistani Mediators Arrive in Iran to Keep Peace Talks Alive",
     "Trump's rift with Pope is playing out in public - it's costing him valuable support",
     "Nine killed in second Turkish school shooting in two days",
     "More than £1bn pledged for Sudan as humanitarian crisis deepens",
@@ -19,10 +12,16 @@
     "South African politician Julius Malema given five-year jail term for gun offence",
     "More than £1bn pledged for Sudan as humanitarian crisis deepens",
     "Chinese Company Sets New World Record with Over 22,000 Drones Flying at the Same Time",
-    "My Dream Holiday Was a $30,000 Scam"
+    "My Dream Holiday Was a $30,000 Scam",
+    "Oil prices plunge as Iran says Strait 'open'",
+    "Thousands of Lebanese Try to Head Home After Israel-Lebanon Truce",
+    "Kenyan firm sacks more than 1,000 workers after losing Meta contract",
+    "Starmer's Credibility Just Took Another Body Blow Over the Mandelson Scandal",
+    "South African politician Julius Malema given five-year jail term for gun offence",
+    "China's Humanoid Robots Are Now as Fast as Usain Bolt",
+    "Monterey McDonald's"
   ],
   "quote_authors": [
-    "Albert Einstein",
     "H.P. Lovecraft",
     "Isak Dinesen",
     "Isak Dinesen",
@@ -41,10 +40,10 @@
     "Ernest Hemingway",
     "Albert Einstein",
     "Albert Einstein",
-    "Albert Einstein"
+    "Albert Einstein",
+    "B.F. Skinner"
   ],
   "poem_titles": [
-    "Infant Sorrow",
     "i carry your heart with me",
     "Lines to a Reviewer",
     "How know it from a Summer's Day?",
@@ -63,6 +62,7 @@
     "Still I Rise",
     "Still I Rise",
     "Memoriam A. H. H.: 44. How fares it with the happy dead?",
-    "Hope is the Thing with Feathers"
+    "Hope is the Thing with Feathers",
+    "Two Pewits"
   ]
 }
