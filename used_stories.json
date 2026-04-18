@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Trump's rift with Pope is playing out in public - it's costing him valuable support",
-    "Nine killed in second Turkish school shooting in two days",
-    "More than £1bn pledged for Sudan as humanitarian crisis deepens",
-    "South Africa names apartheid-era negotiator as ambassador to US",
-    "Man Spends Eight Years with Metal Chopstick Stuck in His Throat",
-    "Company Develops Drug That Allegedly Slows Biological Aging in Dogs",
-    "Israel and Lebanon agree 10-day ceasefire, Trump says",
     "Pope Leo, Amid Standoff With Trump, Says 'Woe to Those Who Manipulate Religion'",
     "Orban's Defeat Punctures Europe's Far Right, but Also Offers It a Road Map",
     "South African politician Julius Malema given five-year jail term for gun offence",
@@ -19,10 +12,16 @@
     "Starmer's Credibility Just Took Another Body Blow Over the Mandelson Scandal",
     "South African politician Julius Malema given five-year jail term for gun offence",
     "China's Humanoid Robots Are Now as Fast as Usain Bolt",
-    "Monterey McDonald's"
+    "Monterey McDonald's",
+    "Strait of Hormuz closed again, Iran says, as ships attacked",
+    "Kyiv Mass Shooting Kills 6 and Gunman Is Shot Dead After Taking Hostages in Grocery",
+    "Kenyan firm sacks more than 1,000 workers after losing Meta contract",
+    "South African politician Julius Malema given five-year jail term for gun offence",
+    "Pope says 'tyrants' speech was not aimed at Trump",
+    "Woman Suffering from Chronic Cough Discovers Nose Piercing Stuck in Her Lungs",
+    "Skullbone City Hall & Hampton's General Store in Bradford, Tennessee"
   ],
   "quote_authors": [
-    "H.P. Lovecraft",
     "Isak Dinesen",
     "Isak Dinesen",
     "B.F. Skinner",
@@ -41,10 +40,10 @@
     "Albert Einstein",
     "Albert Einstein",
     "Albert Einstein",
-    "B.F. Skinner"
+    "B.F. Skinner",
+    "Isak Dinesen"
   ],
   "poem_titles": [
-    "i carry your heart with me",
     "Lines to a Reviewer",
     "How know it from a Summer's Day?",
     "Still I Rise",
@@ -63,6 +62,7 @@
     "Still I Rise",
     "Memoriam A. H. H.: 44. How fares it with the happy dead?",
     "Hope is the Thing with Feathers",
-    "Two Pewits"
+    "Two Pewits",
+    "Hope is the Thing with Feathers"
   ]
 }
