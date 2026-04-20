@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Thousands of Lebanese Try to Head Home After Israel-Lebanon Truce",
-    "Kenyan firm sacks more than 1,000 workers after losing Meta contract",
-    "Starmer's Credibility Just Took Another Body Blow Over the Mandelson Scandal",
-    "South African politician Julius Malema given five-year jail term for gun offence",
-    "China's Humanoid Robots Are Now as Fast as Usain Bolt",
-    "Monterey McDonald's",
-    "Strait of Hormuz closed again, Iran says, as ships attacked",
     "Kyiv Mass Shooting Kills 6 and Gunman Is Shot Dead After Taking Hostages in Grocery",
     "Kenyan firm sacks more than 1,000 workers after losing Meta contract",
     "South African politician Julius Malema given five-year jail term for gun offence",
@@ -19,10 +12,16 @@
     "Eight children killed in Louisiana shooting, police say",
     "Hamas Officials Say Group Is Ready to Hand Over Some Weapons",
     "Man Spends Eight Years with Metal Chopstick Stuck in His Throat",
-    "Medieval Torture Museum in Chicago"
+    "Medieval Torture Museum in Chicago",
+    "Outrage over Israeli soldier's vandalism of Jesus statue in Lebanon",
+    "Iran War Live Updates: Tehran and Trump Send Signals Ahead of Potential Talks",
+    "Arrests fuel fears among Madagascar's gen Z protesters that new regime no better than one they overthrew",
+    "Japan on high alert for 'huge' second quake after issuing tsunami warning",
+    "Man kills seven of his children, and an eighth child, in Louisiana mass shooting",
+    "Indian Workers Wear Head-mounted Cameras to Allegedly Train Their AI Replacements",
+    "We Took Three Kids to Napa. One Joined the Wine Club."
   ],
   "quote_authors": [
-    "Isak Dinesen",
     "B.F. Skinner",
     "Isak Dinesen",
     "Isak Dinesen",
@@ -41,10 +40,10 @@
     "Albert Einstein",
     "B.F. Skinner",
     "Isak Dinesen",
-    "Albert Einstein"
+    "Albert Einstein",
+    "Joseph Campbell"
   ],
   "poem_titles": [
-    "How know it from a Summer's Day?",
     "Still I Rise",
     "Sonnet 91: Some glory in their birth, some in their skill",
     "Trusty as the stars",
@@ -63,6 +62,7 @@
     "Hope is the Thing with Feathers",
     "Two Pewits",
     "Hope is the Thing with Feathers",
-    "i carry your heart with me"
+    "i carry your heart with me",
+    "Still I Rise"
   ]
 }
