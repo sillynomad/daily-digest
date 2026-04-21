@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Kyiv Mass Shooting Kills 6 and Gunman Is Shot Dead After Taking Hostages in Grocery",
-    "Kenyan firm sacks more than 1,000 workers after losing Meta contract",
-    "South African politician Julius Malema given five-year jail term for gun offence",
-    "Pope says 'tyrants' speech was not aimed at Trump",
-    "Woman Suffering from Chronic Cough Discovers Nose Piercing Stuck in Her Lungs",
-    "Skullbone City Hall & Hampton's General Store in Bradford, Tennessee",
-    "Iran War Live Updates: U.S. Attacks Iranian Cargo Ship While Preparing for New Round of Talks",
     "Tehran will never cede control of Strait of Hormuz, senior Iranian politician tells BBC",
     "Kenyan firm sacks more than 1,000 workers after losing Meta contract",
     "Eight children killed in Louisiana shooting, police say",
@@ -19,10 +12,16 @@
     "Japan on high alert for 'huge' second quake after issuing tsunami warning",
     "Man kills seven of his children, and an eighth child, in Louisiana mass shooting",
     "Indian Workers Wear Head-mounted Cameras to Allegedly Train Their AI Replacements",
-    "We Took Three Kids to Napa. One Joined the Wine Club."
+    "We Took Three Kids to Napa. One Joined the Wine Club.",
+    "Iran sees mass redundancies from war with US and Israel",
+    "Trump Extends Cease-Fire With Iran",
+    "Unprecedented ruling finds Hungary's anti-LGBTQ laws in breach of EU values",
+    "Taiwan president blames China for forced cancellation of Eswatini trip",
+    "Arrests fuel fears among Madagascar's gen Z protesters that new regime no better than one they overthrew",
+    "Turkish Politician Gets International Attention for His Impressive Mustache",
+    "China's Humanoid Robots Are Now as Fast as Usain Bolt"
   ],
   "quote_authors": [
-    "B.F. Skinner",
     "Isak Dinesen",
     "Isak Dinesen",
     "Marvin Minsky",
@@ -41,10 +40,10 @@
     "B.F. Skinner",
     "Isak Dinesen",
     "Albert Einstein",
+    "Joseph Campbell",
     "Joseph Campbell"
   ],
   "poem_titles": [
-    "Still I Rise",
     "Sonnet 91: Some glory in their birth, some in their skill",
     "Trusty as the stars",
     "The Road Not Taken",
@@ -63,6 +62,7 @@
     "Two Pewits",
     "Hope is the Thing with Feathers",
     "i carry your heart with me",
-    "Still I Rise"
+    "Still I Rise",
+    "My prayers must meet a brazen heaven"
   ]
 }
