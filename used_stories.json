@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Trump Extends Cease-Fire With Iran",
-    "Unprecedented ruling finds Hungary's anti-LGBTQ laws in breach of EU values",
-    "Taiwan president blames China for forced cancellation of Eswatini trip",
-    "Arrests fuel fears among Madagascar's gen Z protesters that new regime no better than one they overthrew",
-    "Turkish Politician Gets International Attention for His Impressive Mustache",
-    "China's Humanoid Robots Are Now as Fast as Usain Bolt",
-    "Iran War Live Updates: Reported Seizure of Ships Injects New Uncertainty Over Peace Talks",
     "Billionaire backer sues Trump family's crypto firm over alleged extortion",
     "EU approves €90bn loan for Ukraine as pipeline is turned on ending deadlock",
     "Heatwaves, floods and wildfires pose rising threat to democracy, report finds",
@@ -19,10 +12,16 @@
     "Huge chunk of glacier blocks Everest route in peak climbing season",
     "$106 Billion Loan Reflects E.U.'s View That Peace in Ukraine Is Far Away",
     "The World's Largest Snack Store Sells Over 30,000 Kinds of Snacks from 70 Countries",
-    "Shortest Street in America in Bellefontaine, Ohio"
+    "Shortest Street in America in Bellefontaine, Ohio",
+    "Trump's envoys Witkoff and Kushner to fly to Pakistan for Iran talks",
+    "Gaza Set to Hold First Local Election in Two Decades",
+    "US millionaire big-game hunter dies after being crushed by elephants",
+    "Netanyahu Reveals He Had Prostate Cancer and Underwent Radiation Therapy",
+    "Heatwaves, floods and wildfires pose rising threat to democracy, report finds",
+    "Gamblers Allegedly Tamper with Weather Station Sensors to Win Polymarket Bets",
+    "The Museum of Dogs in Cape Town, South Africa"
   ],
   "quote_authors": [
-    "Marvin Minsky",
     "H.P. Lovecraft",
     "Joseph Campbell",
     "Alfred Korzybski",
@@ -41,10 +40,10 @@
     "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Campbell",
-    "Isak Dinesen"
+    "Isak Dinesen",
+    "H.P. Lovecraft"
   ],
   "poem_titles": [
-    "The Road Not Taken",
     "Time was upon",
     "Young Lambs",
     "Happy Is England! I Could Be Content",
@@ -63,6 +62,7 @@
     "Still I Rise",
     "My prayers must meet a brazen heaven",
     "Fragment: To Byron",
-    "Stella's Birthday March 13, 1719"
+    "Stella's Birthday March 13, 1719",
+    "To The Sad Moon"
   ]
 }
