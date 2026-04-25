@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Billionaire backer sues Trump family's crypto firm over alleged extortion",
-    "EU approves €90bn loan for Ukraine as pipeline is turned on ending deadlock",
-    "Heatwaves, floods and wildfires pose rising threat to democracy, report finds",
-    "Trump officials consider sending 1,100 Afghans who aided US forces to Congo",
-    "Restaurant Goes Viral for Its See-Through Pork Slices",
-    "14-Year-Old Whiz Kid Is Building a Working Aircraft Engine by Hand",
-    "Trump tells BBC that King's visit could 'absolutely' help repair relations with UK",
     "The Generals Who Are Now Running Iran",
     "Heatwaves, floods and wildfires pose rising threat to democracy, report finds",
     "Huge chunk of glacier blocks Everest route in peak climbing season",
@@ -19,10 +12,16 @@
     "Netanyahu Reveals He Had Prostate Cancer and Underwent Radiation Therapy",
     "Heatwaves, floods and wildfires pose rising threat to democracy, report finds",
     "Gamblers Allegedly Tamper with Weather Station Sensors to Win Polymarket Bets",
-    "The Museum of Dogs in Cape Town, South Africa"
+    "The Museum of Dogs in Cape Town, South Africa",
+    "Trump cancels US envoys' trip to Pakistan for talks on Iran war",
+    "US millionaire big-game hunter dies after being crushed by elephants",
+    "Mexico says US agents killed in crash weren't permitted to operate there",
+    "Europe Prepares for a Longer War in Ukraine, With No Strategy to End It",
+    "Militants and separatists launch coordinated attacks across Mali",
+    "Search for Missing Woman Hampered by Her Excessively Edited Social Media Photos",
+    "Family Uses AI Clone of Deceased Man to Spare His 80-Year-Old Mother the Pain of Knowing the Truth"
   ],
   "quote_authors": [
-    "H.P. Lovecraft",
     "Joseph Campbell",
     "Alfred Korzybski",
     "Alan Watts",
@@ -41,10 +40,10 @@
     "Joseph Campbell",
     "Joseph Campbell",
     "Isak Dinesen",
-    "H.P. Lovecraft"
+    "H.P. Lovecraft",
+    "Joseph Campbell"
   ],
   "poem_titles": [
-    "Time was upon",
     "Young Lambs",
     "Happy Is England! I Could Be Content",
     "Patriotism 01 Innominatus",
@@ -63,6 +62,7 @@
     "My prayers must meet a brazen heaven",
     "Fragment: To Byron",
     "Stella's Birthday March 13, 1719",
-    "To The Sad Moon"
+    "To The Sad Moon",
+    "Fragment: Thoughts Come and Go in Solitude"
   ]
 }
