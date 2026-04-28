@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "US millionaire big-game hunter dies after being crushed by elephants",
-    "Mexico says US agents killed in crash weren't permitted to operate there",
-    "Europe Prepares for a Longer War in Ukraine, With No Strategy to End It",
-    "Militants and separatists launch coordinated attacks across Mali",
-    "Search for Missing Woman Hampered by Her Excessively Edited Social Media Photos",
-    "Family Uses AI Clone of Deceased Man to Spare His 80-Year-Old Mother the Pain of Knowing the Truth",
-    "Trump and officials 'likely' targets of press dinner shooting suspect, authorities believe",
     "U.S. Mint Buys Drug Cartel Gold and Sells It as 'American'",
     "Mali defence minister killed amid flurry of insurgent attacks",
     "Trump cancels US envoys' trip to Pakistan for talks on Iran war",
@@ -19,10 +12,16 @@
     "Canada Says Its Gold Is Traceable and Clean. So We Traced It.",
     "Pakistan accused of attacking Afghan university",
     "Amateur Breeders Grow Miniature Watermelons the Size of Chicken Eggs",
-    "Novel Technology Fights Fire with Sound Waves Instead of Water or Other Chemicals"
+    "Novel Technology Fights Fire with Sound Waves Instead of Water or Other Chemicals",
+    "UAE Says It Will Leave OPEC as Iran War Strains Oil Markets",
+    "Comey charged with threatening Trump's life in Instagram post",
+    "Fears of resurgence in Somali piracy after three vessels hijacked in a week",
+    "US regulator to review Disney broadcast licences after Jimmy Kimmel joke about Melania Trump",
+    "Indian billionaire's son offers to save Escobar's hippos",
+    "Food Blogger Makes Translucent Fried Chicken That Looks Like Glass Sculptures",
+    "Gamblers Allegedly Tamper with Weather Station Sensors to Win Polymarket Bets"
   ],
   "quote_authors": [
-    "Alan Watts",
     "Joseph Campbell",
     "H.P. Lovecraft",
     "Ernest Hemingway",
@@ -41,10 +40,10 @@
     "H.P. Lovecraft",
     "Joseph Campbell",
     "Niels Bohr",
-    "Arnold J. Toynbee"
+    "Arnold J. Toynbee",
+    "Morton Feldman"
   ],
   "poem_titles": [
-    "Patriotism 01 Innominatus",
     "A Tale",
     "Digging",
     "Astrophel and Stella VII: WhenNature Made her Chief Work",
@@ -63,6 +62,7 @@
     "To The Sad Moon",
     "Fragment: Thoughts Come and Go in Solitude",
     "La Revanche",
-    "Of a Lady Singing to Her Lute."
+    "Of a Lady Singing to Her Lute.",
+    "Spirit of Plato"
   ]
 }
