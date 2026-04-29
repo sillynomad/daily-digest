@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "U.S. Mint Buys Drug Cartel Gold and Sells It as 'American'",
-    "Mali defence minister killed amid flurry of insurgent attacks",
-    "Trump cancels US envoys' trip to Pakistan for talks on Iran war",
-    "'Astonishing' discovery could help save children from deadly disfiguring condition",
-    "University Lab Worker Tries to Poison Fellow Researcher Over a Promotion",
-    "Caucasian Wingnut of Brooklyn Botanic Garden in Brooklyn, New York",
-    "Mali Terror Attack: Defense Minister Killed by Al Qaeda-Linked JNIM",
     "Gunmen kill at least 29 at football pitch in north-east Nigeria, governor says",
     "Iran Offers Plan to Focus on Strait of Hormuz and Delay Nuclear Talks",
     "Canada Says Its Gold Is Traceable and Clean. So We Traced It.",
@@ -19,10 +12,16 @@
     "US regulator to review Disney broadcast licences after Jimmy Kimmel joke about Melania Trump",
     "Indian billionaire's son offers to save Escobar's hippos",
     "Food Blogger Makes Translucent Fried Chicken That Looks Like Glass Sculptures",
-    "Gamblers Allegedly Tamper with Weather Station Sensors to Win Polymarket Bets"
+    "Gamblers Allegedly Tamper with Weather Station Sensors to Win Polymarket Bets",
+    "Oil price rises above $120 after reports of 'extended' Iran blockade",
+    "Epstein Obtained Objects From Islam's Holiest Site for His Island 'Mosque'",
+    "Hungary's next PM says frozen EU funds will be paid out soon",
+    "South Africa deports Mugabe's son for unrelated offences after employee shot at family home",
+    "Calls for humanitarian corridor through strait of Hormuz as Iran war hits vital aid",
+    "Bixonimania – The Fake Health Condition That Fooled the Internet with the Help of AI",
+    "Rewind Wind Turbine Blade Benches in Rotterdam, Netherlands"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "H.P. Lovecraft",
     "Ernest Hemingway",
     "Henry Miller",
@@ -41,10 +40,10 @@
     "Joseph Campbell",
     "Niels Bohr",
     "Arnold J. Toynbee",
-    "Morton Feldman"
+    "Morton Feldman",
+    "Albert Einstein"
   ],
   "poem_titles": [
-    "A Tale",
     "Digging",
     "Astrophel and Stella VII: WhenNature Made her Chief Work",
     "In Memoriam 3: O Sorrow, Cruel Fellowship",
@@ -63,6 +62,7 @@
     "Fragment: Thoughts Come and Go in Solitude",
     "La Revanche",
     "Of a Lady Singing to Her Lute.",
-    "Spirit of Plato"
+    "Spirit of Plato",
+    "From the Original Draft of the Poem to William Shelley"
   ]
 }
