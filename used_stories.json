@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Comey charged with threatening Trump's life in Instagram post",
-    "Fears of resurgence in Somali piracy after three vessels hijacked in a week",
-    "US regulator to review Disney broadcast licences after Jimmy Kimmel joke about Melania Trump",
-    "Indian billionaire's son offers to save Escobar's hippos",
-    "Food Blogger Makes Translucent Fried Chicken That Looks Like Glass Sculptures",
-    "Gamblers Allegedly Tamper with Weather Station Sensors to Win Polymarket Bets",
-    "Oil price rises above $120 after reports of 'extended' Iran blockade",
     "Epstein Obtained Objects From Islam's Holiest Site for His Island 'Mosque'",
     "Hungary's next PM says frozen EU funds will be paid out soon",
     "South Africa deports Mugabe's son for unrelated offences after employee shot at family home",
@@ -19,10 +12,16 @@
     "Macron says France must address issue of reparations for its role in slave trade",
     "US is 'simply choosing not to stop' Ebola outbreak after massive public health cuts, experts say",
     "Bio-Engineering Company Hatches Chicks Out of Completely Artificial Eggs",
-    "Russian Space Agency Displays Commercial Ads on Rockets to Boost Revenues"
+    "Russian Space Agency Displays Commercial Ads on Rockets to Boost Revenues",
+    "Russia's Putin vows retaliation after accusing Ukraine of hitting student dormitory",
+    "Before Europe Anoints Someone to Talk to Putin, It Debates What to Talk About",
+    "Suspected Ebola cases triple in a week as WHO warns of rapid spread in DRC",
+    "Europeans Remain Wary After Trump Promises to Send Troops to Poland",
+    "Macron says France must address issue of reparations for its role in slave trade",
+    "Real-Life Saitama Emulates One-Punch Man's Training for Three Years with Impressive Results",
+    "Controversial 'AI-Powered Pet Translator' Boasts a 95% Accurracy Rate"
   ],
   "quote_authors": [
-    "Ernest Hemingway",
     "Henry Miller",
     "Ernest Hemingway",
     "Albert Einstein",
@@ -41,10 +40,10 @@
     "Arnold J. Toynbee",
     "Morton Feldman",
     "Albert Einstein",
+    "Albert Einstein",
     "Albert Einstein"
   ],
   "poem_titles": [
-    "Astrophel and Stella VII: WhenNature Made her Chief Work",
     "In Memoriam 3: O Sorrow, Cruel Fellowship",
     "Still I Rise",
     "Still I Rise",
@@ -63,6 +62,7 @@
     "Of a Lady Singing to Her Lute.",
     "Spirit of Plato",
     "From the Original Draft of the Poem to William Shelley",
-    "Forbidden Fruit A Flavor Has"
+    "Forbidden Fruit A Flavor Has",
+    "Queries to Casuists"
   ]
 }
