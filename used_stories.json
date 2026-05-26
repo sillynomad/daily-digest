@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Before Europe Anoints Someone to Talk to Putin, It Debates What to Talk About",
-    "Suspected Ebola cases triple in a week as WHO warns of rapid spread in DRC",
-    "Europeans Remain Wary After Trump Promises to Send Troops to Poland",
-    "Macron says France must address issue of reparations for its role in slave trade",
-    "Real-Life Saitama Emulates One-Punch Man's Training for Three Years with Impressive Results",
-    "Controversial 'AI-Powered Pet Translator' Boasts a 95% Accurracy Rate",
-    "Trump says Iran deal 'largely negotiated' including reopening Strait of Hormuz",
     "Xi Calls for All-Out Rescue After Coal Mine Explosion Kills at Least 82 in China",
     "White House pauses removal of detainees to DRC as Ebola outbreak widens",
     "Putin vows retaliation after accusing Ukraine of hitting student dormitory",
@@ -19,10 +12,16 @@
     "BBC at the site of China's worst mining disaster in more than a decade",
     "Blast targeting train kills at least 20 in Pakistan",
     "The Wonder of Zaria – How a 16-Year-Old Youth Almost Became a Member of Nigeria's Parliament",
-    "56-Year-Old Man Has 3-Pound Stone Removed from His Bladder"
+    "56-Year-Old Man Has 3-Pound Stone Removed from His Bladder",
+    "Deal with US not imminent, Iran says",
+    "Iran War Live Updates: As Talks to End War Resume in Qatar, U.S. Conducts Strikes on Iran's Gulf Coast",
+    "Pope Leo Warns of Risks From A.I. in 42,300-Word Encyclical",
+    "Spread of Ebola in DRC 'outpacing' response efforts, warns WHO",
+    "Cubans Cook With Charcoal and Wood Fires to Survive During Energy Crisis",
+    "Natural Wonders – The Fascinating 'Hellicopter Fruits' of the Hollong Tree",
+    "The Museum of Money in Dallas, Texas"
   ],
   "quote_authors": [
-    "Albert Einstein",
     "Albert Einstein",
     "Albert Einstein",
     "B.F. Skinner",
@@ -41,10 +40,10 @@
     "Albert Einstein",
     "Albert Einstein",
     "Marcus Aurelius",
-    "Albert Einstein"
+    "Albert Einstein",
+    "Joanna Macy"
   ],
   "poem_titles": [
-    "Still I Rise",
     "Memoriam A. H. H.: 44. How fares it with the happy dead?",
     "Hope is the Thing with Feathers",
     "Two Pewits",
@@ -63,6 +62,7 @@
     "Forbidden Fruit A Flavor Has",
     "Queries to Casuists",
     "Each Life Converges to some Centre --",
-    "Over the Hills"
+    "Over the Hills",
+    "Impromptu, in Reply to a Friend"
   ]
 }
