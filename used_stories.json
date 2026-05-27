@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Xi Calls for All-Out Rescue After Coal Mine Explosion Kills at Least 82 in China",
-    "White House pauses removal of detainees to DRC as Ebola outbreak widens",
-    "Putin vows retaliation after accusing Ukraine of hitting student dormitory",
-    "F1 great Prost 'injured as masked gang raid home'",
-    "Real-Life One Punch Man: Japanese Man Trains Like Anime Hero for Three Years",
-    "AI Pet Translator Claims 95% Accuracy in Understanding Cats and Dogs",
-    "Iran War Live Updates: U.S.-Iran Peace Deal Nearer, But Could Take Days to Nail Down, U.S. Official Says",
     "Large-scale Russian attack on Ukraine leaves four dead and dozens injured",
     "Number of suspected Ebola cases in DR Congo passes 900 as health workers face attacks and shortages",
     "BBC at the site of China's worst mining disaster in more than a decade",
@@ -19,10 +12,16 @@
     "Spread of Ebola in DRC 'outpacing' response efforts, warns WHO",
     "Cubans Cook With Charcoal and Wood Fires to Survive During Energy Crisis",
     "Natural Wonders – The Fascinating 'Hellicopter Fruits' of the Hollong Tree",
-    "The Museum of Money in Dallas, Texas"
+    "The Museum of Money in Dallas, Texas",
+    "Iran condemns US strikes as 'gross violation' of ceasefire",
+    "Russia threatens more Kyiv strikes and tells foreign nationals to leave",
+    "Iceland, Rattled by Trump's Greenland Threats, Weighs Joining the E.U.",
+    "Spread of Ebola in DRC 'outpacing' response efforts, warns WHO",
+    "Nasa unveils next steps to build permanent Moon base",
+    "Man Lives with 5-Inch Wooden Branch in Eye Socket for a Year and Half Without Knowing It",
+    "Real-Life Saitama Emulates One-Punch Man's Training for Three Years with Impressive Results"
   ],
   "quote_authors": [
-    "Albert Einstein",
     "Albert Einstein",
     "B.F. Skinner",
     "Isak Dinesen",
@@ -41,10 +40,10 @@
     "Albert Einstein",
     "Marcus Aurelius",
     "Albert Einstein",
-    "Joanna Macy"
+    "Joanna Macy",
+    "Joseph Campbell"
   ],
   "poem_titles": [
-    "Memoriam A. H. H.: 44. How fares it with the happy dead?",
     "Hope is the Thing with Feathers",
     "Two Pewits",
     "Hope is the Thing with Feathers",
@@ -63,6 +62,7 @@
     "Queries to Casuists",
     "Each Life Converges to some Centre --",
     "Over the Hills",
-    "Impromptu, in Reply to a Friend"
+    "Impromptu, in Reply to a Friend",
+    "The Road Not Taken"
   ]
 }
