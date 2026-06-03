@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "A Big Bang, a Fire and Panic as War Enters Romanian Homes",
-    "WHO puts Ebola outbreak death rate at 'huge' 30-50% as chief arrives in DRC",
-    "Ecuador accused of meddling in Colombian election with tariff vow",
-    "Oscar-winning Star Wars editor Marcia Lucas dies aged 80",
-    "Australian Designer Sparks Controversy with Real Taxidermied Rats Sewn onto Underwear",
-    "Cosplay Models Shock Internet by Selling 'Feet Juice' at California Anime Festival",
-    "Israel Captures Crusader Castle That Symbolized Its Long Lebanon Occupation",
     "Hundreds arrested and dozens of police injured after Champions League riots in France",
     "Polls close in Colombia presidential election that may reshape relations with US",
     "WHO calls for community cooperation to contain Ebola outbreak in DRC",
@@ -19,10 +12,16 @@
     "OpenAI let ChatGPT aid and abet mass shooters, Florida lawsuit claims",
     "UK will not have to pay Rwanda £100m over failed asylum scheme, court rules",
     "High School Students Create the World's Largest Remote-Controlled Paper Plane",
-    "Woman Unable to Close Her Eyes Due Botched Operation Now Has to Pay Surgeon for Defamation"
+    "Woman Unable to Close Her Eyes Due Botched Operation Now Has to Pay Surgeon for Defamation",
+    "Israel strikes southern Lebanon but partial truce with Hezbollah appears to hold",
+    "Russia Launches Deadly Strikes on Kyiv After Threatening Ukraine for a Week",
+    "Microsoft says new quantum chip 1,000 times more reliable than predecessor",
+    "'We don't have another country to run to': Kenyans fear US plan for Ebola quarantine site",
+    "People 'panicking' as Ghana passes sweeping law criminalising LGBTQ+ activity",
+    "Man Who Practiced Iron Sand Palm Kung-Fu Technique for 20 Years Has 3-Inch-Thick Palms",
+    "Supermileage, an Extremely Efficient Experimental Car That Gets 2,145 Miles per Gallon of Fuel"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Isak Dinesen",
     "H.P. Lovecraft",
     "Joseph Campbell",
@@ -41,10 +40,10 @@
     "John Schaar",
     "Joseph Campbell",
     "Joseph Campbell",
+    "Joseph Campbell",
     "Joseph Campbell"
   ],
   "poem_titles": [
-    "Fragment: To Byron",
     "Stella's Birthday March 13, 1719",
     "To The Sad Moon",
     "Fragment: Thoughts Come and Go in Solitude",
@@ -63,6 +62,7 @@
     "Sonnet",
     "Sonnet 70: That thou art blam'd shall not be thy defect",
     "Remembrance",
-    "There Was an Old Man in a Tree"
+    "There Was an Old Man in a Tree",
+    "Trees"
   ]
 }
