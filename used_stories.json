@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Hundreds arrested and dozens of police injured after Champions League riots in France",
-    "Polls close in Colombia presidential election that may reshape relations with US",
-    "WHO calls for community cooperation to contain Ebola outbreak in DRC",
-    "Even Havana's Street Sweepers Can't Escape the Impact of the Fuel Blockade",
-    "Male Model Credits Weightloss and Mewing Exercises for Shocking Physical Transformation",
-    "My dream holiday was a $30,000 scam",
-    "Lebanon says Hezbollah agrees reciprocal halt to attacks on Israel",
     "Andriy Yermak, Once the Muscle Behind Zelensky, Is Now Crowdfunding Bail Money",
     "People 'panicking' as Ghana passes sweeping law criminalising LGBTQ+ activity",
     "OpenAI let ChatGPT aid and abet mass shooters, Florida lawsuit claims",
@@ -19,10 +12,16 @@
     "'We don't have another country to run to': Kenyans fear US plan for Ebola quarantine site",
     "People 'panicking' as Ghana passes sweeping law criminalising LGBTQ+ activity",
     "Man Who Practiced Iron Sand Palm Kung-Fu Technique for 20 Years Has 3-Inch-Thick Palms",
-    "Supermileage, an Extremely Efficient Experimental Car That Gets 2,145 Miles per Gallon of Fuel"
+    "Supermileage, an Extremely Efficient Experimental Car That Gets 2,145 Miles per Gallon of Fuel",
+    "Israel and Lebanon agree to ceasefire contingent on Hezbollah stopping attacks",
+    "Ukraine Strikes St. Petersburg on First Day of a Marquee Putin Event",
+    "DRC Ebola outbreak could have begun as early as January, WHO chief says",
+    "Mozambique says five citizens killed in 'xenophobic attacks' in South Africa",
+    "Fire at a New Delhi Hotel Kills at Least 21",
+    "Man Builds Autonomous AI-Powered Water Gun Turret to Keep Pigeons Away",
+    "Mexico's 'Field of the Gods' – A Unique Football Field Inside an Extinct Volcano"
   ],
   "quote_authors": [
-    "Isak Dinesen",
     "H.P. Lovecraft",
     "Joseph Campbell",
     "Niels Bohr",
@@ -41,10 +40,10 @@
     "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Campbell",
-    "Joseph Campbell"
+    "Joseph Campbell",
+    "Joanna Macy"
   ],
   "poem_titles": [
-    "Stella's Birthday March 13, 1719",
     "To The Sad Moon",
     "Fragment: Thoughts Come and Go in Solitude",
     "La Revanche",
@@ -63,6 +62,7 @@
     "Sonnet 70: That thou art blam'd shall not be thy defect",
     "Remembrance",
     "There Was an Old Man in a Tree",
-    "Trees"
+    "Trees",
+    "i carry your heart with me"
   ]
 }
