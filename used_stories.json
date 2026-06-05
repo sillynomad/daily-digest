@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Andriy Yermak, Once the Muscle Behind Zelensky, Is Now Crowdfunding Bail Money",
-    "People 'panicking' as Ghana passes sweeping law criminalising LGBTQ+ activity",
-    "OpenAI let ChatGPT aid and abet mass shooters, Florida lawsuit claims",
-    "UK will not have to pay Rwanda £100m over failed asylum scheme, court rules",
-    "High School Students Create the World's Largest Remote-Controlled Paper Plane",
-    "Woman Unable to Close Her Eyes Due Botched Operation Now Has to Pay Surgeon for Defamation",
-    "Israel strikes southern Lebanon but partial truce with Hezbollah appears to hold",
     "Russia Launches Deadly Strikes on Kyiv After Threatening Ukraine for a Week",
     "Microsoft says new quantum chip 1,000 times more reliable than predecessor",
     "'We don't have another country to run to': Kenyans fear US plan for Ebola quarantine site",
@@ -19,10 +12,16 @@
     "Mozambique says five citizens killed in 'xenophobic attacks' in South Africa",
     "Fire at a New Delhi Hotel Kills at Least 21",
     "Man Builds Autonomous AI-Powered Water Gun Turret to Keep Pigeons Away",
-    "Mexico's 'Field of the Gods' – A Unique Football Field Inside an Extinct Volcano"
+    "Mexico's 'Field of the Gods' – A Unique Football Field Inside an Extinct Volcano",
+    "Zelensky proposes face-to-face talks in open letter to Putin",
+    "Mideast Live Updates: Hezbollah Rejects Cease-Fire Deal Between Lebanon and Israel",
+    "Ireland, Seen as a Weak Link in Europe's Defense, Is Trying to Bulk Up",
+    "Experts criticise plan for American-only Ebola quarantine centre in Kenya",
+    "Civilians flee as Somali troops and opposition-allied militias trade fire in Mogadishu",
+    "This Modern Fortress in the Middle of a Russian Field Is the Perfect Zombie Apocalypse Camp",
+    "FLOP Museum in Oslo, Norway"
   ],
   "quote_authors": [
-    "H.P. Lovecraft",
     "Joseph Campbell",
     "Niels Bohr",
     "Arnold J. Toynbee",
@@ -41,10 +40,10 @@
     "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Campbell",
-    "Joanna Macy"
+    "Joanna Macy",
+    "Albert Einstein"
   ],
   "poem_titles": [
-    "To The Sad Moon",
     "Fragment: Thoughts Come and Go in Solitude",
     "La Revanche",
     "Of a Lady Singing to Her Lute.",
@@ -63,6 +62,7 @@
     "Remembrance",
     "There Was an Old Man in a Tree",
     "Trees",
-    "i carry your heart with me"
+    "i carry your heart with me",
+    "Epitaph on John Adams, of Southwell, a Carrier, Who Died of Drunkenness"
   ]
 }
