@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Astronauts return to ISS after sheltering during air leak repair attempt",
-    "Hopes of Lebanon Cease-Fire Falter as Israel and Hezbollah Fight On",
-    "The Gold Mines at the Heart of This Ebola Outbreak",
-    "'Family values' African charter condemned by rights groups as regressive and dangerous",
-    "Woman Has Late Pet Dog's Ashes Mixed into Her Eyeliner Tattoo Ink to Have Him with Her Always",
-    "My dream holiday was a $30,000 scam",
-    "Ukrainian drones target St Petersburg in attack Russia calls 'unprecedented'",
     "US and Iran exchange strikes in Gulf in latest test of ceasefire",
     "In Venezuela, the Debt Collector Is the Devil",
     "Ebola spread in central Africa could match 2014 record outbreak, US health officials say",
@@ -19,10 +12,16 @@
     "Ebola spread in central Africa could match 2014 record outbreak, US health officials say",
     "'Family values' African charter condemned by rights groups as regressive and dangerous",
     "Man Builds AI Water Gun Turret to Fight Pigeons",
-    "Football Field Built Inside Extinct Volcano in Mexico"
+    "Football Field Built Inside Extinct Volcano in Mexico",
+    "Iran and Israel say they will pause strikes but warn of retaliation if ceasefire breached again",
+    "SpaceX's stock market blast-off could be Musk's biggest gamble yet",
+    "A 'Miraculous Transformation': How Kim Jong-un Fortified North Korea",
+    "'Extreme fear' among immigrants as backlash sweeps South Africa",
+    "Ebola spread in central Africa could match 2014 record outbreak, US health officials say",
+    "Russia Uses WWI-Era Zebra Camouflage to Protect Its Vehicles from AI-Powered Kamikaze Drones",
+    "'The Devil is Loose' in Middelfart, Denmark"
   ],
   "quote_authors": [
-    "Morton Feldman",
     "Albert Einstein",
     "Albert Einstein",
     "Albert Einstein",
@@ -41,10 +40,10 @@
     "Albert Einstein",
     "Isak Dinesen",
     "J.B.S. Haldane",
-    "Albert Einstein"
+    "Albert Einstein",
+    "Alfred Korzybski"
   ],
   "poem_titles": [
-    "Spirit of Plato",
     "From the Original Draft of the Poem to William Shelley",
     "Forbidden Fruit A Flavor Has",
     "Queries to Casuists",
@@ -63,6 +62,7 @@
     "Epitaph on John Adams, of Southwell, a Carrier, Who Died of Drunkenness",
     "Translation",
     "Hope is the Thing with Feathers",
-    "Hymn"
+    "Hymn",
+    "Flowers -- Well -- if anybody"
   ]
 }
