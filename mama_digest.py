@@ -25,7 +25,7 @@ from email.mime.text import MIMEText
 # Claude client
 # ---------------------------------------------------------------------------
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-6"
 TODAY = datetime.date.today()
 TODAY_READABLE = TODAY.strftime("%A, %d %B %Y")
 TODAY_SHORT = TODAY.strftime("%d %B %Y")
