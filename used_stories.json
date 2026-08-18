@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Elon Musk becomes world's first trillionaire as SpaceX soars in stock market debut",
-    "U.S. Plan Is Said to Pull a Third of Fighter Jets It Provides NATO for Europe",
-    "London council seizes social housing flat rented by Sierra Leone first lady",
-    "Global brands 'likely' using mineral that funds rebels accused of atrocities in DRC, investigation finds",
-    "Freedom Ship – The Mile-Long Floating City That Can Carry Up to 80,000 People",
-    "The Remarkable 'Resurrection Plant' Has a Fascinating Survival Mechanism",
-    "Trump says US-Iran deal to be signed on Sunday as Tehran casts doubt on timing",
     "Russia Is Rich in Ballistic Missiles. Ukraine Is Short of Ways to Stop Them.",
     "London council seizes social housing flat rented by Sierra Leone first lady",
     "Switzerland to vote on plan to cap population at 10 million",
@@ -19,10 +12,16 @@
     "UK and Japan agree £18bn investment deal",
     "Curaçao Is the Smallest Country Ever to Reach the World Cup",
     "74-Year-Old Grandma Stuns Internet with Her Youthful Looks and Bold Fashion Style",
-    "World Famous Talking Bear in Oakhurst, California"
+    "World Famous Talking Bear in Oakhurst, California",
+    "Trump threatens to bomb US ally Oman if it 'gets in the way' over Iran deal",
+    "Iran's Supreme Leader Signals Intention to Keep Country on a War Footing",
+    "Trump's Overture to North Korea Strains Alliance With the South",
+    "Ebola outbreak in Democratic Republic of the Congo now deadliest in country's history",
+    "China Wants Its Data to Power the World's A.I.",
+    "Wealthy Woman Bankrolls Drama Series So She Can Star in It and Kiss Male Lead More Than 60 Times",
+    "Pastry Chef Spends Four Months Creating Awe-Inspiring 500-Kilogram Wedding Cake"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Joseph Campbell",
     "B.F. Skinner",
     "John Schaar",
@@ -41,10 +40,10 @@
     "Earl Miller",
     "Joseph Campbell",
     "Joseph Campbell",
-    "Joseph Heller"
+    "Joseph Heller",
+    "Martin Heidegger"
   ],
   "poem_titles": [
-    "The Road Not Taken",
     "Easter",
     "Sonnet XLI: Why Do I Speak of Joy",
     "Sonnet",
@@ -63,6 +62,7 @@
     "My Soul Is Dark",
     "Still I Rise",
     "\"I have heard the sunset song of the birches,\"",
-    "The Road Not Taken"
+    "The Road Not Taken",
+    "When I hoped I feared --"
   ]
 }
