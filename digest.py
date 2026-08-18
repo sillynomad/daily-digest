@@ -153,7 +153,7 @@ def articles_to_text(articles: list[dict]) -> str:
 # ── Claude Client ─────────────────────────────────────────────────────────────
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
-MODEL = "claude-sonnet-4-20250514"
+MODEL = "claude-sonnet-4-6"
 
 
 def claude(prompt: str, system: str = "", max_tokens: int = 1500) -> str:
