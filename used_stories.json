@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Ebola outbreak in Democratic Republic of the Congo now deadliest in country's history",
-    "Israel Strikes Air Base in Syria, Drawing Ire From the U.S.",
-    "Kariba ferry death toll rises to 93, making it Zimbabwe's deadliest transport disaster",
-    "Moroccan police arrest more than 100 people attempting to enter Ceuta",
-    "Dameisha, the World's Most Crowded Beach",
-    "Woman Arrested For Placing Over 2,000 Fake Orders on Online Manga Store in Less Than a Year",
-    "Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation",
     "Australia 'outraged' after Israeli decision not to prosecute over killing of aid worker in Gaza",
     "U.A.E. Announces Halt to Trade With Iran Amid Trump's Push To Isolate Tehran",
     "Ukrainian man arrested in Croatia over Nord Stream pipeline blasts",
@@ -19,10 +12,16 @@
     "More than 100 dead after goldmine collapses in Central African Republic",
     "Assad officer extradited to Syria on war crimes charges for first time",
     "Volvo Island in Ottawa, Illinois",
-    "Fyllingsdalstunnelen in Fyllingsdalen, Norway"
+    "Fyllingsdalstunnelen in Fyllingsdalen, Norway",
+    "Russian double-tap drone strike kills 15 in Ukrainian mall, officials say",
+    "Israel re-establishes closed West Bank settlement, defying growing international protests",
+    "Why China Thinks It Can Resist Trump's Economic Threats on Iran",
+    "More than 100 dead after goldmine collapses in Central African Republic",
+    "Canada-U.S. Tariff Talks Continue as Trump's Midnight Deadline Looms",
+    "Wealthy Woman Bankrolls Drama Series So She Can Star in It and Kiss Male Lead More Than 60 Times",
+    "Pastry Chef Spends Four Months Creating Awe-Inspiring 500-Kilogram Wedding Cake"
   ],
   "quote_authors": [
-    "John Schaar",
     "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Campbell",
@@ -41,10 +40,10 @@
     "Joseph Heller",
     "Martin Heidegger",
     "H.P. Lovecraft",
-    "Emma Goldman"
+    "Emma Goldman",
+    "Carl Sagan"
   ],
   "poem_titles": [
-    "Sonnet 70: That thou art blam'd shall not be thy defect",
     "Remembrance",
     "There Was an Old Man in a Tree",
     "Trees",
@@ -63,6 +62,7 @@
     "When I hoped I feared --",
     "Epigram on an Old Lady Who Had Some Curious Notions Respecting the Soul",
     "Substitute for an Epitaph",
-    "Fragment: A Tale Untold"
+    "Fragment: A Tale Untold",
+    "Still I Rise"
   ]
 }
