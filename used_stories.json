@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Zelensky Says His Ex-Defense Minister Was Wrong to Call for Elections",
-    "Iran Warns Gulf States Not to Join Trump's Economic War",
-    "Landslide at waste mound in Guinea capital kills 30, government says",
-    "DR Congo and M23 rebels agree roadmap for peace talks",
-    "Nine Lives, the Legendary Feral Cat That Eluded Capture for 3 Years",
-    "Teenage Boy Suffers Temporary Hearing Loss After Listening to Cicadas for Four Hours",
-    "Iran faces 'greatest financial offensive ever', says US treasury secretary",
     "A Drone Killed Three Ukrainians. It Was Guided Entirely by A.I.",
     "Video shows hundreds held captive after Nigeria mosque kidnapping",
     "Iran Cracks Down on One Luxury Left to Its Youth: Coffee Shops",
@@ -19,7 +12,14 @@
     "Survivors recount panic and struggle to breathe in Nigerian prison cell where 37 died",
     "On a Dot of France Off Canada, Carney and Macron Talk Partnership",
     "This Salon Will Scratch That Itch — Literally!",
-    "A Chapel Inside a 500-Year-Old Tree? Yes, Really!"
+    "A Chapel Inside a 500-Year-Old Tree? Yes, Really!",
+    "Yemenis flee across Red Sea as Houthis and Saudi-backed forces escalate war",
+    "Banished to alien lands: Trump's secret deportation deals",
+    "Merz vows to keep coalition together for Germany's 'democratic future'",
+    "Ex-Commander of China's Military Accused of Corruption and Expelled From Party",
+    "Survivors recount panic and struggle to breathe in Nigerian prison cell where 37 died",
+    "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
+    "Men Are Now Shaving Their Eyelashes to Look 'More Masculine'"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -44,7 +44,6 @@
     "Carl Sagan"
   ],
   "poem_titles": [
-    "Epitaph on John Adams, of Southwell, a Carrier, Who Died of Drunkenness",
     "Translation",
     "Hope is the Thing with Feathers",
     "Hymn",
@@ -63,6 +62,12 @@
     "That Girl's Clear Eyes",
     "285. Song—I Gaed a Waefu’ Gate Yestreen",
     "Sonnet 13",
-    "Still I Rise"
+    "Still I Rise",
+    "On Fanny Godwin"
+  ],
+  "job_urls": [
+    "https://stripe.com/jobs/search",
+    "https://stripe.com/jobs/search",
+    "https://stripe.com/jobs/search"
   ]
 }
