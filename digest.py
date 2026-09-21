@@ -89,6 +89,8 @@ MAX_JOB_HISTORY = 90                  # job URLs remembered, to avoid repeats
 BOARD_RESOLVE_PER_RUN = 5             # unknown companies probed per run
 JOB_MAX_AGE_DAYS = 21                 # ignore postings older than this
 JOB_CANDIDATES_TO_CLAUDE = 30         # shortlist size sent for final ranking
+MAX_PER_COMPANY_SHORTLIST = 4         # stops one big board crowding out the shortlist
+ONE_ROLE_PER_COMPANY = True           # never send three roles from the same employer
 
 # Who you are, in the terms a recruiter would use. This is the brief Claude
 # ranks against — rewrite it as the search moves.
@@ -848,7 +850,20 @@ def collect_jobs(used_job_urls: list[str]) -> list[dict]:
         out.append(j)
     out.sort(key=job_score, reverse=True)
     print(f"  ✓ {len(out)} relevant, unseen postings after filtering")
-    return out[:JOB_CANDIDATES_TO_CLAUDE]
+
+    # Keep only the strongest few per employer — a 500-role board like Stripe's
+    # would otherwise fill the entire shortlist on its own.
+    per_company, capped = {}, []
+    for j in out:
+        c = (j.get("company") or "unknown").lower()
+        if per_company.get(c, 0) >= MAX_PER_COMPANY_SHORTLIST:
+            continue
+        per_company[c] = per_company.get(c, 0) + 1
+        capped.append(j)
+    if len(capped) < len(out):
+        print(f"  ✓ {len(capped)} after capping at {MAX_PER_COMPANY_SHORTLIST} per company "
+              f"({len(per_company)} employers represented)")
+    return capped[:JOB_CANDIDATES_TO_CLAUDE]
 
 
 def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
@@ -871,6 +886,7 @@ def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
         f"TODAY'S OPEN ROLES:\n{listing}\n\n"
         f"Pick the {JOBS_PER_DAY} roles most worth applying to today. Rank them best first. "
         "Favour genuine seniority and P&L or regional ownership over brand name. "
+        "Pick from DIFFERENT employers — no two of your three from the same company. "
         "Drop anything that looks below the compensation floor or below Director level. "
         "If fewer than three are worth his time, return fewer — never pad the list.\n\n"
         "Return ONLY a JSON array, no prose, no code fences:\n"
@@ -894,12 +910,49 @@ def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
         picks = [{"index": i, "fit": "", "why": "", "angle": ""}
                  for i in range(min(JOBS_PER_DAY, len(candidates)))]
 
-    cards, urls = [], []
-    for p in picks[:JOBS_PER_DAY]:
+    # Enforce employer diversity even if the model ignored the instruction, then
+    # backfill from the shortlist so the section still carries three roles.
+    chosen, seen_companies, used_idx = [], set(), set()
+    for p in picks:
         try:
-            job = candidates[int(p.get("index", -1))]
+            idx = int(p.get("index", -1))
+            job = candidates[idx]
         except Exception:
             continue
+        company = (job.get("company") or "").lower()
+        if ONE_ROLE_PER_COMPANY and company and company in seen_companies:
+            print(f"  · skipping second {job.get('company')} role ({job.get('title')})")
+            continue
+        chosen.append((job, p))
+        seen_companies.add(company)
+        used_idx.add(idx)
+        if len(chosen) >= JOBS_PER_DAY:
+            break
+
+    if len(chosen) < JOBS_PER_DAY:
+        for idx, job in enumerate(candidates):
+            if len(chosen) >= JOBS_PER_DAY:
+                break
+            company = (job.get("company") or "").lower()
+            if idx in used_idx or (ONE_ROLE_PER_COMPANY and company and company in seen_companies):
+                continue
+            chosen.append((job, {}))
+            seen_companies.add(company)
+            used_idx.add(idx)
+
+    # Last resort: if the day's pool really is one employer, a thin section beats
+    # an empty one — allow repeats rather than shipping a single card.
+    if len(chosen) < JOBS_PER_DAY:
+        for idx, job in enumerate(candidates):
+            if len(chosen) >= JOBS_PER_DAY:
+                break
+            if idx in used_idx:
+                continue
+            chosen.append((job, {}))
+            used_idx.add(idx)
+
+    cards, urls = [], []
+    for job, p in chosen:
         fit = (p.get("fit") or "").strip()
         why = (p.get("why") or "").strip()
         angle = (p.get("angle") or "").strip()
@@ -1114,8 +1167,12 @@ def send_email(html: str):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
-def jobs_test():
-    """Dry run for the jobs section: fetch, filter, rank, print. No email, no other sections."""
+def jobs_test(save: bool = True):
+    """Dry run for the jobs section: fetch, filter, rank, print. No email, no other sections.
+
+    Picked roles ARE written to used_stories.json by default, so a test run and the next
+    morning's run don't hand you the same three jobs. Pass --no-save to leave the ledger alone.
+    """
     used = load_used()
     print("💼 Collecting jobs...")
     candidates = collect_jobs(used.get("job_urls", []))
@@ -1131,6 +1188,12 @@ def jobs_test():
     with open("jobs_preview.html", "w", encoding="utf-8") as f:
         f.write(build_html("", "", "", "", "", "", "", jobs=html))
     print("\n💾 Wrote jobs_preview.html — open it in a browser to see the styling.")
+    if save:
+        used["job_urls"] = used.get("job_urls", []) + urls
+        save_used(used)
+        print(f"💾 Recorded {len(urls)} job URLs in used_stories.json — they won't come back.")
+    else:
+        print("↩︎  --no-save: ledger untouched, these roles can appear again.")
 
 
 def main():
@@ -1211,6 +1274,6 @@ def main():
 if __name__ == "__main__":
     import sys
     if "--jobs-test" in sys.argv:
-        jobs_test()
+        jobs_test(save="--no-save" not in sys.argv)
     else:
         main()
