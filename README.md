@@ -8,6 +8,7 @@ A personalised morning email digest with world news, tech Asia, La Liga opinion,
 
 | Section | Content | Language |
 |---|---|---|
+| 💼 Jobs of the Day | 3 roles worth applying to, ranked against your profile | English |
 | 🌍 The Skim | 5-bullet global news summary | English |
 | 💻 Tech Asia | 3 top Asia tech stories | English |
 | ⚽ La Liga Opinión | 3 opinion pieces from Marca, Sport, MD, As | Spanish |
@@ -79,6 +80,37 @@ Edit the cron line in `.github/workflows/daily_digest.yml`:
 - cron: '0 23 * * *'   # 23:00 UTC = 07:00 SGT
 ```
 Use [crontab.guru](https://crontab.guru) to find the UTC equivalent of your preferred time.
+
+### Jobs of the Day
+
+Three sources, merged and de-duplicated:
+
+1. **Target companies' ATS boards** — Greenhouse, Lever and Ashby. `TARGET_COMPANIES` in
+   `digest.py` is just a list of names; the script probes each company's board on first run
+   and caches whatever it finds in `job_boards.json`. Companies with no public board are
+   retried once a month. Add or remove names freely — no slugs to look up.
+2. **Adzuna Singapore** — broad sweep, catches companies not on the list.
+   Free key from [developer.adzuna.com](https://developer.adzuna.com), added as the
+   `ADZUNA_APP_ID` and `ADZUNA_APP_KEY` repo secrets. Without them this source is skipped.
+3. **The Muse** — free, no key.
+
+Postings are filtered by title, seniority, location and age, pre-scored, then the top ~30 go
+to Claude, which picks three and writes one line on why each fits and what to lead with.
+Chosen roles are remembered in `used_stories.json` so they don't come back.
+
+Tune the search by editing these in `digest.py`:
+
+| What | Constant |
+|---|---|
+| Who you are / what you want | `CANDIDATE_PROFILE` |
+| Company tier list | `TARGET_COMPANIES` |
+| Titles to catch / ignore | `JOB_TITLE_KEYWORDS`, `JOB_TITLE_EXCLUDE` |
+| Geography | `JOB_LOCATION_KEYWORDS`, `JOB_LOCATION_EXCLUDE` |
+| How many, how fresh | `JOBS_PER_DAY`, `JOB_MAX_AGE_DAYS` |
+
+Test it without sending an email: **Actions → Daily News Digest → Run workflow → tick
+"jobs_only"**. The log shows what each source returned and which three were picked.
+Locally: `python digest.py --jobs-test` (writes `jobs_preview.html`).
 
 ### Add or swap RSS feeds
 Edit the `FEEDS` dictionary at the top of `digest.py`. Any RSS/Atom URL works.
