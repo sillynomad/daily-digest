@@ -80,6 +80,94 @@ FEEDS = {
 }
 
 
+# ── Jobs of the Day ───────────────────────────────────────────────────────────
+# Everything in this block is meant to be edited by hand as the search evolves.
+
+JOBS_PER_DAY = 3
+JOB_BOARDS_FILE = "job_boards.json"   # cache of resolved ATS board slugs
+MAX_JOB_HISTORY = 90                  # job URLs remembered, to avoid repeats
+BOARD_RESOLVE_PER_RUN = 5             # unknown companies probed per run
+JOB_MAX_AGE_DAYS = 21                 # ignore postings older than this
+JOB_CANDIDATES_TO_CLAUDE = 30         # shortlist size sent for final ranking
+
+# Who you are, in the terms a recruiter would use. This is the brief Claude
+# ranks against — rewrite it as the search moves.
+CANDIDATE_PROFILE = """
+Country Manager / GM with full P&L ownership across Singapore and Australia at
+TTRacing (consumer hardware, 500 Global-backed). Former CEO of FoodRazor (B2B
+SaaS, Cocoon Capital-backed): led the turnaround, scaled to 10 markets, company
+acquired 2023. Earlier: Rakuten, and six years at EF Education First across Hong
+Kong and Tokyo. Yale BA, INSEAD MBA. EU passport, based in Singapore.
+Distributor and market-entry work across Australia, Japan and Costa Rica.
+Languages: English, Spanish, French fluent; Japanese working; Mandarin A2.
+
+TARGETING: GM, Country Manager, Managing Director, Regional Director or Head of
+<function> roles with commercial ownership at Western companies, based in
+Singapore or covering APAC/SEA. Consumer brands, B2B SaaS, sports/endurance and
+partnerships/channel roles all fit.
+
+HARD FILTERS: Singapore-based or genuinely APAC-regional (remote-APAC counts).
+Seniority at least Director/Head level. Compensation must clear SGD 15,000/month
+— treat anything that looks below that as a non-starter.
+AVOID: individual-contributor sales quotas, junior or mid-level roles,
+engineering roles, and roles requiring relocation outside Singapore.
+"""
+
+# Tier list — the resolver finds each company's ATS board automatically and
+# caches the answer in job_boards.json. Add or remove names freely.
+TARGET_COMPANIES = [
+    "Stripe", "Canva", "Miro", "Spotify", "HubSpot", "Asana", "Adobe",
+    "Strava", "Zwift", "Whoop", "Oura", "Sportradar", "Emeritus",
+    "Figma", "Notion", "Airtable", "Atlassian", "Datadog", "Twilio",
+    "Cloudflare", "Deel", "Rippling", "Remote", "Gitlab", "Elastic",
+    "Peloton", "Garmin", "Wahoo Fitness", "Lululemon", "On Running",
+]
+
+# Companies whose board we already know — skips probing.
+BOARD_OVERRIDES = {
+    "Stripe": ["greenhouse", "stripe"],
+    "Asana": ["greenhouse", "asana"],
+}
+
+JOB_TITLE_KEYWORDS = [
+    "country manager", "general manager", "managing director", "country lead",
+    "country director", "regional director", "regional manager", "head of",
+    "vp ", "vice president", "director, ", "director of", "commercial director",
+    "chief commercial", "chief operating", "chief executive", "gm,", "gm ",
+    "market lead", "market director", "partnerships", "channel", "go-to-market",
+    "business development director", "sales director", "revenue",
+]
+
+JOB_TITLE_EXCLUDE = [
+    "intern", "internship", "graduate", "junior", "associate ", "assistant",
+    "engineer", "developer", "designer", "scientist", "analyst", "recruiter",
+    "coordinator", "specialist", "representative", "sdr", "bdr", "executive assistant",
+    "manager, engineering", "software", "technician", "accountant", "controller",
+]
+
+JOB_LOCATION_KEYWORDS = [
+    "singapore", "apac", "asia pacific", "asia-pacific", "southeast asia",
+    "south east asia", "south-east asia", "sea ", "asia", "remote",
+]
+
+JOB_LOCATION_EXCLUDE = [
+    "remote - us", "remote, us", "remote (us", "united states only",
+    "emea only", "latam", "europe only",
+]
+
+# Broad Singapore sweep via Adzuna. Free key from developer.adzuna.com.
+ADZUNA_APP_ID = os.environ.get("ADZUNA_APP_ID", "")
+ADZUNA_APP_KEY = os.environ.get("ADZUNA_APP_KEY", "")
+ADZUNA_QUERIES = [
+    "country manager", "general manager", "managing director",
+    "regional director", "head of partnerships", "commercial director",
+]
+
+# The Muse — free, no key.
+MUSE_LOCATIONS = ["Singapore, Singapore"]
+MUSE_LEVELS = ["Senior Level", "Management"]
+
+
 # ── Used Stories Tracking ─────────────────────────────────────────────────────
 
 def load_used() -> dict:
@@ -88,13 +176,14 @@ def load_used() -> dict:
         with open(USED_STORIES_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
     except Exception:
-        return {"story_titles": [], "quote_authors": [], "poem_titles": []}
+        return {"story_titles": [], "quote_authors": [], "poem_titles": [], "job_urls": []}
 
 
 def save_used(used: dict):
     """Persist the used-stories ledger, trimming to MAX_HISTORY entries."""
     for key in ["story_titles", "quote_authors", "poem_titles"]:
         used[key] = used.get(key, [])[-MAX_HISTORY:]
+    used["job_urls"] = used.get("job_urls", [])[-MAX_JOB_HISTORY:]
     with open(USED_STORIES_FILE, "w", encoding="utf-8") as f:
         json.dump(used, f, ensure_ascii=False, indent=2)
 
@@ -471,10 +560,368 @@ def build_poem_of_day(used_poem_titles: list[str]) -> tuple[str, str]:
     return html, title
 
 
+# ── Jobs: fetching ────────────────────────────────────────────────────────────
+
+def http_json(url: str, timeout: int = 15):
+    """GET a URL and parse JSON. Returns None on any failure."""
+    try:
+        req = urllib.request.Request(url, headers={
+            "User-Agent": "DailyDigestBot/1.0 (personal job digest)",
+            "Accept": "application/json",
+        })
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            return json.loads(r.read().decode("utf-8", "replace"))
+    except Exception:
+        return None
+
+
+def load_boards() -> dict:
+    try:
+        with open(JOB_BOARDS_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return {}
+
+
+def save_boards(boards: dict):
+    with open(JOB_BOARDS_FILE, "w", encoding="utf-8") as f:
+        json.dump(boards, f, ensure_ascii=False, indent=2, sort_keys=True)
+
+
+def slug_variants(company: str) -> list[str]:
+    """Plausible ATS slugs for a company name."""
+    base = company.lower().strip()
+    compact = re.sub(r"[^a-z0-9]", "", base)
+    dashed = re.sub(r"[^a-z0-9]+", "-", base).strip("-")
+    first = compact.split()[0] if compact else compact
+    out = [compact, dashed, first, compact + "inc", compact + "careers",
+           compact + "jobs", base.split()[0]]
+    seen, uniq = set(), []
+    for s in out:
+        if s and s not in seen:
+            seen.add(s)
+            uniq.append(s)
+    return uniq[:4]
+
+
+def greenhouse_jobs(slug: str) -> list[dict]:
+    data = http_json(f"https://boards-api.greenhouse.io/v1/boards/{slug}/jobs?content=false")
+    if not isinstance(data, dict):
+        return []
+    out = []
+    for j in data.get("jobs", []):
+        out.append({
+            "title": (j.get("title") or "").strip(),
+            "location": ((j.get("location") or {}).get("name") or "").strip(),
+            "url": j.get("absolute_url", ""),
+            "posted": (j.get("updated_at") or j.get("first_published") or "")[:10],
+            "salary": "",
+        })
+    return out
+
+
+def lever_jobs(slug: str) -> list[dict]:
+    data = http_json(f"https://api.lever.co/v0/postings/{slug}?mode=json")
+    if not isinstance(data, list):
+        return []
+    out = []
+    for j in data:
+        cat = j.get("categories") or {}
+        ts = j.get("createdAt")
+        posted = ""
+        if isinstance(ts, (int, float)):
+            posted = datetime.utcfromtimestamp(ts / 1000).strftime("%Y-%m-%d")
+        out.append({
+            "title": (j.get("text") or "").strip(),
+            "location": (cat.get("location") or "").strip(),
+            "url": j.get("hostedUrl", ""),
+            "posted": posted,
+            "salary": "",
+        })
+    return out
+
+
+def ashby_jobs(slug: str) -> list[dict]:
+    data = http_json(f"https://api.ashbyhq.com/posting-api/job-board/{slug}")
+    if not isinstance(data, dict):
+        return []
+    out = []
+    for j in data.get("jobs", []):
+        out.append({
+            "title": (j.get("title") or "").strip(),
+            "location": (j.get("location") or "").strip(),
+            "url": j.get("jobUrl") or j.get("applyUrl") or "",
+            "posted": (j.get("publishedAt") or "")[:10],
+            "salary": "",
+        })
+    return out
+
+
+ATS_FETCHERS = {
+    "greenhouse": greenhouse_jobs,
+    "lever": lever_jobs,
+    "ashby": ashby_jobs,
+}
+
+
+def resolve_board(company: str) -> list | None:
+    """Probe the three ATS APIs for a company's public board. Returns [ats, slug] or None."""
+    for slug in slug_variants(company):
+        for ats, fetcher in ATS_FETCHERS.items():
+            jobs = fetcher(slug)
+            if jobs:
+                print(f"  🔎 resolved {company} → {ats}/{slug} ({len(jobs)} jobs)")
+                return [ats, slug]
+    print(f"  · no public board found for {company}")
+    return None
+
+
+def fetch_target_company_jobs() -> list[dict]:
+    """Pull jobs from target companies' ATS boards, resolving unknown boards gradually."""
+    boards = load_boards()
+    for company, board in BOARD_OVERRIDES.items():
+        boards.setdefault(company, {"board": board, "checked": ""})
+
+    today = datetime.now().strftime("%Y-%m-%d")
+    probed = 0
+    for company in TARGET_COMPANIES:
+        entry = boards.get(company)
+        stale = False
+        if entry and entry.get("board") is None:
+            # retry dead ends roughly monthly
+            stale = (entry.get("checked", "") < (datetime.now().strftime("%Y-%m-%d")[:7] + "-01"))
+        if entry and not stale:
+            continue
+        if probed >= BOARD_RESOLVE_PER_RUN:
+            continue
+        probed += 1
+        boards[company] = {"board": resolve_board(company), "checked": today}
+
+    jobs = []
+    for company, entry in boards.items():
+        board = (entry or {}).get("board")
+        if not board:
+            continue
+        ats, slug = board[0], board[1]
+        fetcher = ATS_FETCHERS.get(ats)
+        if not fetcher:
+            continue
+        for j in fetcher(slug):
+            j["company"] = company
+            j["source"] = f"{company} careers"
+            jobs.append(j)
+
+    save_boards(boards)
+    print(f"  ✓ target company boards: {len(jobs)} raw postings")
+    return jobs
+
+
+def fetch_adzuna_jobs() -> list[dict]:
+    """Broad Singapore sweep. Needs free ADZUNA_APP_ID / ADZUNA_APP_KEY."""
+    if not (ADZUNA_APP_ID and ADZUNA_APP_KEY):
+        print("  · Adzuna skipped (no API key set)")
+        return []
+    jobs = []
+    for q in ADZUNA_QUERIES:
+        url = (
+            "https://api.adzuna.com/v1/api/jobs/sg/search/1"
+            f"?app_id={ADZUNA_APP_ID}&app_key={ADZUNA_APP_KEY}"
+            f"&results_per_page=25&what_phrase={urllib.parse.quote(q)}"
+            f"&max_days_old={JOB_MAX_AGE_DAYS}&sort_by=date&content-type=application/json"
+        )
+        data = http_json(url)
+        if not isinstance(data, dict):
+            continue
+        for j in data.get("results", []):
+            smin, smax = j.get("salary_min"), j.get("salary_max")
+            salary = ""
+            if smin:
+                salary = f"SGD {int(smin):,}" + (f"–{int(smax):,}" if smax and smax != smin else "") + " / yr"
+            jobs.append({
+                "title": (j.get("title") or "").strip(),
+                "company": ((j.get("company") or {}).get("display_name") or "").strip(),
+                "location": ((j.get("location") or {}).get("display_name") or "").strip(),
+                "url": j.get("redirect_url", ""),
+                "posted": (j.get("created") or "")[:10],
+                "salary": salary,
+                "source": "Adzuna SG",
+            })
+    print(f"  ✓ Adzuna: {len(jobs)} raw postings")
+    return jobs
+
+
+def fetch_muse_jobs() -> list[dict]:
+    jobs = []
+    for loc in MUSE_LOCATIONS:
+        params = [f"location={urllib.parse.quote(loc)}", "page=1"]
+        for lvl in MUSE_LEVELS:
+            params.append(f"level={urllib.parse.quote(lvl)}")
+        data = http_json("https://www.themuse.com/api/public/jobs?" + "&".join(params))
+        if not isinstance(data, dict):
+            continue
+        for j in data.get("results", []):
+            locs = ", ".join(l.get("name", "") for l in j.get("locations", []) if l.get("name"))
+            jobs.append({
+                "title": (j.get("name") or "").strip(),
+                "company": ((j.get("company") or {}).get("name") or "").strip(),
+                "location": locs,
+                "url": ((j.get("refs") or {}).get("landing_page") or ""),
+                "posted": (j.get("publication_date") or "")[:10],
+                "salary": "",
+                "source": "The Muse",
+            })
+    print(f"  ✓ The Muse: {len(jobs)} raw postings")
+    return jobs
+
+
+# ── Jobs: filtering and ranking ───────────────────────────────────────────────
+
+def job_is_relevant(job: dict) -> bool:
+    title = (job.get("title") or "").lower()
+    loc = (job.get("location") or "").lower()
+    if not title or not job.get("url"):
+        return False
+    if any(x in title for x in JOB_TITLE_EXCLUDE):
+        return False
+    if not any(k in title for k in JOB_TITLE_KEYWORDS):
+        return False
+    if any(x in loc for x in JOB_LOCATION_EXCLUDE):
+        return False
+    if loc and not any(k in loc for k in JOB_LOCATION_KEYWORDS):
+        return False
+    posted = job.get("posted") or ""
+    if len(posted) == 10:
+        try:
+            age = (datetime.now() - datetime.strptime(posted, "%Y-%m-%d")).days
+            if age > JOB_MAX_AGE_DAYS:
+                return False
+        except Exception:
+            pass
+    return True
+
+
+def job_score(job: dict) -> int:
+    """Cheap pre-ranking so the shortlist sent to Claude is the strongest slice."""
+    title = (job.get("title") or "").lower()
+    loc = (job.get("location") or "").lower()
+    score = 0
+    for kw, pts in [("country manager", 30), ("general manager", 28), ("managing director", 28),
+                    ("country director", 26), ("regional director", 22), ("country lead", 22),
+                    ("head of", 16), ("vice president", 16), ("vp ", 16), ("director", 12),
+                    ("partnerships", 8), ("channel", 6), ("commercial", 6)]:
+        if kw in title:
+            score += pts
+            break
+    if "singapore" in loc:
+        score += 20
+    elif any(k in loc for k in ("apac", "asia pacific", "asia-pacific", "southeast asia")):
+        score += 14
+    elif "asia" in loc:
+        score += 8
+    if job.get("source", "").endswith("careers"):
+        score += 12          # target-company boards outrank aggregators
+    if job.get("salary"):
+        score += 3
+    posted = job.get("posted") or ""
+    if len(posted) == 10:
+        try:
+            age = (datetime.now() - datetime.strptime(posted, "%Y-%m-%d")).days
+            score += max(0, 10 - age // 2)
+        except Exception:
+            pass
+    return score
+
+
+def collect_jobs(used_job_urls: list[str]) -> list[dict]:
+    raw = fetch_target_company_jobs() + fetch_adzuna_jobs() + fetch_muse_jobs()
+    seen = set(used_job_urls)
+    out, dupes = [], set()
+    for j in raw:
+        url = (j.get("url") or "").split("?")[0]
+        key = (j.get("title", "").lower(), j.get("company", "").lower())
+        if not url or url in seen or key in dupes:
+            continue
+        if not job_is_relevant(j):
+            continue
+        dupes.add(key)
+        j["url"] = url
+        out.append(j)
+    out.sort(key=job_score, reverse=True)
+    print(f"  ✓ {len(out)} relevant, unseen postings after filtering")
+    return out[:JOB_CANDIDATES_TO_CLAUDE]
+
+
+def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
+    """Ask Claude to pick the best JOBS_PER_DAY roles and say why. Returns (html, urls_used)."""
+    if not candidates:
+        return "", []
+
+    listing = "\n\n".join(
+        f"{i}. {c['title']}\n"
+        f"   Company: {c.get('company') or 'unknown'}\n"
+        f"   Location: {c.get('location') or 'not stated'}\n"
+        f"   Posted: {c.get('posted') or 'unknown'}"
+        + (f"\n   Salary: {c['salary']}" if c.get("salary") else "")
+        + f"\n   Source: {c.get('source', '')}"
+        for i, c in enumerate(candidates)
+    )
+
+    result = claude(
+        f"CANDIDATE PROFILE:\n{CANDIDATE_PROFILE}\n\n"
+        f"TODAY'S OPEN ROLES:\n{listing}\n\n"
+        f"Pick the {JOBS_PER_DAY} roles most worth applying to today. Rank them best first. "
+        "Favour genuine seniority and P&L or regional ownership over brand name. "
+        "Drop anything that looks below the compensation floor or below Director level. "
+        "If fewer than three are worth his time, return fewer — never pad the list.\n\n"
+        "Return ONLY a JSON array, no prose, no code fences:\n"
+        '[{"index": 0, "fit": "Strong fit", "why": "One sentence, max 25 words, '
+        'naming the specific thing in his background that makes this land.", '
+        '"angle": "One short sentence on the angle the application should lead with."}]\n'
+        'Valid "fit" values: "Strong fit", "Good fit", "Worth a shot".',
+        system="You are a blunt executive search partner who knows this candidate well. "
+               "You do not flatter and you do not recommend roles that waste his time.",
+        max_tokens=900,
+    )
+
+    txt = result.strip()
+    if txt.startswith("```"):
+        txt = re.sub(r"^```[a-z]*\n?|```$", "", txt, flags=re.MULTILINE).strip()
+
+    try:
+        picks = json.loads(txt)
+    except Exception as e:
+        print(f"Warning: job ranking JSON failed ({e}) — falling back to top-scored roles")
+        picks = [{"index": i, "fit": "", "why": "", "angle": ""}
+                 for i in range(min(JOBS_PER_DAY, len(candidates)))]
+
+    cards, urls = [], []
+    for p in picks[:JOBS_PER_DAY]:
+        try:
+            job = candidates[int(p.get("index", -1))]
+        except Exception:
+            continue
+        fit = (p.get("fit") or "").strip()
+        why = (p.get("why") or "").strip()
+        angle = (p.get("angle") or "").strip()
+        meta = " · ".join(x for x in [job.get("company"), job.get("location"), job.get("salary")] if x)
+        posted = f'<span class="job-posted">posted {job["posted"]}</span>' if job.get("posted") else ""
+        cards.append(f"""<div class="job-card">
+  <div class="job-meta">{meta}{" · " if meta and posted else ""}{posted}</div>
+  <h4><a href="{job['url']}" target="_blank">{job['title']}</a></h4>
+  {f'<span class="job-fit">{fit}</span>' if fit else ""}
+  {f'<p class="job-why">{why}</p>' if why else ""}
+  {f'<p class="job-angle"><em>Lead with:</em> {angle}</p>' if angle else ""}
+  <p class="job-apply"><a href="{job['url']}" target="_blank">View &amp; apply →</a></p>
+</div>""")
+        urls.append(job["url"])
+
+    return "\n".join(cards), urls
+
+
 # ── Email / HTML Builder ──────────────────────────────────────────────────────
 
 def build_html(skim, tech, laliga, sg, fr, ja, zh,
-               quote="", photo="", poem="", web_url="") -> str:
+               quote="", photo="", poem="", jobs="", web_url="") -> str:
     today = datetime.now().strftime("%A, %d %B %Y")
     browser_button = (
         f'<div class="view-browser"><a href="{web_url}" target="_blank">🌐 Read in Browser</a></div>'
@@ -507,6 +954,21 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh,
   .section h4 a {{ color: #1a1a2e; text-decoration: none; border-bottom: 1px solid #ddd; }}
   .section h4 a:hover {{ border-bottom-color: #1a1a2e; }}
   .section p {{ font-family: Georgia, serif; font-size: 14px; line-height: 1.7; color: #333; margin: 0 0 10px; }}
+  /* Jobs of the day */
+  .job-card {{ padding: 16px 0; border-bottom: 1px solid #f0ede6; }}
+  .job-card:last-child {{ border-bottom: none; }}
+  .job-meta {{ font-family: sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+               text-transform: uppercase; color: #aaa; margin-bottom: 4px; }}
+  .job-posted {{ color: #bbb; letter-spacing: 1px; }}
+  .job-card h4 {{ margin: 2px 0 6px; font-size: 16px; }}
+  .job-fit {{ display: inline-block; font-family: sans-serif; font-size: 10px; font-weight: 700;
+              letter-spacing: 1px; text-transform: uppercase; color: #6b5b00;
+              background: #f5c842; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }}
+  .job-why {{ font-family: Georgia, serif; font-size: 14px; line-height: 1.65; color: #333; margin: 8px 0 4px; }}
+  .job-angle {{ font-family: Georgia, serif; font-size: 13px; line-height: 1.6; color: #666; margin: 0 0 8px; }}
+  .job-apply a {{ font-family: sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px;
+                  text-transform: uppercase; color: #1a1a2e; text-decoration: none;
+                  border-bottom: 2px solid #f5c842; }}
   /* Article cards */
   .article-card {{ padding: 16px 0; border-bottom: 1px solid #f0ede6; }}
   .article-card:last-child {{ border-bottom: none; }}
@@ -564,6 +1026,9 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh,
 
   <!-- QUOTE OF THE DAY -->
   {"" if not quote else f'<div class="section"><div class="section-label">💬 Quote of the Day</div>{quote}</div>'}
+
+  <!-- JOBS OF THE DAY -->
+  {"" if not jobs else f'<div class="section"><div class="section-label">💼 Jobs of the Day</div><h2>Worth Applying To</h2>{jobs}</div>'}
 
   <!-- THE SKIM -->
   <div class="section">
@@ -649,13 +1114,40 @@ def send_email(html: str):
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
+def jobs_test():
+    """Dry run for the jobs section: fetch, filter, rank, print. No email, no other sections."""
+    used = load_used()
+    print("💼 Collecting jobs...")
+    candidates = collect_jobs(used.get("job_urls", []))
+    for c in candidates[:15]:
+        print(f"  [{job_score(c):3}] {c['title']} — {c.get('company')} — "
+              f"{c.get('location')} — {c.get('source')}")
+    if not candidates:
+        print("No candidates. Check source output above.")
+        return
+    html, urls = build_jobs_of_day(candidates)
+    print("\n--- SECTION HTML ---\n")
+    print(html)
+    with open("jobs_preview.html", "w", encoding="utf-8") as f:
+        f.write(build_html("", "", "", "", "", "", "", jobs=html))
+    print("\n💾 Wrote jobs_preview.html — open it in a browser to see the styling.")
+
+
 def main():
     # Load history to avoid repeats
     used = load_used()
     print(f"📚 Loaded used history: "
-          f"{len(used['story_titles'])} stories, "
-          f"{len(used['quote_authors'])} authors, "
-          f"{len(used['poem_titles'])} poems")
+          f"{len(used.get('story_titles', []))} stories, "
+          f"{len(used.get('quote_authors', []))} authors, "
+          f"{len(used.get('poem_titles', []))} poems, "
+          f"{len(used.get('job_urls', []))} jobs")
+
+    print("💼 Collecting jobs...")
+    try:
+        job_candidates = collect_jobs(used.get("job_urls", []))
+    except Exception as e:
+        print(f"Warning: job collection failed: {e}")
+        job_candidates = []
 
     print("📡 Fetching feeds...")
     general_articles = fetch_articles(FEEDS["general"])
@@ -680,24 +1172,32 @@ def main():
     photo                     = build_photo_of_day()
     poem_html, poem_title     = build_poem_of_day(used["poem_titles"])
 
+    try:
+        jobs_html, job_urls = build_jobs_of_day(job_candidates)
+    except Exception as e:
+        print(f"Warning: job ranking failed: {e}")
+        jobs_html, job_urls = "", []
+
     # Update used history
     used["story_titles"]  = used["story_titles"] + skim_titles + lang_titles
     used["quote_authors"] = used["quote_authors"] + ([quote_author] if quote_author else [])
     used["poem_titles"]   = used["poem_titles"]   + ([poem_title]   if poem_title   else [])
+    used["job_urls"]      = used.get("job_urls", []) + job_urls
     save_used(used)
     print("💾 Saved used_stories.json")
 
     print("📧 Building HTML...")
     # HTML version (GitHub Pages) — ruby on top
     html_web = build_html(skim, tech, laliga, sg, fr, ja, zh,
-                          quote=quote_html, photo=photo, poem=poem_html, web_url="")
+                          quote=quote_html, photo=photo, poem=poem_html,
+                          jobs=jobs_html, web_url="")
 
     # Email version — strip ruby entirely, add browser button
     ja_email = ruby_strip(ja)
     zh_email = ruby_strip(zh)
     html_email = build_html(skim, tech, laliga, sg, fr, ja_email, zh_email,
                             quote=quote_html, photo=photo, poem=poem_html,
-                            web_url=GITHUB_PAGES_URL)
+                            jobs=jobs_html, web_url=GITHUB_PAGES_URL)
 
     # Save for GitHub Pages
     os.makedirs("docs", exist_ok=True)
@@ -709,4 +1209,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    import sys
+    if "--jobs-test" in sys.argv:
+        jobs_test()
+    else:
+        main()
