@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
-    "Men deported from US bound and beaten in Equatorial Guinea detention hotel, lawyers say",
-    "Survivors recount panic and struggle to breathe in Nigerian prison cell where 37 died",
-    "On a Dot of France Off Canada, Carney and Macron Talk Partnership",
-    "This Salon Will Scratch That Itch — Literally!",
-    "A Chapel Inside a 500-Year-Old Tree? Yes, Really!",
-    "Yemenis flee across Red Sea as Houthis and Saudi-backed forces escalate war",
     "Banished to alien lands: Trump's secret deportation deals",
     "Merz vows to keep coalition together for Germany's 'democratic future'",
     "Ex-Commander of China's Military Accused of Corruption and Expelled From Party",
@@ -19,10 +12,16 @@
     "First UK charges brought over 1994 Rwanda genocide",
     "U.N. General Assembly to Confront Familiar Crises, New Conflicts and A.I.",
     "Scratch That! Chinese Entrepreneur Opens Relaxing Scratching Salons",
-    "Conspiracy Theorists vs. Traffic Lights: The Showdown Nobody Asked For"
+    "Conspiracy Theorists vs. Traffic Lights: The Showdown Nobody Asked For",
+    "Trump threatens to 'annihilate' Iran in UN speech as officials from both countries meet on sidelines",
+    "Banished to alien lands: Trump's secret deportation deals",
+    "US to build two military bases in Greenland under new deal with Denmark",
+    "Ethiopian Rebel Groups Join Forces Against the Government",
+    "Developing El Niño becomes strongest on record weeks before expected peak",
+    "The Fugitive Who Fooled Everyone for 8 Years",
+    "Traffic Lights: Secret Weapons? These Folks Think So!"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Campbell",
@@ -41,10 +40,10 @@
     "Martin Heidegger",
     "H.P. Lovecraft",
     "Emma Goldman",
-    "Carl Sagan"
+    "Carl Sagan",
+    "Alfred Korzybski"
   ],
   "poem_titles": [
-    "Hope is the Thing with Feathers",
     "Hymn",
     "Flowers -- Well -- if anybody",
     "Were My Bosom As False As Thou Deem'st It to Be",
@@ -63,7 +62,8 @@
     "Sonnet 13",
     "Still I Rise",
     "On Fanny Godwin",
-    "Fragment: 'Wake the Serpent Not'"
+    "Fragment: 'Wake the Serpent Not'",
+    "Sonnet 50: How heavy do I journey on the way"
   ],
   "job_urls": [
     "https://stripe.com/jobs/search",
