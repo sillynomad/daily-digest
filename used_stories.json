@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "CNN, MS NOW and Politico file lawsuit against Trump's White House ban",
-    "Banished to alien lands: Trump's secret deportation deals",
-    "First UK charges brought over 1994 Rwanda genocide",
-    "U.N. General Assembly to Confront Familiar Crises, New Conflicts and A.I.",
-    "Scratch That! Chinese Entrepreneur Opens Relaxing Scratching Salons",
-    "Conspiracy Theorists vs. Traffic Lights: The Showdown Nobody Asked For",
-    "Trump threatens to 'annihilate' Iran in UN speech as officials from both countries meet on sidelines",
     "Banished to alien lands: Trump's secret deportation deals",
     "US to build two military bases in Greenland under new deal with Denmark",
     "Ethiopian Rebel Groups Join Forces Against the Government",
@@ -19,7 +12,14 @@
     "Trump's New Favorite Neighbor: Mexico",
     "Healthcare in Africa 'under growing strain' after US withdrawal from aid programs, report warns",
     "This Blind, Drunk Man Somehow Drove 150 Miles on the Highway",
-    "Sydney's Lucky Bronze Boar: Rub Its Snout for Good Luck!"
+    "Sydney's Lucky Bronze Boar: Rub Its Snout for Good Luck!",
+    "Netanyahu defends Israeli military action as delegates walk out before UN speech",
+    "Haiti Turns to Roger Stone To Lobby Trump Administration",
+    "Rebel offensive against Ethiopian army stokes fears of return to civil war",
+    "Saudi Arabia Downs Houthi Missiles Targeting Kingdom, Official Says",
+    "Forced Eviction of 87-Year-Old Woman Spurs Outrage in Spain",
+    "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
+    "Shave Your Eyelashes for Masculinity? Men Are Actually Doing This!"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -44,7 +44,6 @@
     "Alfred Korzybski"
   ],
   "poem_titles": [
-    "Flowers -- Well -- if anybody",
     "Were My Bosom As False As Thou Deem'st It to Be",
     "The Lamb",
     "My Soul Is Dark",
@@ -63,7 +62,8 @@
     "On Fanny Godwin",
     "Fragment: 'Wake the Serpent Not'",
     "Sonnet 50: How heavy do I journey on the way",
-    "Epitaph for Mr. William Michie, Schoolmaster"
+    "Epitaph for Mr. William Michie, Schoolmaster",
+    "Concord"
   ],
   "job_urls": [
     "https://stripe.com/jobs/search",
