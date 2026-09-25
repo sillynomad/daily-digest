@@ -19,6 +19,7 @@ from email.mime.text import MIMEText
 
 # ── Constants ─────────────────────────────────────────────────────────────────
 
+SCRIPT_VERSION = "2026-09-24 · jobs-v4"   # bump when digest.py changes; printed in the Action log
 GITHUB_PAGES_URL = os.environ.get("GITHUB_PAGES_URL", "https://sillynomad.github.io/daily-digest/")
 USED_STORIES_FILE = "used_stories.json"
 MAX_HISTORY = 20      # entries to keep per category in used_stories.json
@@ -86,7 +87,7 @@ FEEDS = {
 JOBS_PER_DAY = 3
 JOB_BOARDS_FILE = "job_boards.json"   # cache of resolved ATS board slugs
 MAX_JOB_HISTORY = 90                  # job URLs remembered, to avoid repeats
-BOARD_RESOLVE_PER_RUN = 5             # unknown companies probed per run
+BOARD_RESOLVE_PER_RUN = 8             # unknown companies probed per run
 JOB_MAX_AGE_DAYS = 21                 # ignore postings older than this
 JOB_CANDIDATES_TO_CLAUDE = 30         # shortlist size sent for final ranking
 MAX_PER_COMPANY_SHORTLIST = 4         # stops one big board crowding out the shortlist
@@ -145,16 +146,34 @@ JOB_TITLE_EXCLUDE = [
     "engineer", "developer", "designer", "scientist", "analyst", "recruiter",
     "coordinator", "specialist", "representative", "sdr", "bdr", "executive assistant",
     "manager, engineering", "software", "technician", "accountant", "controller",
+    # individual-contributor sales — "Channel Account Executive" is not a Head of role
+    "account executive", "account manager", "account director", "sales manager",
+    "customer success manager", "solutions consultant", "partner manager",
 ]
 
-JOB_LOCATION_KEYWORDS = [
-    "singapore", "apac", "asia pacific", "asia-pacific", "southeast asia",
-    "south east asia", "south-east asia", "sea ", "asia", "remote",
+# A posting must carry one of these to count as reachable from Singapore.
+# Word-boundary matched, so "Seattle" no longer reads as "sea".
+JOB_LOCATION_REQUIRED = [
+    "singapore", "sg", "apac", "aspac", "apj", "asia pacific", "asia-pacific",
+    "southeast asia", "south east asia", "south-east asia", "sea", "asia",
+    "global", "worldwide", "anywhere",
+    # APAC hubs — a regional role often lists the hub rather than the region.
+    # Relocation out of Singapore is handled by the ranking prompt, not here.
+    "australia", "sydney", "melbourne", "new zealand", "auckland",
+    "japan", "tokyo", "hong kong", "korea", "seoul", "taiwan", "taipei",
+    "malaysia", "kuala lumpur", "indonesia", "jakarta", "thailand", "bangkok",
+    "vietnam", "hanoi", "ho chi minh", "philippines", "manila", "india",
+    "bangalore", "bengaluru", "mumbai", "china", "shanghai", "beijing", "shenzhen",
 ]
 
+# Bare "remote" is no longer enough on its own — "US FL Miami - Remote" is not
+# a Singapore job. Remote only counts alongside one of the tokens above.
 JOB_LOCATION_EXCLUDE = [
-    "remote - us", "remote, us", "remote (us", "united states only",
-    "emea only", "latam", "europe only",
+    "remote - us", "remote, us", "remote (us", "united states", "usa", "u.s.",
+    "latam", "latin america", "americas", "emea", "europe", "north america",
+    "canada", "brazil", "mexico", "argentina", "colombia", "chile",
+    "united kingdom", "germany", "france", "spain", "netherlands", "ireland",
+    "poland", "portugal", "israel", "dubai", "uae",
 ]
 
 # Broad Singapore sweep via Adzuna. Free key from developer.adzuna.com.
@@ -176,7 +195,20 @@ def load_used() -> dict:
     """Load the used-stories ledger from disk."""
     try:
         with open(USED_STORIES_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
+            used = json.load(f)
+        # Self-heal: a URL recorded more than once came from a board handing the
+        # same careers-page link to several roles. Leaving it in would exclude
+        # that employer's entire board from here on.
+        jobs = used.get("job_urls", [])
+        counts = {}
+        for u in jobs:
+            counts[u] = counts.get(u, 0) + 1
+        poisoned = {u for u, n in counts.items() if n > 1}
+        if poisoned:
+            used["job_urls"] = [u for u in jobs if u not in poisoned]
+            print(f"  · dropped {len(poisoned)} generic URL(s) from the job ledger: "
+                  + ", ".join(sorted(poisoned)))
+        return used
     except Exception:
         return {"story_titles": [], "quote_authors": [], "poem_titles": [], "job_urls": []}
 
@@ -612,10 +644,17 @@ def greenhouse_jobs(slug: str) -> list[dict]:
         return []
     out = []
     for j in data.get("jobs", []):
+        # Some boards (Stripe) return a generic careers-search page as absolute_url
+        # for every posting. Fall back to the canonical per-job Greenhouse URL so
+        # each role keeps a distinct link.
+        jid = j.get("id")
+        url = (j.get("absolute_url") or "").strip()
+        if jid and str(jid) not in url:
+            url = f"https://boards.greenhouse.io/{slug}/jobs/{jid}"
         out.append({
             "title": (j.get("title") or "").strip(),
             "location": ((j.get("location") or {}).get("name") or "").strip(),
-            "url": j.get("absolute_url", ""),
+            "url": url,
             "posted": (j.get("updated_at") or j.get("first_published") or "")[:10],
             "salary": "",
         })
@@ -778,28 +817,51 @@ def fetch_muse_jobs() -> list[dict]:
 
 # ── Jobs: filtering and ranking ───────────────────────────────────────────────
 
-def job_is_relevant(job: dict) -> bool:
+def loc_has(loc: str, tokens: list[str]) -> bool:
+    """Word-boundary match, so 'Seattle' doesn't read as 'sea' and 'Lagos' isn't 'sg'."""
+    return any(re.search(r"\b" + re.escape(t) + r"\b", loc) for t in tokens)
+
+
+def job_key(job: dict) -> str:
+    """Stable identity for a posting: employer + title, not the URL.
+
+    Boards that hand back the same careers-page URL for every role would
+    otherwise poison the ledger and exclude that employer permanently.
+    """
+    company = re.sub(r"[^a-z0-9]", "", (job.get("company") or "").lower())
+    title = re.sub(r"[^a-z0-9]+", " ", (job.get("title") or "").lower()).strip()
+    return f"{company}|{title}"
+
+
+def job_reject_reason(job: dict) -> str:
+    """Why a posting was dropped — "" means it survives. Drives the funnel log."""
     title = (job.get("title") or "").lower()
     loc = (job.get("location") or "").lower()
     if not title or not job.get("url"):
-        return False
+        return "no title or url"
     if any(x in title for x in JOB_TITLE_EXCLUDE):
-        return False
+        return "title excluded"
     if not any(k in title for k in JOB_TITLE_KEYWORDS):
-        return False
-    if any(x in loc for x in JOB_LOCATION_EXCLUDE):
-        return False
-    if loc and not any(k in loc for k in JOB_LOCATION_KEYWORDS):
-        return False
+        return "title not senior enough"
+    if loc:
+        if loc_has(loc, JOB_LOCATION_EXCLUDE):
+            return "location outside APAC"
+        # "Remote" alone is not a location — it must be remote from somewhere he is.
+        if not loc_has(loc, JOB_LOCATION_REQUIRED):
+            return "location not APAC"
     posted = job.get("posted") or ""
     if len(posted) == 10:
         try:
             age = (datetime.now() - datetime.strptime(posted, "%Y-%m-%d")).days
             if age > JOB_MAX_AGE_DAYS:
-                return False
+                return f"older than {JOB_MAX_AGE_DAYS} days"
         except Exception:
             pass
-    return True
+    return ""
+
+
+def job_is_relevant(job: dict) -> bool:
+    return job_reject_reason(job) == ""
 
 
 def job_score(job: dict) -> int:
@@ -836,19 +898,47 @@ def job_score(job: dict) -> int:
 
 def collect_jobs(used_job_urls: list[str]) -> list[dict]:
     raw = fetch_target_company_jobs() + fetch_adzuna_jobs() + fetch_muse_jobs()
+    # A URL that several postings share is a generic careers page, not a job
+    # identity — matching on it would blacklist an employer's whole board.
+    url_counts = {}
+    for j in raw:
+        u = (j.get("url") or "").split("?")[0]
+        url_counts[u] = url_counts.get(u, 0) + 1
+    generic_urls = {u for u, n in url_counts.items() if n > 1}
+    if generic_urls:
+        print(f"  · {len(generic_urls)} shared/generic URL(s) ignored for dedupe")
+
     seen = set(used_job_urls)
     out, dupes = [], set()
+    funnel, near_misses = {}, []
     for j in raw:
         url = (j.get("url") or "").split("?")[0]
-        key = (j.get("title", "").lower(), j.get("company", "").lower())
-        if not url or url in seen or key in dupes:
+        key = job_key(j)
+        already = key in seen or (url in seen and url not in generic_urls)
+        if not url or already or key in dupes:
+            funnel["already seen or duplicate"] = funnel.get("already seen or duplicate", 0) + 1
             continue
-        if not job_is_relevant(j):
+        reason = job_reject_reason(j)
+        if reason:
+            funnel[reason] = funnel.get(reason, 0) + 1
+            # Roles in the right place but the wrong title are how we learn the
+            # keyword list is too narrow — surface a few of them.
+            if reason == "title not senior enough" and loc_has((j.get("location") or "").lower(),
+                                                               ["singapore", "apac", "asia pacific"]):
+                near_misses.append(f"{j.get('title')} — {j.get('company')} — {j.get('location')}")
             continue
         dupes.add(key)
         j["url"] = url
         out.append(j)
     out.sort(key=job_score, reverse=True)
+
+    if funnel:
+        print("  funnel: " + ", ".join(f"{v} {k}" for k, v in
+                                       sorted(funnel.items(), key=lambda x: -x[1])))
+    if near_misses:
+        print(f"  near misses (right location, title didn't match — {len(near_misses)}):")
+        for n in near_misses[:10]:
+            print(f"    · {n}")
     print(f"  ✓ {len(out)} relevant, unseen postings after filtering")
 
     # Keep only the strongest few per employer — a 500-role board like Stripe's
@@ -866,10 +956,33 @@ def collect_jobs(used_job_urls: list[str]) -> list[dict]:
     return capped[:JOB_CANDIDATES_TO_CLAUDE]
 
 
+def parse_picks(txt: str):
+    """Parse the ranking response. Returns a list (possibly empty), or None if unparseable."""
+    if txt.startswith("```"):
+        txt = re.sub(r"^```[a-z]*\n?|```$", "", txt, flags=re.MULTILINE).strip()
+    try:
+        data = json.loads(txt)
+    except Exception:
+        m = re.search(r"\[.*\]", txt, re.DOTALL)
+        if not m:
+            return None
+        try:
+            data = json.loads(m.group(0))
+        except Exception:
+            return None
+    return data if isinstance(data, list) else None
+
+
+def no_jobs_note(scanned: int) -> str:
+    return (f'<p class="job-none">Nothing worth applying to today — {scanned} '
+            f'matching role{"s" if scanned != 1 else ""} scanned and none cleared the bar.</p>')
+
+
 def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
     """Ask Claude to pick the best JOBS_PER_DAY roles and say why. Returns (html, urls_used)."""
     if not candidates:
-        return "", []
+        print("  · no candidates reached the ranking step")
+        return no_jobs_note(0), []
 
     listing = "\n\n".join(
         f"{i}. {c['title']}\n"
@@ -899,19 +1012,27 @@ def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
         max_tokens=900,
     )
 
-    txt = result.strip()
-    if txt.startswith("```"):
-        txt = re.sub(r"^```[a-z]*\n?|```$", "", txt, flags=re.MULTILINE).strip()
+    picks = parse_picks(result.strip())
+    if picks is None:
+        # One retry with a stricter instruction before giving up. Never pad the
+        # list with unvetted roles — a bad recommendation costs more than a gap.
+        print("Warning: job ranking JSON failed — retrying once")
+        retry = claude(
+            f"CANDIDATE PROFILE:\n{CANDIDATE_PROFILE}\n\nROLES:\n{listing}\n\n"
+            f"Return ONLY a JSON array of up to {JOBS_PER_DAY} objects with keys "
+            '"index" (int), "fit", "why", "angle". No prose. No code fences. '
+            "Different employer for each. Return [] if none are worth his time.",
+            max_tokens=900,
+        )
+        picks = parse_picks(retry.strip())
+    if picks is None:
+        print("Warning: ranking failed twice — no jobs section today")
+        return "", []
+    if not picks:
+        print("  · nothing in today's pool cleared the bar")
+        return no_jobs_note(len(candidates)), []
 
-    try:
-        picks = json.loads(txt)
-    except Exception as e:
-        print(f"Warning: job ranking JSON failed ({e}) — falling back to top-scored roles")
-        picks = [{"index": i, "fit": "", "why": "", "angle": ""}
-                 for i in range(min(JOBS_PER_DAY, len(candidates)))]
-
-    # Enforce employer diversity even if the model ignored the instruction, then
-    # backfill from the shortlist so the section still carries three roles.
+    # Enforce employer diversity even if the model ignored the instruction.
     chosen, seen_companies, used_idx = [], set(), set()
     for p in picks:
         try:
@@ -929,27 +1050,9 @@ def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
         if len(chosen) >= JOBS_PER_DAY:
             break
 
+    # Deliberately no backfill. If only one role clears the bar, one card ships.
     if len(chosen) < JOBS_PER_DAY:
-        for idx, job in enumerate(candidates):
-            if len(chosen) >= JOBS_PER_DAY:
-                break
-            company = (job.get("company") or "").lower()
-            if idx in used_idx or (ONE_ROLE_PER_COMPANY and company and company in seen_companies):
-                continue
-            chosen.append((job, {}))
-            seen_companies.add(company)
-            used_idx.add(idx)
-
-    # Last resort: if the day's pool really is one employer, a thin section beats
-    # an empty one — allow repeats rather than shipping a single card.
-    if len(chosen) < JOBS_PER_DAY:
-        for idx, job in enumerate(candidates):
-            if len(chosen) >= JOBS_PER_DAY:
-                break
-            if idx in used_idx:
-                continue
-            chosen.append((job, {}))
-            used_idx.add(idx)
+        print(f"  · only {len(chosen)} role(s) cleared the bar today — not padding")
 
     cards, urls = [], []
     for job, p in chosen:
@@ -966,7 +1069,10 @@ def build_jobs_of_day(candidates: list[dict]) -> tuple[str, list[str]]:
   {f'<p class="job-angle"><em>Lead with:</em> {angle}</p>' if angle else ""}
   <p class="job-apply"><a href="{job['url']}" target="_blank">View &amp; apply →</a></p>
 </div>""")
-        urls.append(job["url"])
+        # Record employer+title, not the URL — boards that reuse one careers-page
+        # link for every role would otherwise blacklist themselves. Legacy URL
+        # entries already in the ledger still match on the URL side.
+        urls.append(job_key(job))
 
     return "\n".join(cards), urls
 
@@ -1019,6 +1125,8 @@ def build_html(skim, tech, laliga, sg, fr, ja, zh,
               background: #f5c842; padding: 3px 8px; border-radius: 3px; margin-bottom: 8px; }}
   .job-why {{ font-family: Georgia, serif; font-size: 14px; line-height: 1.65; color: #333; margin: 8px 0 4px; }}
   .job-angle {{ font-family: Georgia, serif; font-size: 13px; line-height: 1.6; color: #666; margin: 0 0 8px; }}
+  .job-none {{ font-family: Georgia, serif; font-size: 14px; line-height: 1.7; color: #777;
+               font-style: italic; margin: 0; }}
   .job-apply a {{ font-family: sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px;
                   text-transform: uppercase; color: #1a1a2e; text-decoration: none;
                   border-bottom: 2px solid #f5c842; }}
@@ -1173,6 +1281,7 @@ def jobs_test(save: bool = True):
     Picked roles ARE written to used_stories.json by default, so a test run and the next
     morning's run don't hand you the same three jobs. Pass --no-save to leave the ledger alone.
     """
+    print(f"🏷️  digest.py version: {SCRIPT_VERSION}")
     used = load_used()
     print("💼 Collecting jobs...")
     candidates = collect_jobs(used.get("job_urls", []))
@@ -1197,6 +1306,7 @@ def jobs_test(save: bool = True):
 
 
 def main():
+    print(f"🏷️  digest.py version: {SCRIPT_VERSION}")
     # Load history to avoid repeats
     used = load_used()
     print(f"📚 Loaded used history: "
