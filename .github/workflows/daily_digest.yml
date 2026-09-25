@@ -5,6 +5,11 @@ on:
     # Runs at 7:00 AM Singapore time (SGT = UTC+8), so 23:00 UTC previous day
     - cron: '0 23 * * *'
   workflow_dispatch: # allows manual trigger from GitHub UI
+    inputs:
+      jobs_only:
+        description: 'Test the Jobs of the Day section only (no email sent)'
+        type: boolean
+        default: false
 
 jobs:
   send-digest:
@@ -32,12 +37,19 @@ jobs:
           EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
           EMAIL_APP_PASSWORD: ${{ secrets.EMAIL_APP_PASSWORD }}
           GITHUB_PAGES_URL: ${{ secrets.GITHUB_PAGES_URL }}
-        run: python digest.py
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: |
+          if [ "${{ inputs.jobs_only }}" = "true" ]; then
+            python digest.py --jobs-test
+          else
+            python digest.py
+          fi
 
       - name: Commit outputs
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/index.html used_stories.json
+          git add docs/index.html used_stories.json job_boards.json 2>/dev/null || true
           git commit -m "Daily digest $(date +'%Y-%m-%d')" || echo "Nothing to commit"
           git push
