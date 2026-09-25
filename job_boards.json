@@ -1,0 +1,66 @@
+{
+  "Adobe": {
+    "board": null,
+    "checked": "2026-09-25"
+  },
+  "Asana": {
+    "board": [
+      "greenhouse",
+      "asana"
+    ],
+    "checked": ""
+  },
+  "Canva": {
+    "board": null,
+    "checked": "2026-09-25"
+  },
+  "HubSpot": {
+    "board": [
+      "greenhouse",
+      "hubspotjobs"
+    ],
+    "checked": "2026-09-25"
+  },
+  "Miro": {
+    "board": [
+      "ashby",
+      "miro"
+    ],
+    "checked": "2026-09-25"
+  },
+  "Spotify": {
+    "board": [
+      "lever",
+      "spotify"
+    ],
+    "checked": "2026-09-25"
+  },
+  "Strava": {
+    "board": [
+      "ashby",
+      "strava"
+    ],
+    "checked": "2026-09-25"
+  },
+  "Stripe": {
+    "board": [
+      "greenhouse",
+      "stripe"
+    ],
+    "checked": ""
+  },
+  "Whoop": {
+    "board": [
+      "ashby",
+      "whoop"
+    ],
+    "checked": "2026-09-25"
+  },
+  "Zwift": {
+    "board": [
+      "greenhouse",
+      "zwift"
+    ],
+    "checked": "2026-09-25"
+  }
+}
