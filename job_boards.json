@@ -3,6 +3,13 @@
     "board": null,
     "checked": "2026-09-25"
   },
+  "Airtable": {
+    "board": [
+      "greenhouse",
+      "airtable"
+    ],
+    "checked": "2026-09-26"
+  },
   "Asana": {
     "board": [
       "greenhouse",
@@ -10,9 +17,31 @@
     ],
     "checked": ""
   },
+  "Atlassian": {
+    "board": null,
+    "checked": "2026-09-26"
+  },
   "Canva": {
     "board": null,
     "checked": "2026-09-25"
+  },
+  "Datadog": {
+    "board": [
+      "greenhouse",
+      "datadog"
+    ],
+    "checked": "2026-09-26"
+  },
+  "Emeritus": {
+    "board": null,
+    "checked": "2026-09-26"
+  },
+  "Figma": {
+    "board": [
+      "greenhouse",
+      "figma"
+    ],
+    "checked": "2026-09-26"
   },
   "HubSpot": {
     "board": [
@@ -27,6 +56,27 @@
       "miro"
     ],
     "checked": "2026-09-25"
+  },
+  "Notion": {
+    "board": [
+      "ashby",
+      "notion"
+    ],
+    "checked": "2026-09-26"
+  },
+  "Oura": {
+    "board": [
+      "greenhouse",
+      "oura"
+    ],
+    "checked": "2026-09-26"
+  },
+  "Sportradar": {
+    "board": [
+      "greenhouse",
+      "sportradar"
+    ],
+    "checked": "2026-09-26"
   },
   "Spotify": {
     "board": [

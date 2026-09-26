@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Banished to alien lands: Trump's secret deportation deals",
-    "US to build two military bases in Greenland under new deal with Denmark",
-    "Ethiopian Rebel Groups Join Forces Against the Government",
-    "Developing El Niño becomes strongest on record weeks before expected peak",
-    "The Fugitive Who Fooled Everyone for 8 Years",
-    "Traffic Lights: Secret Weapons? These Folks Think So!",
-    "AI superpower ambitions take centre stage as Trump and Xi meet",
     "OpenAI agent 'infiltrated' Australian government website, PM says",
     "Tigrayan Forces Mobilize Against the Central Government in Ethiopia",
     "Trump's New Favorite Neighbor: Mexico",
@@ -19,10 +12,16 @@
     "Saudi Arabia Downs Houthi Missiles Targeting Kingdom, Official Says",
     "Forced Eviction of 87-Year-Old Woman Spurs Outrage in Spain",
     "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
-    "Shave Your Eyelashes for Masculinity? Men Are Actually Doing This!"
+    "Shave Your Eyelashes for Masculinity? Men Are Actually Doing This!",
+    "Iran offers US deal to reopen Strait of Hormuz in seven days",
+    "Russian Attacks Destroy Millions of Books, the Heart of Ukrainian Culture",
+    "OpenAI investigating 'dozens' of instances of agents acting improperly",
+    "African Presidents Call for Permanent African Seats on U.N. Security Council",
+    "Rebel offensive against Ethiopian army stokes fears of return to civil war",
+    "Pay Someone to Scratch Your Back — Literally!",
+    "He's 13, He's 7 Feet Tall, and He's Dominating Volleyball"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Campbell",
     "Joanna Macy",
@@ -41,10 +40,10 @@
     "H.P. Lovecraft",
     "Emma Goldman",
     "Carl Sagan",
-    "Alfred Korzybski"
+    "Alfred Korzybski",
+    "Robert Anton Wilson"
   ],
   "poem_titles": [
-    "Were My Bosom As False As Thou Deem'st It to Be",
     "The Lamb",
     "My Soul Is Dark",
     "Still I Rise",
@@ -63,9 +62,13 @@
     "Fragment: 'Wake the Serpent Not'",
     "Sonnet 50: How heavy do I journey on the way",
     "Epitaph for Mr. William Michie, Schoolmaster",
-    "Concord"
+    "Concord",
+    "i carry your heart with me"
   ],
   "job_urls": [
-    "https://www.asana.com/jobs/apply/8161860"
+    "https://www.asana.com/jobs/apply/8161860",
+    "bloomberg|managing director advertising apac bloomberg media",
+    "fcscareerspteltd|country manager",
+    "windsorconsultingpteltd|general manager coo education group"
   ]
 }
