@@ -25,12 +25,30 @@
     "board": null,
     "checked": "2026-09-25"
   },
+  "Cloudflare": {
+    "board": [
+      "greenhouse",
+      "cloudflare"
+    ],
+    "checked": "2026-09-27"
+  },
   "Datadog": {
     "board": [
       "greenhouse",
       "datadog"
     ],
     "checked": "2026-09-26"
+  },
+  "Deel": {
+    "board": null,
+    "checked": "2026-09-27"
+  },
+  "Elastic": {
+    "board": [
+      "greenhouse",
+      "elastic"
+    ],
+    "checked": "2026-09-27"
   },
   "Emeritus": {
     "board": null,
@@ -42,6 +60,13 @@
       "figma"
     ],
     "checked": "2026-09-26"
+  },
+  "Gitlab": {
+    "board": [
+      "greenhouse",
+      "gitlab"
+    ],
+    "checked": "2026-09-27"
   },
   "HubSpot": {
     "board": [
@@ -71,6 +96,24 @@
     ],
     "checked": "2026-09-26"
   },
+  "Peloton": {
+    "board": [
+      "greenhouse",
+      "peloton"
+    ],
+    "checked": "2026-09-27"
+  },
+  "Remote": {
+    "board": [
+      "greenhouse",
+      "remote"
+    ],
+    "checked": "2026-09-27"
+  },
+  "Rippling": {
+    "board": null,
+    "checked": "2026-09-27"
+  },
   "Sportradar": {
     "board": [
       "greenhouse",
@@ -98,6 +141,13 @@
       "stripe"
     ],
     "checked": ""
+  },
+  "Twilio": {
+    "board": [
+      "greenhouse",
+      "twilio"
+    ],
+    "checked": "2026-09-27"
   },
   "Whoop": {
     "board": [

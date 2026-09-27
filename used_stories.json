@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "OpenAI agent 'infiltrated' Australian government website, PM says",
-    "Tigrayan Forces Mobilize Against the Central Government in Ethiopia",
-    "Trump's New Favorite Neighbor: Mexico",
-    "Healthcare in Africa 'under growing strain' after US withdrawal from aid programs, report warns",
-    "This Blind, Drunk Man Somehow Drove 150 Miles on the Highway",
-    "Sydney's Lucky Bronze Boar: Rub Its Snout for Good Luck!",
-    "Netanyahu defends Israeli military action as delegates walk out before UN speech",
     "Haiti Turns to Roger Stone To Lobby Trump Administration",
     "Rebel offensive against Ethiopian army stokes fears of return to civil war",
     "Saudi Arabia Downs Houthi Missiles Targeting Kingdom, Official Says",
@@ -19,10 +12,16 @@
     "African Presidents Call for Permanent African Seats on U.N. Security Council",
     "Rebel offensive against Ethiopian army stokes fears of return to civil war",
     "Pay Someone to Scratch Your Back — Literally!",
-    "He's 13, He's 7 Feet Tall, and He's Dominating Volleyball"
+    "He's 13, He's 7 Feet Tall, and He's Dominating Volleyball",
+    "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
+    "At Summit, Xi Sought to Tilt Trump's Stance on America's Place in Asia",
+    "Rebel offensive against Ethiopian army stokes fears of return to civil war",
+    "Heroine or Public Enemy? The Israeli Blocking Much of Netanyahu's Agenda.",
+    "A Tetris-Like Maze Blocks Protests in Pakistan's Capital",
+    "Pay to Get Scratched? This Salon Has You Covered!",
+    "Traffic Lights Are Weapons?! Conspiracy Group Says Yes!"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Joseph Campbell",
     "Joanna Macy",
     "Albert Einstein",
@@ -41,10 +40,10 @@
     "Emma Goldman",
     "Carl Sagan",
     "Alfred Korzybski",
-    "Robert Anton Wilson"
+    "Robert Anton Wilson",
+    "Meister Eckhart"
   ],
   "poem_titles": [
-    "The Lamb",
     "My Soul Is Dark",
     "Still I Rise",
     "\"I have heard the sunset song of the birches,\"",
@@ -63,12 +62,16 @@
     "Sonnet 50: How heavy do I journey on the way",
     "Epitaph for Mr. William Michie, Schoolmaster",
     "Concord",
-    "i carry your heart with me"
+    "i carry your heart with me",
+    "Hope is the Thing with Feathers"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
     "bloomberg|managing director advertising apac bloomberg media",
     "fcscareerspteltd|country manager",
-    "windsorconsultingpteltd|general manager coo education group"
+    "windsorconsultingpteltd|general manager coo education group",
+    "leansixsearchsupplychainrecruitment|managing director southeast asia",
+    "stripe|head of communications apac",
+    "3imembers|regional director singapore"
   ]
 }
