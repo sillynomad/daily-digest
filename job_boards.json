@@ -61,6 +61,10 @@
     ],
     "checked": "2026-09-26"
   },
+  "Garmin": {
+    "board": null,
+    "checked": "2026-09-28"
+  },
   "Gitlab": {
     "board": [
       "greenhouse",
@@ -75,6 +79,10 @@
     ],
     "checked": "2026-09-25"
   },
+  "Lululemon": {
+    "board": null,
+    "checked": "2026-09-28"
+  },
   "Miro": {
     "board": [
       "ashby",
@@ -88,6 +96,13 @@
       "notion"
     ],
     "checked": "2026-09-26"
+  },
+  "On Running": {
+    "board": [
+      "greenhouse",
+      "onrunning"
+    ],
+    "checked": "2026-09-28"
   },
   "Oura": {
     "board": [
@@ -148,6 +163,10 @@
       "twilio"
     ],
     "checked": "2026-09-27"
+  },
+  "Wahoo Fitness": {
+    "board": null,
+    "checked": "2026-09-28"
   },
   "Whoop": {
     "board": [

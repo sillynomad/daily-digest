@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Haiti Turns to Roger Stone To Lobby Trump Administration",
-    "Rebel offensive against Ethiopian army stokes fears of return to civil war",
-    "Saudi Arabia Downs Houthi Missiles Targeting Kingdom, Official Says",
-    "Forced Eviction of 87-Year-Old Woman Spurs Outrage in Spain",
-    "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
-    "Shave Your Eyelashes for Masculinity? Men Are Actually Doing This!",
-    "Iran offers US deal to reopen Strait of Hormuz in seven days",
     "Russian Attacks Destroy Millions of Books, the Heart of Ukrainian Culture",
     "OpenAI investigating 'dozens' of instances of agents acting improperly",
     "African Presidents Call for Permanent African Seats on U.N. Security Council",
@@ -19,7 +12,14 @@
     "Heroine or Public Enemy? The Israeli Blocking Much of Netanyahu's Agenda.",
     "A Tetris-Like Maze Blocks Protests in Pakistan's Capital",
     "Pay to Get Scratched? This Salon Has You Covered!",
-    "Traffic Lights Are Weapons?! Conspiracy Group Says Yes!"
+    "Traffic Lights Are Weapons?! Conspiracy Group Says Yes!",
+    "Serbia's Longtime President Aleksandar Vucic Resigns Post",
+    "5 Arrested on Suspicion of Terrorism Near RAF Fairford Air Base in UK",
+    "At least 27 dead after two mass shootings in South Africa, police say",
+    "Rebel offensive against Ethiopian army stokes fears of return to civil war",
+    "Venezuela releases dozens of political prisoners as election calls grow",
+    "Blind Man With No License Drinks and Drives 150 Miles on the Highway",
+    "Is Alton, Illinois America's Most Haunted Small Town?"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "My Soul Is Dark",
     "Still I Rise",
     "\"I have heard the sunset song of the birches,\"",
     "The Road Not Taken",
@@ -63,7 +62,8 @@
     "Epitaph for Mr. William Michie, Schoolmaster",
     "Concord",
     "i carry your heart with me",
-    "Hope is the Thing with Feathers"
+    "Hope is the Thing with Feathers",
+    "Laughing Song"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -72,6 +72,7 @@
     "windsorconsultingpteltd|general manager coo education group",
     "leansixsearchsupplychainrecruitment|managing director southeast asia",
     "stripe|head of communications apac",
-    "3imembers|regional director singapore"
+    "3imembers|regional director singapore",
+    "stripe|head of marketing southeast asia"
   ]
 }
