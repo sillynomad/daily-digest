@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Russian Attacks Destroy Millions of Books, the Heart of Ukrainian Culture",
-    "OpenAI investigating 'dozens' of instances of agents acting improperly",
-    "African Presidents Call for Permanent African Seats on U.N. Security Council",
-    "Rebel offensive against Ethiopian army stokes fears of return to civil war",
-    "Pay Someone to Scratch Your Back — Literally!",
-    "He's 13, He's 7 Feet Tall, and He's Dominating Volleyball",
-    "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
     "At Summit, Xi Sought to Tilt Trump's Stance on America's Place in Asia",
     "Rebel offensive against Ethiopian army stokes fears of return to civil war",
     "Heroine or Public Enemy? The Israeli Blocking Much of Netanyahu's Agenda.",
@@ -19,7 +12,14 @@
     "Rebel offensive against Ethiopian army stokes fears of return to civil war",
     "Venezuela releases dozens of political prisoners as election calls grow",
     "Blind Man With No License Drinks and Drives 150 Miles on the Highway",
-    "Is Alton, Illinois America's Most Haunted Small Town?"
+    "Is Alton, Illinois America's Most Haunted Small Town?",
+    "OpenAI scraps rollout of new model over safety concerns",
+    "Over 800 Killed in Renewed Houthi-Saudi War in Yemen, W.H.O. Says",
+    "3 Egyptian Officials Convicted of Kidnapping Slain Italian Student",
+    "DRC politician beaten to death after radio appearance about Ebola outbreak",
+    "At least 27 dead after two mass shootings in South Africa, police say",
+    "Men Are Shaving Off Their Eyelashes to Look 'Manly'",
+    "Meet Wahpper: The World's Largest Catfish Statue in North Dakota"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "Still I Rise",
     "\"I have heard the sunset song of the birches,\"",
     "The Road Not Taken",
     "When I hoped I feared --",
@@ -63,7 +62,8 @@
     "Concord",
     "i carry your heart with me",
     "Hope is the Thing with Feathers",
-    "Laughing Song"
+    "Laughing Song",
+    "To --"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -73,6 +73,8 @@
     "leansixsearchsupplychainrecruitment|managing director southeast asia",
     "stripe|head of communications apac",
     "3imembers|regional director singapore",
-    "stripe|head of marketing southeast asia"
+    "stripe|head of marketing southeast asia",
+    "bloomberglp|managing director advertising apac bloomberg media singapore sgp posted today",
+    "stripe|global partnerships lead greater china hong kong singapore"
   ]
 }
