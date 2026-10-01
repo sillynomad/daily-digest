@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "5 Arrested on Suspicion of Terrorism Near RAF Fairford Air Base in UK",
-    "At least 27 dead after two mass shootings in South Africa, police say",
-    "Rebel offensive against Ethiopian army stokes fears of return to civil war",
-    "Venezuela releases dozens of political prisoners as election calls grow",
-    "Blind Man With No License Drinks and Drives 150 Miles on the Highway",
-    "Is Alton, Illinois America's Most Haunted Small Town?",
-    "OpenAI scraps rollout of new model over safety concerns",
     "Over 800 Killed in Renewed Houthi-Saudi War in Yemen, W.H.O. Says",
     "3 Egyptian Officials Convicted of Kidnapping Slain Italian Student",
     "DRC politician beaten to death after radio appearance about Ebola outbreak",
@@ -19,10 +12,16 @@
     "DRC politician beaten to death after radio appearance about Ebola outbreak",
     "Spain announces ban on evictions after protests over 87-year-old woman's removal from flat",
     "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
-    "Madrid's Metro Stations Are Secretly Underground Art Galleries"
+    "Madrid's Metro Stations Are Secretly Underground Art Galleries",
+    "What we know about stabbing on Flydubai flight to Israel",
+    "After Two Decades, U.S. Forces Leave Iraq to an Uncertain Future",
+    "Trump administration diverts human rights funds to push far-right agenda abroad",
+    "Swiss glaciers suffer 'disastrous' year of ice loss, threatening water supplies",
+    "Hundreds Detained in France as Some Student Protests Turn Violent",
+    "This Chinese Entrepreneur Is Making Bank Just by Scratching People",
+    "Copenhagen's Wackiest Metro Station Has Furniture Stuck to the Ceiling"
   ],
   "quote_authors": [
-    "Joanna Macy",
     "Albert Einstein",
     "Isak Dinesen",
     "J.B.S. Haldane",
@@ -41,10 +40,10 @@
     "Alfred Korzybski",
     "Robert Anton Wilson",
     "Meister Eckhart",
-    "Nicholas Negroponte"
+    "Nicholas Negroponte",
+    "Niels Bohr"
   ],
   "poem_titles": [
-    "The Road Not Taken",
     "When I hoped I feared --",
     "Epigram on an Old Lady Who Had Some Curious Notions Respecting the Soul",
     "Substitute for an Epitaph",
@@ -63,7 +62,8 @@
     "Hope is the Thing with Feathers",
     "Laughing Song",
     "To --",
-    "To a Friend Who Sent Me Some Roses"
+    "To a Friend Who Sent Me Some Roses",
+    "But These Things Also"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -75,6 +75,7 @@
     "3imembers|regional director singapore",
     "stripe|head of marketing southeast asia",
     "bloomberglp|managing director advertising apac bloomberg media singapore sgp posted today",
-    "stripe|global partnerships lead greater china hong kong singapore"
+    "stripe|global partnerships lead greater china hong kong singapore",
+    "taulia|general manager asia pacific"
   ]
 }
