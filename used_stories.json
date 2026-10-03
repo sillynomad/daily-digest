@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Israeli Settlers Stop Soldiers From Returning Palestinians to Their Home",
-    "Dozens Killed in Myanmar Military Bombing",
-    "DRC politician beaten to death after radio appearance about Ebola outbreak",
-    "Spain announces ban on evictions after protests over 87-year-old woman's removal from flat",
-    "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
-    "Madrid's Metro Stations Are Secretly Underground Art Galleries",
-    "What we know about stabbing on Flydubai flight to Israel",
     "After Two Decades, U.S. Forces Leave Iraq to an Uncertain Future",
     "Trump administration diverts human rights funds to push far-right agenda abroad",
     "Swiss glaciers suffer 'disastrous' year of ice loss, threatening water supplies",
@@ -19,7 +12,14 @@
     "Canada's Proposed Oil Pipeline Offers Carney Relief From Domestic and Global Turmoil",
     "Egypt Arrests 6 Matsaddash Journalists on Claims of Spreading Disinformation",
     "Blind Man With No License Drinks and Drives 150 Miles on the Highway",
-    "A Real Pirate's Jolly Roger Is Hiding in Plain Sight in England"
+    "A Real Pirate's Jolly Roger Is Hiding in Plain Sight in England",
+    "G7 to release 100 million barrels of oil and diesel after Trump export ban threat",
+    "Ukraine Reports First Combat Use of Its Own Ballistic Missile",
+    "Argentina's 'Golden Passport' Program Offers Citizenship in Exchange for Foreign Cash",
+    "Riot police clash with students as education protests rage in France",
+    "Trump administration diverts human rights funds to push far-right agenda abroad",
+    "Men Are Shaving Off Their Eyelashes to Look More Masculine",
+    "Conspiracy Theorists Are Smashing Traffic Lights, Convinced They're Secret Weapons"
   ],
   "quote_authors": [
     "Isak Dinesen",
@@ -44,7 +44,6 @@
     "Bertrand Russell"
   ],
   "poem_titles": [
-    "Epigram on an Old Lady Who Had Some Curious Notions Respecting the Soul",
     "Substitute for an Epitaph",
     "Fragment: A Tale Untold",
     "Still I Rise",
@@ -63,7 +62,8 @@
     "To --",
     "To a Friend Who Sent Me Some Roses",
     "But These Things Also",
-    "O Beauty, Passing Beauty!"
+    "O Beauty, Passing Beauty!",
+    "The Road Not Taken"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -76,6 +76,9 @@
     "stripe|head of marketing southeast asia",
     "bloomberglp|managing director advertising apac bloomberg media singapore sgp posted today",
     "stripe|global partnerships lead greater china hong kong singapore",
-    "taulia|general manager asia pacific"
+    "taulia|general manager asia pacific",
+    "richemontluxury|regional director se asia oceania luxury growth lead",
+    "relx|regional director research sales sea anz",
+    "pricewaterhousecoopers|deals strategic capital solutions scs director managing director"
   ]
 }
