@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "After Two Decades, U.S. Forces Leave Iraq to an Uncertain Future",
-    "Trump administration diverts human rights funds to push far-right agenda abroad",
-    "Swiss glaciers suffer 'disastrous' year of ice loss, threatening water supplies",
-    "Hundreds Detained in France as Some Student Protests Turn Violent",
-    "This Chinese Entrepreneur Is Making Bank Just by Scratching People",
-    "Copenhagen's Wackiest Metro Station Has Furniture Stuck to the Ceiling",
-    "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
     "Investigators Seek to Establish Motive in FlyDubai Attack",
     "Trump administration diverts human rights funds to push far-right agenda abroad",
     "Canada's Proposed Oil Pipeline Offers Carney Relief From Domestic and Global Turmoil",
@@ -19,10 +12,16 @@
     "Riot police clash with students as education protests rage in France",
     "Trump administration diverts human rights funds to push far-right agenda abroad",
     "Men Are Shaving Off Their Eyelashes to Look More Masculine",
-    "Conspiracy Theorists Are Smashing Traffic Lights, Convinced They're Secret Weapons"
+    "Conspiracy Theorists Are Smashing Traffic Lights, Convinced They're Secret Weapons",
+    "Tennessee prison chief to resign after Christa Pike's failed execution",
+    "FlyDubai Co-Pilot Used Crash Ax in 'Terrorist' Cockpit Attack, Emirates Says",
+    "Russia Hits Second Major Bridge in Ukraine's Capital Kyiv",
+    "Separatists Are Poised to Win Quebec's Election. Independence Is Still a Hard Sell.",
+    "American High School Students Are Selling Guns Bound for Cartels",
+    "Qatar's 13-Year-Old Volleyball Giant Raises Eyebrows at Asian Championship",
+    "The Abandoned Monorail of Melaka"
   ],
   "quote_authors": [
-    "Isak Dinesen",
     "J.B.S. Haldane",
     "Albert Einstein",
     "Alfred Korzybski",
@@ -41,10 +40,10 @@
     "Meister Eckhart",
     "Nicholas Negroponte",
     "Niels Bohr",
-    "Bertrand Russell"
+    "Bertrand Russell",
+    "Stephen King"
   ],
   "poem_titles": [
-    "Substitute for an Epitaph",
     "Fragment: A Tale Untold",
     "Still I Rise",
     "That Girl's Clear Eyes",
@@ -63,7 +62,8 @@
     "To a Friend Who Sent Me Some Roses",
     "But These Things Also",
     "O Beauty, Passing Beauty!",
-    "The Road Not Taken"
+    "The Road Not Taken",
+    "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -79,6 +79,7 @@
     "taulia|general manager asia pacific",
     "richemontluxury|regional director se asia oceania luxury growth lead",
     "relx|regional director research sales sea anz",
-    "pricewaterhousecoopers|deals strategic capital solutions scs director managing director"
+    "pricewaterhousecoopers|deals strategic capital solutions scs director managing director",
+    "stripe|head of risk programs apac"
   ]
 }
