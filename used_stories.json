@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Ukraine Reports First Combat Use of Its Own Ballistic Missile",
-    "Argentina's 'Golden Passport' Program Offers Citizenship in Exchange for Foreign Cash",
-    "Riot police clash with students as education protests rage in France",
-    "Trump administration diverts human rights funds to push far-right agenda abroad",
-    "Men Are Shaving Off Their Eyelashes to Look More Masculine",
-    "Conspiracy Theorists Are Smashing Traffic Lights, Convinced They're Secret Weapons",
-    "Tennessee prison chief to resign after Christa Pike's failed execution",
     "FlyDubai Co-Pilot Used Crash Ax in 'Terrorist' Cockpit Attack, Emirates Says",
     "Russia Hits Second Major Bridge in Ukraine's Capital Kyiv",
     "Separatists Are Poised to Win Quebec's Election. Independence Is Still a Hard Sell.",
@@ -19,7 +12,14 @@
     "Egyptian journalist faces terrorism charges after entire newsroom detained",
     "Superpowers Race to Put Nuclear Reactors on the Moon",
     "This Salon Will Scratch That Itch — Literally!",
-    "A Hidden Mural in Oslo City Hall Is Quietly Making Fun of Everyone"
+    "A Hidden Mural in Oslo City Hall Is Quietly Making Fun of Everyone",
+    "Trump says 'threat' led US to pull bombers from RAF Fairford",
+    "Russia Moves to Tamp Down Rumors About Plague Outbreak in Siberia",
+    "In a Major Boost for the Right, Another Bolsonaro Nears Brazil's Presidency",
+    "Spain's Leader Calls an Early Election",
+    "Egyptian journalist faces terrorism charges after entire newsroom detained",
+    "This Fugitive Spent 8 Years Living as a Woman to Avoid Arrest",
+    "A Blind, Drunk Man With No License Just Drove 150 Miles on the Highway"
   ],
   "quote_authors": [
     "J.B.S. Haldane",
@@ -44,7 +44,6 @@
     "Stephen King"
   ],
   "poem_titles": [
-    "Still I Rise",
     "That Girl's Clear Eyes",
     "285. Song—I Gaed a Waefu’ Gate Yestreen",
     "Sonnet 13",
@@ -63,7 +62,8 @@
     "O Beauty, Passing Beauty!",
     "The Road Not Taken",
     "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646",
-    "Translation from Horace"
+    "Translation from Horace",
+    "Still I Rise"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
