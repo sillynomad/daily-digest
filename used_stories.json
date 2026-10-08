@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Houthis Claim Attack on Aramco as Yemen Conflict Escalates",
-    "Brazil Elections Head to Runoff Between Lula and Bolsonaro Son",
-    "Egyptian journalist faces terrorism charges after entire newsroom detained",
-    "Superpowers Race to Put Nuclear Reactors on the Moon",
-    "This Salon Will Scratch That Itch — Literally!",
-    "A Hidden Mural in Oslo City Hall Is Quietly Making Fun of Everyone",
-    "Trump says 'threat' led US to pull bombers from RAF Fairford",
     "Russia Moves to Tamp Down Rumors About Plague Outbreak in Siberia",
     "In a Major Boost for the Right, Another Bolsonaro Nears Brazil's Presidency",
     "Spain's Leader Calls an Early Election",
@@ -19,7 +12,14 @@
     "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
     "Tigray rebel groups 'forcibly recruiting boys as young as 15' as fighting spreads",
     "Men Are Shaving Off Their Eyelashes to Look More Masculine",
-    "Pinkie the Giant Pink Elephant Is a Must-See Wisconsin Roadside Attraction"
+    "Pinkie the Giant Pink Elephant Is a Must-See Wisconsin Roadside Attraction",
+    "Spanish pensioner whose eviction sparked nationwide protests dies, union says",
+    "Israelis demand accountability over 7 October failures three years after attacks",
+    "Canada Halts Plan to Allow Medically Assisted Death for the Mentally Ill",
+    "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
+    "Rubio Urges Europe to Awaken From 'Slumber' and Uphold Western Dominance",
+    "This 13-Year-Old Volleyball Player Is Almost 7 Feet Tall!",
+    "Watch Out — Those Traffic Lights Might Be Weapons! (At Least, Some People Think So)"
   ],
   "quote_authors": [
     "J.B.S. Haldane",
@@ -44,7 +44,6 @@
     "Stephen King"
   ],
   "poem_titles": [
-    "285. Song—I Gaed a Waefu’ Gate Yestreen",
     "Sonnet 13",
     "Still I Rise",
     "On Fanny Godwin",
@@ -63,7 +62,8 @@
     "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646",
     "Translation from Horace",
     "Still I Rise",
-    "The Road Not Taken"
+    "The Road Not Taken",
+    "To the Author of a Poem Entitled Successio"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -80,6 +80,7 @@
     "richemontluxury|regional director se asia oceania luxury growth lead",
     "relx|regional director research sales sea anz",
     "pricewaterhousecoopers|deals strategic capital solutions scs director managing director",
-    "stripe|head of risk programs apac"
+    "stripe|head of risk programs apac",
+    "standardcharteredbank|managing director global head ai experimentation partnerships"
   ]
 }
