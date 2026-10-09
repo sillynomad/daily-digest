@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Russia Moves to Tamp Down Rumors About Plague Outbreak in Siberia",
-    "In a Major Boost for the Right, Another Bolsonaro Nears Brazil's Presidency",
-    "Spain's Leader Calls an Early Election",
-    "Egyptian journalist faces terrorism charges after entire newsroom detained",
-    "This Fugitive Spent 8 Years Living as a Woman to Avoid Arrest",
-    "A Blind, Drunk Man With No License Just Drove 150 Miles on the Highway",
-    "US death row inmate Christa Pike awake and speaking after failed execution, lawyers say",
     "Student Protests Expand to More Than 40 French Cities",
     "Live From the Barracks: Three Juntas Launch TV Channel",
     "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
@@ -19,10 +12,16 @@
     "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
     "Rubio Urges Europe to Awaken From 'Slumber' and Uphold Western Dominance",
     "This 13-Year-Old Volleyball Player Is Almost 7 Feet Tall!",
-    "Watch Out — Those Traffic Lights Might Be Weapons! (At Least, Some People Think So)"
+    "Watch Out — Those Traffic Lights Might Be Weapons! (At Least, Some People Think So)",
+    "Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge",
+    "How a U.S. Diplomat Suppressed and Altered Reports Critical of Israel",
+    "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
+    "Russia's Silence on Possible Plague Outbreak Stokes Fears of a Cover-Up",
+    "Scientists discover 180,000 giant tortoises on one Seychelles island",
+    "Get Paid to Scratch! China's Relaxing New Salon Trend",
+    "A Wine Tower You Can Actually Climb!"
   ],
   "quote_authors": [
-    "J.B.S. Haldane",
     "Albert Einstein",
     "Alfred Korzybski",
     "Joseph Campbell",
@@ -41,10 +40,10 @@
     "Nicholas Negroponte",
     "Niels Bohr",
     "Bertrand Russell",
-    "Stephen King"
+    "Stephen King",
+    "Martin Heidegger"
   ],
   "poem_titles": [
-    "Sonnet 13",
     "Still I Rise",
     "On Fanny Godwin",
     "Fragment: 'Wake the Serpent Not'",
@@ -63,7 +62,8 @@
     "Translation from Horace",
     "Still I Rise",
     "The Road Not Taken",
-    "To the Author of a Poem Entitled Successio"
+    "To the Author of a Poem Entitled Successio",
+    "Grace for a Child"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -81,6 +81,8 @@
     "relx|regional director research sales sea anz",
     "pricewaterhousecoopers|deals strategic capital solutions scs director managing director",
     "stripe|head of risk programs apac",
-    "standardcharteredbank|managing director global head ai experimentation partnerships"
+    "standardcharteredbank|managing director global head ai experimentation partnerships",
+    "ripplinginc|general manager of asia pacific",
+    "relxinternational|regional director research sales sea anz"
   ]
 }
