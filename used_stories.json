@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Student Protests Expand to More Than 40 French Cities",
-    "Live From the Barracks: Three Juntas Launch TV Channel",
-    "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
-    "Tigray rebel groups 'forcibly recruiting boys as young as 15' as fighting spreads",
-    "Men Are Shaving Off Their Eyelashes to Look More Masculine",
-    "Pinkie the Giant Pink Elephant Is a Must-See Wisconsin Roadside Attraction",
-    "Spanish pensioner whose eviction sparked nationwide protests dies, union says",
     "Israelis demand accountability over 7 October failures three years after attacks",
     "Canada Halts Plan to Allow Medically Assisted Death for the Mentally Ill",
     "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
@@ -19,10 +12,16 @@
     "Russia's Silence on Possible Plague Outbreak Stokes Fears of a Cover-Up",
     "Scientists discover 180,000 giant tortoises on one Seychelles island",
     "Get Paid to Scratch! China's Relaxing New Salon Trend",
-    "A Wine Tower You Can Actually Climb!"
+    "A Wine Tower You Can Actually Climb!",
+    "Trump announces deal for Russian diesel as Zelensky calls it a gift to Putin",
+    "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
+    "US unveils sanctions on ICC in move court condemns as 'assault on rule of law'",
+    "Days of Deadly Houthi Attacks Show Saudi Arabia's Vulnerabilities",
+    "Isaias strengthens to become first Atlantic hurricane of 2026 season",
+    "This 13-Year-Old Volleyball Player Is Almost 7 Feet Tall!",
+    "Sweet History: England Has a Whole Museum Dedicated to Jam!"
   ],
   "quote_authors": [
-    "Albert Einstein",
     "Alfred Korzybski",
     "Joseph Campbell",
     "Joanna Macy",
@@ -41,10 +40,10 @@
     "Niels Bohr",
     "Bertrand Russell",
     "Stephen King",
-    "Martin Heidegger"
+    "Martin Heidegger",
+    "Kenneth Burke"
   ],
   "poem_titles": [
-    "Still I Rise",
     "On Fanny Godwin",
     "Fragment: 'Wake the Serpent Not'",
     "Sonnet 50: How heavy do I journey on the way",
@@ -63,7 +62,8 @@
     "Still I Rise",
     "The Road Not Taken",
     "To the Author of a Poem Entitled Successio",
-    "Grace for a Child"
+    "Grace for a Child",
+    "Sonnet"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -83,6 +83,9 @@
     "stripe|head of risk programs apac",
     "standardcharteredbank|managing director global head ai experimentation partnerships",
     "ripplinginc|general manager of asia pacific",
-    "relxinternational|regional director research sales sea anz"
+    "relxinternational|regional director research sales sea anz",
+    "elsevier|regional director research sales sea anz",
+    "gehealthcare|regional service commercial director",
+    "richemontluxury|chief executive officer seao"
   ]
 }
