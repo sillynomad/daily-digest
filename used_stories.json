@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "How a U.S. Diplomat Suppressed and Altered Reports Critical of Israel",
-    "Kenya confirms first Ebola case as virus 'surges' in DR Congo province",
-    "Russia's Silence on Possible Plague Outbreak Stokes Fears of a Cover-Up",
-    "Scientists discover 180,000 giant tortoises on one Seychelles island",
-    "Get Paid to Scratch! China's Relaxing New Salon Trend",
-    "A Wine Tower You Can Actually Climb!",
-    "Trump announces deal for Russian diesel as Zelensky calls it a gift to Putin",
     "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
     "US unveils sanctions on ICC in move court condemns as 'assault on rule of law'",
     "Days of Deadly Houthi Attacks Show Saudi Arabia's Vulnerabilities",
@@ -19,10 +12,16 @@
     "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau",
     "Inside Erik Prince's Mercenary Deal in Congo",
     "Men Are Shaving Off Their Eyelashes to Look More Masculine",
-    "This Gold Rush Cabin in the Yukon Is a Frozen Slice of History"
+    "This Gold Rush Cabin in the Yukon Is a Frozen Slice of History",
+    "Trump's 'energy ceasefire' claim welcomed by Zelensky but Russia silent",
+    "Saudi Arabia Has Few Options as Houthis Aim at Heart of Its Ambitions",
+    "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
+    "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau",
+    "India's 'Cockroach' Leaders Released as Small Protests Go On in Delhi",
+    "Blind Man Gets Drunk and Drives 150 Miles on the Highway!",
+    "Conspiracy Theorists Are Destroying Traffic Lights... Because They Think They're Weapons!"
   ],
   "quote_authors": [
-    "Alfred Korzybski",
     "Joseph Campbell",
     "Joanna Macy",
     "Earl Miller",
@@ -41,10 +40,10 @@
     "Bertrand Russell",
     "Stephen King",
     "Martin Heidegger",
-    "Kenneth Burke"
+    "Kenneth Burke",
+    "Gregory Bateson"
   ],
   "poem_titles": [
-    "Fragment: 'Wake the Serpent Not'",
     "Sonnet 50: How heavy do I journey on the way",
     "Epitaph for Mr. William Michie, Schoolmaster",
     "Concord",
@@ -63,7 +62,8 @@
     "To the Author of a Poem Entitled Successio",
     "Grace for a Child",
     "Sonnet",
-    "Song: I Gaed a Waefu’ Gate Yestreen"
+    "Song: I Gaed a Waefu’ Gate Yestreen",
+    "That Nature Is a Heraclitean Fire and of the Comfort of the Resurrection"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -89,6 +89,8 @@
     "richemontluxury|chief executive officer seao",
     "elsevier|regional director research sales sea anz growth leader",
     "pageexecutive|general manager sales asia i water technology",
-    "charleskeithgroup|regional director wholesale market growth"
+    "charleskeithgroup|regional director wholesale market growth",
+    "jacrecruitmentpteltd|chief revenue officer saas",
+    "msdinternationalgmbh|executive director ap commercial operations strategy"
   ]
 }
