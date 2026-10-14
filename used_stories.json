@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Days of Deadly Houthi Attacks Show Saudi Arabia's Vulnerabilities",
-    "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
-    "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau",
-    "Inside Erik Prince's Mercenary Deal in Congo",
-    "Men Are Shaving Off Their Eyelashes to Look More Masculine",
-    "This Gold Rush Cabin in the Yukon Is a Frozen Slice of History",
-    "Trump's 'energy ceasefire' claim welcomed by Zelensky but Russia silent",
     "Saudi Arabia Has Few Options as Houthis Aim at Heart of Its Ambitions",
     "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
     "Controversial vaccine trial touted by RFK Jr gets go-ahead in Guinea-Bissau",
@@ -19,10 +12,16 @@
     "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
     "The Taliban Are Using Europe's Fear of Migrants to Their Advantage",
     "This Scratching Salon Will Relax You... With Its Bare Hands!",
-    "Wisconsin Has the World's Largest Letter 'M' — and It's Massive!"
+    "Wisconsin Has the World's Largest Letter 'M' — and It's Massive!",
+    "Pope diagnosed with lung cancer but had successful surgery, Vatican says",
+    "Trump Hands Victories to Putin, Who Offers More War in Return",
+    "ICJ judge Navi Pillay wins Nobel peace prize for promoting international law",
+    "Saudi Energy Giant Struck as War Spikes Between Houthis and Saudi Arabia",
+    "Isaias strengthens to become first Atlantic hurricane of 2026 season",
+    "Qatar's 13-Year-Old Volleyball Giant Is Already Almost 7 Feet Tall!",
+    "Look Up! This Spanish City Has a Flock of Birds Frozen in the Sky Forever"
   ],
   "quote_authors": [
-    "Joanna Macy",
     "Earl Miller",
     "Joseph Campbell",
     "Joseph Campbell",
@@ -41,10 +40,10 @@
     "Martin Heidegger",
     "Kenneth Burke",
     "Gregory Bateson",
-    "Carl Sagan"
+    "Carl Sagan",
+    "Orson Welles"
   ],
   "poem_titles": [
-    "Epitaph for Mr. William Michie, Schoolmaster",
     "Concord",
     "i carry your heart with me",
     "Hope is the Thing with Feathers",
@@ -63,7 +62,8 @@
     "Sonnet",
     "Song: I Gaed a Waefu’ Gate Yestreen",
     "That Nature Is a Heraclitean Fire and of the Comfort of the Resurrection",
-    "Stanzas Written in Passing the Ambracian Gulf"
+    "Stanzas Written in Passing the Ambracian Gulf",
+    "i carry your heart with me"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -93,6 +93,7 @@
     "jacrecruitmentpteltd|chief revenue officer saas",
     "msdinternationalgmbh|executive director ap commercial operations strategy",
     "threebondsingaporepteltd|managing director",
-    "bloomberg|gfanz regional director apac 12 month contract"
+    "bloomberg|gfanz regional director apac 12 month contract",
+    "kaplansingapore|general manager"
   ]
 }
