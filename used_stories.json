@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Turkey Raids Pro-Opposition TV Station",
-    "Student protesters attack government buildings in Albania",
-    "The Taliban Suspend BBC Broadcasts Across Afghanistan",
-    "Guinea-Bissau denies it has approved controversial vaccine trial in newborns",
-    "Men Are Shaving Off Their Eyelashes to Look More Masculine!",
-    "A Tiny Singing Robot Bird Is Brooklyn's Newest Celebrity!",
-    "Zelensky Says Ukraine Will Resume Russian Refinery Strikes, Defying Trump",
     "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
     "At least 33 pupils and teacher killed after school roof collapses in Pakistan",
     "Second Ebola Infection Announced in Kenya",
@@ -19,7 +12,14 @@
     "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
     "Katie Zacharia leaving her White House role less than five days on the job",
     "This Salon Will Scratch Your Stress Away!",
-    "Conspiracy Theorists Are Attacking... Traffic Lights?!"
+    "Conspiracy Theorists Are Attacking... Traffic Lights?!",
+    "Unrest Mars Day of Protest in France, as Student Movement Turns National",
+    "Trump waives several Russia sanctions as row with Zelensky intensifies",
+    "Israeli Settlers Attack Palestinians and European Officials in West Bank",
+    "Kenya Confirms Four New Ebola Cases",
+    "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
+    "Qatar's 13-Year-Old Volleyball Giant Is Turning Heads!",
+    "This Spooky Shop Is Half Bookstore, Half Spider Paradise!"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -44,7 +44,6 @@
     "Freeman Dyson"
   ],
   "poem_titles": [
-    "Laughing Song",
     "To --",
     "To a Friend Who Sent Me Some Roses",
     "But These Things Also",
@@ -63,7 +62,8 @@
     "i carry your heart with me",
     "While Summer Suns O'er the Gay Prospect Play'd",
     "Still I Rise",
-    "Oh! Weep for Those"
+    "Oh! Weep for Those",
+    "Fragment: 'Alas! This Is Not What I Thought Life Was'"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -99,6 +99,9 @@
     "standardchartered|managing director standard chartered",
     "dhlsupplychain|general manager transport operations",
     "saptaulia|general manager asia pacific",
-    "renpho|country manager asean"
+    "renpho|country manager asean",
+    "miro|country manager japan",
+    "thecocacolacompany|senior director metals packaging apac",
+    "boeing|regional director se asia sales initiatives non executive"
   ]
 }
