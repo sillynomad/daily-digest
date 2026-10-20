@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Pope Asks Putin for a Cease-Fire for a Ukrainian City Under Siege",
-    "Israeli Settlers Attack Palestinians and Washington Post Journalist in West Bank",
-    "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
-    "Katie Zacharia leaving her White House role less than five days on the job",
-    "This Salon Will Scratch Your Stress Away!",
-    "Conspiracy Theorists Are Attacking... Traffic Lights?!",
-    "Unrest Mars Day of Protest in France, as Student Movement Turns National",
     "Trump waives several Russia sanctions as row with Zelensky intensifies",
     "Israeli Settlers Attack Palestinians and European Officials in West Bank",
     "Kenya Confirms Four New Ebola Cases",
@@ -19,10 +12,16 @@
     "U.S. Officials Condemn West Bank Attacks as Netanyahu Casts Doubt on Them",
     "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
     "Men Are Shaving Off Their Eyelashes to Look More Masculine!",
-    "This Florida Conservancy Is Home to the World's Largest Bats!"
+    "This Florida Conservancy Is Home to the World's Largest Bats!",
+    "Curfew imposed in parts of central Paris and other cities after rioting across France",
+    "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
+    "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
+    "How a Trillion-Dollar Industry Launders Illegal Gold",
+    "Drone attack near market kills 80 in Sudan",
+    "This Blind Man Drove 150 Miles on the Highway — While Drunk!",
+    "Madrid's Legendary Rock Venue Has the Most Rock-and-Roll Signage Ever"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Joseph Campbell",
     "Joseph Heller",
     "Martin Heidegger",
@@ -41,10 +40,10 @@
     "Gregory Bateson",
     "Carl Sagan",
     "Orson Welles",
-    "Freeman Dyson"
+    "Freeman Dyson",
+    "Coco Chanel"
   ],
   "poem_titles": [
-    "To a Friend Who Sent Me Some Roses",
     "But These Things Also",
     "O Beauty, Passing Beauty!",
     "The Road Not Taken",
@@ -63,7 +62,8 @@
     "Still I Rise",
     "Oh! Weep for Those",
     "Fragment: 'Alas! This Is Not What I Thought Life Was'",
-    "To Frances S. Osgood"
+    "To Frances S. Osgood",
+    "Imitated from Catullus: To Ellen"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -102,6 +102,8 @@
     "renpho|country manager asean",
     "miro|country manager japan",
     "thecocacolacompany|senior director metals packaging apac",
-    "boeing|regional director se asia sales initiatives non executive"
+    "boeing|regional director se asia sales initiatives non executive",
+    "tallentire|managing director of transformation tallentire",
+    "omronhealthcaresingaporepteltd|managing director"
   ]
 }
