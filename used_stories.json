@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Trump waives several Russia sanctions as row with Zelensky intensifies",
-    "Israeli Settlers Attack Palestinians and European Officials in West Bank",
-    "Kenya Confirms Four New Ebola Cases",
-    "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
-    "Qatar's 13-Year-Old Volleyball Giant Is Turning Heads!",
-    "This Spooky Shop Is Half Bookstore, Half Spider Paradise!",
-    "France in Shock After Protests Turn Into Riots, Damaging Buildings and Shops",
     "Major fire at Canada military base leaves four dead, dozens injured",
     "Trump says suspension of Russia sanctions is to keep peace negotiations going",
     "U.S. Officials Condemn West Bank Attacks as Netanyahu Casts Doubt on Them",
@@ -19,7 +12,14 @@
     "How a Trillion-Dollar Industry Launders Illegal Gold",
     "Drone attack near market kills 80 in Sudan",
     "This Blind Man Drove 150 Miles on the Highway — While Drunk!",
-    "Madrid's Legendary Rock Venue Has the Most Rock-and-Roll Signage Ever"
+    "Madrid's Legendary Rock Venue Has the Most Rock-and-Roll Signage Ever",
+    "Zelensky says US intelligence sharing 'works now' after talks with Trump envoy in Oslo",
+    "France Protests Show Europe's Shift Away From Centrist Politics",
+    "Nigeria confirms Ebola case as outbreak spreads into western Africa",
+    "Elon Musk says Tesla-SpaceX merger being considered",
+    "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
+    "This Scratching Salon Is the Ultimate Stress-Buster!",
+    "Sweden's Giant Vinegar Bottle Is a Towering Tribute to a Kitchen Staple!"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -44,7 +44,6 @@
     "Coco Chanel"
   ],
   "poem_titles": [
-    "But These Things Also",
     "O Beauty, Passing Beauty!",
     "The Road Not Taken",
     "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646",
@@ -63,7 +62,8 @@
     "Oh! Weep for Those",
     "Fragment: 'Alas! This Is Not What I Thought Life Was'",
     "To Frances S. Osgood",
-    "Imitated from Catullus: To Ellen"
+    "Imitated from Catullus: To Ellen",
+    "Written After Swimming from Sestos to Abydos"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -104,6 +104,8 @@
     "thecocacolacompany|senior director metals packaging apac",
     "boeing|regional director se asia sales initiatives non executive",
     "tallentire|managing director of transformation tallentire",
-    "omronhealthcaresingaporepteltd|managing director"
+    "omronhealthcaresingaporepteltd|managing director",
+    "visa|sr director head of products solutions singapore brunei",
+    "bloomberg|apac regional director strategy engagement impact"
   ]
 }
