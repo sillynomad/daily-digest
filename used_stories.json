@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Major fire at Canada military base leaves four dead, dozens injured",
-    "Trump says suspension of Russia sanctions is to keep peace negotiations going",
-    "U.S. Officials Condemn West Bank Attacks as Netanyahu Casts Doubt on Them",
-    "LGBTQ+ people go into hiding in Senegal as hundreds are arrested",
-    "Men Are Shaving Off Their Eyelashes to Look More Masculine!",
-    "This Florida Conservancy Is Home to the World's Largest Bats!",
-    "Curfew imposed in parts of central Paris and other cities after rioting across France",
     "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
     "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
     "How a Trillion-Dollar Industry Launders Illegal Gold",
@@ -19,7 +12,14 @@
     "Elon Musk says Tesla-SpaceX merger being considered",
     "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
     "This Scratching Salon Is the Ultimate Stress-Buster!",
-    "Sweden's Giant Vinegar Bottle Is a Towering Tribute to a Kitchen Staple!"
+    "Sweden's Giant Vinegar Bottle Is a Towering Tribute to a Kitchen Staple!",
+    "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
+    "Drone Strike Kills More Than 150 in Abyei in Sudan's Civil War",
+    "Macron Says Trump Does Not Like France and Distorts Its Troubles",
+    "Nigeria confirms Ebola case as outbreak spreads into western Africa",
+    "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
+    "Qatar's 13-Year-Old Volleyball Giant Is Raising Eyebrows!",
+    "Portland Airport Has a Memorial to Its Famously Ugly Carpet!"
   ],
   "quote_authors": [
     "Joseph Campbell",
@@ -44,7 +44,6 @@
     "Coco Chanel"
   ],
   "poem_titles": [
-    "O Beauty, Passing Beauty!",
     "The Road Not Taken",
     "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646",
     "Translation from Horace",
@@ -63,7 +62,8 @@
     "Fragment: 'Alas! This Is Not What I Thought Life Was'",
     "To Frances S. Osgood",
     "Imitated from Catullus: To Ellen",
-    "Written After Swimming from Sestos to Abydos"
+    "Written After Swimming from Sestos to Abydos",
+    "March the Third (the Author's Birthday)"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -106,6 +106,9 @@
     "tallentire|managing director of transformation tallentire",
     "omronhealthcaresingaporepteltd|managing director",
     "visa|sr director head of products solutions singapore brunei",
-    "bloomberg|apac regional director strategy engagement impact"
+    "bloomberg|apac regional director strategy engagement impact",
+    "craneworldwidelogistics|regional director business development apac",
+    "cocacolasingaporebeveragespteltd|senior director metals packaging apac",
+    "inmyjet|apac commercial director growth partnerships"
   ]
 }
