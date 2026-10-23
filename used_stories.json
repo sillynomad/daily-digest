@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
-    "Kenyan starvation cult leader guilty of murder of 190 children and one adult",
-    "How a Trillion-Dollar Industry Launders Illegal Gold",
-    "Drone attack near market kills 80 in Sudan",
-    "This Blind Man Drove 150 Miles on the Highway — While Drunk!",
-    "Madrid's Legendary Rock Venue Has the Most Rock-and-Roll Signage Ever",
-    "Zelensky says US intelligence sharing 'works now' after talks with Trump envoy in Oslo",
     "France Protests Show Europe's Shift Away From Centrist Politics",
     "Nigeria confirms Ebola case as outbreak spreads into western Africa",
     "Elon Musk says Tesla-SpaceX merger being considered",
@@ -19,10 +12,16 @@
     "Nigeria confirms Ebola case as outbreak spreads into western Africa",
     "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
     "Qatar's 13-Year-Old Volleyball Giant Is Raising Eyebrows!",
-    "Portland Airport Has a Memorial to Its Famously Ugly Carpet!"
+    "Portland Airport Has a Memorial to Its Famously Ugly Carpet!",
+    "Hospitals deliberately targeted by Sudan's RSF fighters, BBC investigation finds",
+    "Putin Nears a Prize: Restoring Ties With the U.S. While Giving Up Nothing",
+    "Houthi Strike on Saudi Airport Kills 2 as U.S. Tells Some Diplomats to Leave",
+    "In the Wake of Riots, the French Authorities Ban Some Protests",
+    "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
+    "This Salon Will Scratch That Itch — Literally!",
+    "Guys Are Shaving Off Their Eyelashes to Look 'Manly'"
   ],
   "quote_authors": [
-    "Joseph Campbell",
     "Joseph Heller",
     "Martin Heidegger",
     "H.P. Lovecraft",
@@ -41,10 +40,10 @@
     "Carl Sagan",
     "Orson Welles",
     "Freeman Dyson",
-    "Coco Chanel"
+    "Coco Chanel",
+    "Stephen Jay Gould"
   ],
   "poem_titles": [
-    "The Road Not Taken",
     "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646",
     "Translation from Horace",
     "Still I Rise",
@@ -63,7 +62,8 @@
     "To Frances S. Osgood",
     "Imitated from Catullus: To Ellen",
     "Written After Swimming from Sestos to Abydos",
-    "March the Third (the Author's Birthday)"
+    "March the Third (the Author's Birthday)",
+    "Hope is the Thing with Feathers"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -109,6 +109,9 @@
     "bloomberg|apac regional director strategy engagement impact",
     "craneworldwidelogistics|regional director business development apac",
     "cocacolasingaporebeveragespteltd|senior director metals packaging apac",
-    "inmyjet|apac commercial director growth partnerships"
+    "inmyjet|apac commercial director growth partnerships",
+    "johnsonjohnson|sea general manager vision care",
+    "bjak|director business operations",
+    "twilio|director supplier relations apac"
   ]
 }
