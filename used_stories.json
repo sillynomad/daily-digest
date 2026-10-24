@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "France Protests Show Europe's Shift Away From Centrist Politics",
-    "Nigeria confirms Ebola case as outbreak spreads into western Africa",
-    "Elon Musk says Tesla-SpaceX merger being considered",
-    "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
-    "This Scratching Salon Is the Ultimate Stress-Buster!",
-    "Sweden's Giant Vinegar Bottle Is a Towering Tribute to a Kitchen Staple!",
-    "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
     "Drone Strike Kills More Than 150 in Abyei in Sudan's Civil War",
     "Macron Says Trump Does Not Like France and Distorts Its Troubles",
     "Nigeria confirms Ebola case as outbreak spreads into western Africa",
@@ -19,7 +12,14 @@
     "In the Wake of Riots, the French Authorities Ban Some Protests",
     "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
     "This Salon Will Scratch That Itch — Literally!",
-    "Guys Are Shaving Off Their Eyelashes to Look 'Manly'"
+    "Guys Are Shaving Off Their Eyelashes to Look 'Manly'",
+    "Deadly shooting near Paris is a 'racist terrorist attack', Macron says",
+    "Gunmen Open Fire at Church in Jordan, Killing at Least Seven",
+    "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+    "Palestinian Gunmen Open Fire on Israelis in the West Bank, Officials Say",
+    "The Bukeleization of Latin America Has Arrived",
+    "The Blind, Drunk Driver Who Somehow Made It 150 Miles!",
+    "Beware the Traffic Light — It Might Be a Secret Weapon!"
   ],
   "quote_authors": [
     "Joseph Heller",
@@ -44,7 +44,6 @@
     "Stephen Jay Gould"
   ],
   "poem_titles": [
-    "On the Religious Memory of Mrs. Catherine Thomson, my Christian Friend, Deceased Dec. 16, 1646",
     "Translation from Horace",
     "Still I Rise",
     "The Road Not Taken",
@@ -63,7 +62,8 @@
     "Imitated from Catullus: To Ellen",
     "Written After Swimming from Sestos to Abydos",
     "March the Third (the Author's Birthday)",
-    "Hope is the Thing with Feathers"
+    "Hope is the Thing with Feathers",
+    "The Princess: A Medley: Home they Brought her Warrior Dead"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -112,6 +112,9 @@
     "inmyjet|apac commercial director growth partnerships",
     "johnsonjohnson|sea general manager vision care",
     "bjak|director business operations",
-    "twilio|director supplier relations apac"
+    "twilio|director supplier relations apac",
+    "johnsonandjohnson|sea general manager vision care",
+    "crocssingaporepteltd|director strategic projects apac",
+    "deliveryheroapacptelimited|regional director local shops quick commerce"
   ]
 }
