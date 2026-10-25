@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Drone Strike Kills More Than 150 in Abyei in Sudan's Civil War",
-    "Macron Says Trump Does Not Like France and Distorts Its Troubles",
-    "Nigeria confirms Ebola case as outbreak spreads into western Africa",
-    "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
-    "Qatar's 13-Year-Old Volleyball Giant Is Raising Eyebrows!",
-    "Portland Airport Has a Memorial to Its Famously Ugly Carpet!",
-    "Hospitals deliberately targeted by Sudan's RSF fighters, BBC investigation finds",
     "Putin Nears a Prize: Restoring Ties With the U.S. While Giving Up Nothing",
     "Houthi Strike on Saudi Airport Kills 2 as U.S. Tells Some Diplomats to Leave",
     "In the Wake of Riots, the French Authorities Ban Some Protests",
@@ -19,10 +12,16 @@
     "Palestinian Gunmen Open Fire on Israelis in the West Bank, Officials Say",
     "The Bukeleization of Latin America Has Arrived",
     "The Blind, Drunk Driver Who Somehow Made It 150 Miles!",
-    "Beware the Traffic Light — It Might Be a Secret Weapon!"
+    "Beware the Traffic Light — It Might Be a Secret Weapon!",
+    "Unrest Erupts Again in France, but This Time, With Less Property Damage",
+    "Elon Musk Says Ukraine Violated Starlink's Rules",
+    "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+    "Palestinian families displaced as Israeli forces demolish Hebron homes",
+    "Man arrested after fire at Hitler's mountaintop Eagle's Nest retreat",
+    "California Woman Sets Guinness World Record for the Largest Collection of Frog Memorabilia",
+    "Costume Designer Turns Recycled Items Into 'Spirit Walker', A Four-Legged Creature With a Human Face"
   ],
   "quote_authors": [
-    "Joseph Heller",
     "Martin Heidegger",
     "H.P. Lovecraft",
     "Emma Goldman",
@@ -41,10 +40,10 @@
     "Orson Welles",
     "Freeman Dyson",
     "Coco Chanel",
-    "Stephen Jay Gould"
+    "Stephen Jay Gould",
+    "H.P. Lovecraft"
   ],
   "poem_titles": [
-    "Translation from Horace",
     "Still I Rise",
     "The Road Not Taken",
     "To the Author of a Poem Entitled Successio",
@@ -63,7 +62,8 @@
     "Written After Swimming from Sestos to Abydos",
     "March the Third (the Author's Birthday)",
     "Hope is the Thing with Feathers",
-    "The Princess: A Medley: Home they Brought her Warrior Dead"
+    "The Princess: A Medley: Home they Brought her Warrior Dead",
+    "i carry your heart with me"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -115,6 +115,9 @@
     "twilio|director supplier relations apac",
     "johnsonandjohnson|sea general manager vision care",
     "crocssingaporepteltd|director strategic projects apac",
-    "deliveryheroapacptelimited|regional director local shops quick commerce"
+    "deliveryheroapacptelimited|regional director local shops quick commerce",
+    "jjfamilyofcompanies|sea general manager vision care",
+    "audiocodes|vp sales meeting insights asean",
+    "ignitetalent|managing director insights agency"
   ]
 }
