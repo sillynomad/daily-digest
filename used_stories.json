@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Putin Nears a Prize: Restoring Ties With the U.S. While Giving Up Nothing",
-    "Houthi Strike on Saudi Airport Kills 2 as U.S. Tells Some Diplomats to Leave",
-    "In the Wake of Riots, the French Authorities Ban Some Protests",
-    "Severely ill ICE detainees face imminent deportation to unknown African states, advocates say",
-    "This Salon Will Scratch That Itch — Literally!",
-    "Guys Are Shaving Off Their Eyelashes to Look 'Manly'",
-    "Deadly shooting near Paris is a 'racist terrorist attack', Macron says",
     "Gunmen Open Fire at Church in Jordan, Killing at Least Seven",
     "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
     "Palestinian Gunmen Open Fire on Israelis in the West Bank, Officials Say",
@@ -19,10 +12,16 @@
     "Palestinian families displaced as Israeli forces demolish Hebron homes",
     "Man arrested after fire at Hitler's mountaintop Eagle's Nest retreat",
     "California Woman Sets Guinness World Record for the Largest Collection of Frog Memorabilia",
-    "Costume Designer Turns Recycled Items Into 'Spirit Walker', A Four-Legged Creature With a Human Face"
+    "Costume Designer Turns Recycled Items Into 'Spirit Walker', A Four-Legged Creature With a Human Face",
+    "Aleksandar Vucic Concedes Defeat in Serbian Election",
+    "Live Updates: Brazil Re-Elects Lula, Rejecting Predecessor's Son",
+    "Venezuelan opposition leader María Machado returns after months in exile",
+    "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
+    "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
+    "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
+    "Where to Find the World's Creepiest Dolls and Toys"
   ],
   "quote_authors": [
-    "Martin Heidegger",
     "H.P. Lovecraft",
     "Emma Goldman",
     "Carl Sagan",
@@ -41,10 +40,10 @@
     "Freeman Dyson",
     "Coco Chanel",
     "Stephen Jay Gould",
-    "H.P. Lovecraft"
+    "H.P. Lovecraft",
+    "Wangari Maathai"
   ],
   "poem_titles": [
-    "Still I Rise",
     "The Road Not Taken",
     "To the Author of a Poem Entitled Successio",
     "Grace for a Child",
@@ -63,7 +62,8 @@
     "March the Third (the Author's Birthday)",
     "Hope is the Thing with Feathers",
     "The Princess: A Medley: Home they Brought her Warrior Dead",
-    "i carry your heart with me"
+    "i carry your heart with me",
+    "Song VI: Cherish Life that Abideth"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -118,6 +118,7 @@
     "deliveryheroapacptelimited|regional director local shops quick commerce",
     "jjfamilyofcompanies|sea general manager vision care",
     "audiocodes|vp sales meeting insights asean",
-    "ignitetalent|managing director insights agency"
+    "ignitetalent|managing director insights agency",
+    "adactioninteractive|general manager strategic partnerships sea"
   ]
 }
