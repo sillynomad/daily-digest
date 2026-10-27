@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Gunmen Open Fire at Church in Jordan, Killing at Least Seven",
-    "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
-    "Palestinian Gunmen Open Fire on Israelis in the West Bank, Officials Say",
-    "The Bukeleization of Latin America Has Arrived",
-    "The Blind, Drunk Driver Who Somehow Made It 150 Miles!",
-    "Beware the Traffic Light — It Might Be a Secret Weapon!",
-    "Unrest Erupts Again in France, but This Time, With Less Property Damage",
     "Elon Musk Says Ukraine Violated Starlink's Rules",
     "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
     "Palestinian families displaced as Israeli forces demolish Hebron homes",
@@ -19,10 +12,16 @@
     "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
     "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
     "Qatar's 13-Year-Old Volleyball Giant Turns Heads at Asian Championship",
-    "Where to Find the World's Creepiest Dolls and Toys"
+    "Where to Find the World's Creepiest Dolls and Toys",
+    "Lula Defeats Bolsonaro for Brazil Presidency, in Blow to Latin America's Right",
+    "Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement",
+    "Anthropic warns of 'catastrophic risk' to humankind ahead of blockbuster share listing",
+    "Sudan paramilitary drone strikes cause mass power cuts in eastern states",
+    "Flurry of Diplomacy in Iran Amid Reports of U.S. and Israeli Plans to Renew War",
+    "Pay Someone to Scratch Your Back — Literally!",
+    "Men Are Shaving Off Their Eyelashes to Look Tougher"
   ],
   "quote_authors": [
-    "H.P. Lovecraft",
     "Emma Goldman",
     "Carl Sagan",
     "Alfred Korzybski",
@@ -41,10 +40,10 @@
     "Coco Chanel",
     "Stephen Jay Gould",
     "H.P. Lovecraft",
-    "Wangari Maathai"
+    "Wangari Maathai",
+    "J.M. Barrie"
   ],
   "poem_titles": [
-    "The Road Not Taken",
     "To the Author of a Poem Entitled Successio",
     "Grace for a Child",
     "Sonnet",
@@ -63,7 +62,8 @@
     "Hope is the Thing with Feathers",
     "The Princess: A Medley: Home they Brought her Warrior Dead",
     "i carry your heart with me",
-    "Song VI: Cherish Life that Abideth"
+    "Song VI: Cherish Life that Abideth",
+    "Hope is the Thing with Feathers"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -119,6 +119,9 @@
     "jjfamilyofcompanies|sea general manager vision care",
     "audiocodes|vp sales meeting insights asean",
     "ignitetalent|managing director insights agency",
-    "adactioninteractive|general manager strategic partnerships sea"
+    "adactioninteractive|general manager strategic partnerships sea",
+    "magnetforensicsinc|country manager",
+    "foodpanda|head of vendor strategy lifecycle health",
+    "wolarecruitmentpteltd|country general manager ai martech automotive"
   ]
 }
