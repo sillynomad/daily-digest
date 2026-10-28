@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Elon Musk Says Ukraine Violated Starlink's Rules",
-    "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
-    "Palestinian families displaced as Israeli forces demolish Hebron homes",
-    "Man arrested after fire at Hitler's mountaintop Eagle's Nest retreat",
-    "California Woman Sets Guinness World Record for the Largest Collection of Frog Memorabilia",
-    "Costume Designer Turns Recycled Items Into 'Spirit Walker', A Four-Legged Creature With a Human Face",
-    "Aleksandar Vucic Concedes Defeat in Serbian Election",
     "Live Updates: Brazil Re-Elects Lula, Rejecting Predecessor's Son",
     "Venezuelan opposition leader María Machado returns after months in exile",
     "Mystery over source of Ebola infection in Nigeria fuels concern about spread of virus",
@@ -19,7 +12,14 @@
     "Sudan paramilitary drone strikes cause mass power cuts in eastern states",
     "Flurry of Diplomacy in Iran Amid Reports of U.S. and Israeli Plans to Renew War",
     "Pay Someone to Scratch Your Back — Literally!",
-    "Men Are Shaving Off Their Eyelashes to Look Tougher"
+    "Men Are Shaving Off Their Eyelashes to Look Tougher",
+    "Norway and Finland leaders hold rare call with Putin",
+    "Trump Explores Lifting Sanctions on Russia's Flagship Investment Fund",
+    "Sudan paramilitary drone strikes cause mass power cuts in eastern states",
+    "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
+    "Serbian Students, Victorious and Leaderless, Go After the Media",
+    "This Salon Will Scratch That Itch — Literally!",
+    "Conspiracy Theorists vs. Traffic Lights: The Battle for Devon!"
   ],
   "quote_authors": [
     "Emma Goldman",
@@ -44,7 +44,6 @@
     "J.M. Barrie"
   ],
   "poem_titles": [
-    "To the Author of a Poem Entitled Successio",
     "Grace for a Child",
     "Sonnet",
     "Song: I Gaed a Waefu’ Gate Yestreen",
@@ -63,7 +62,8 @@
     "The Princess: A Medley: Home they Brought her Warrior Dead",
     "i carry your heart with me",
     "Song VI: Cherish Life that Abideth",
-    "Hope is the Thing with Feathers"
+    "Hope is the Thing with Feathers",
+    "Lines to a Lady Weeping"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -122,6 +122,9 @@
     "adactioninteractive|general manager strategic partnerships sea",
     "magnetforensicsinc|country manager",
     "foodpanda|head of vendor strategy lifecycle health",
-    "wolarecruitmentpteltd|country general manager ai martech automotive"
+    "wolarecruitmentpteltd|country general manager ai martech automotive",
+    "oura|vice president of retail apac",
+    "vatgroup|general manager sea singapore p l leader",
+    "ignitetalent|apac insights growth managing director"
   ]
 }
