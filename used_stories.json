@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Celebrations in Serbia after veteran ruler Vučić loses election to student-led protest movement",
-    "Anthropic warns of 'catastrophic risk' to humankind ahead of blockbuster share listing",
-    "Sudan paramilitary drone strikes cause mass power cuts in eastern states",
-    "Flurry of Diplomacy in Iran Amid Reports of U.S. and Israeli Plans to Renew War",
-    "Pay Someone to Scratch Your Back — Literally!",
-    "Men Are Shaving Off Their Eyelashes to Look Tougher",
-    "Norway and Finland leaders hold rare call with Putin",
     "Trump Explores Lifting Sanctions on Russia's Flagship Investment Fund",
     "Sudan paramilitary drone strikes cause mass power cuts in eastern states",
     "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
@@ -19,7 +12,14 @@
     "Flávio Bolsonaro Lands in Miami After Fleeing Brazil",
     "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
     "The World's Tallest Barber Pole Is Just... Standing There in Oregon",
-    "Welcome to Gnome Hill, Maryland's Most Magical Trail Landmark"
+    "Welcome to Gnome Hill, Maryland's Most Magical Trail Landmark",
+    "Israeli opposition accuses Netanyahu of trying to 'delegitimise' election",
+    "Trump and His Aides Helped Bolsonaro Flee Brazil and Enter U.S.",
+    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
+    "Africa's 'unprecedented' Ebola outbreak could reach UK, says top health official",
+    "Russian drone attack on Ukrainian train station kills at least 14, officials say",
+    "Qatar's 13-Year-Old Volleyball Giant Is Already Taller Than Your Dad",
+    "Fire, Dragons, and Incense: Hong Kong's Dazzling Mid-Autumn Tradition"
   ],
   "quote_authors": [
     "Carl Sagan",
@@ -44,7 +44,6 @@
     "Bertrand Russell"
   ],
   "poem_titles": [
-    "Sonnet",
     "Song: I Gaed a Waefu’ Gate Yestreen",
     "That Nature Is a Heraclitean Fire and of the Comfort of the Resurrection",
     "Stanzas Written in Passing the Ambracian Gulf",
@@ -63,7 +62,8 @@
     "Song VI: Cherish Life that Abideth",
     "Hope is the Thing with Feathers",
     "Lines to a Lady Weeping",
-    "Summer Dawn"
+    "Summer Dawn",
+    "The Rose"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -127,6 +127,9 @@
     "vatgroup|general manager sea singapore p l leader",
     "ignitetalent|apac insights growth managing director",
     "airbus|satair managing director ho region and commercial support aspac",
-    "hays|head of partnerships relationship management hays"
+    "hays|head of partnerships relationship management hays",
+    "spglobal|senior commercial director asean",
+    "cocacola|plant general manager singapore",
+    "mastercard|director fraud decisioning solutions regional product management"
   ]
 }
