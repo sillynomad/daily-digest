@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Trump Explores Lifting Sanctions on Russia's Flagship Investment Fund",
-    "Sudan paramilitary drone strikes cause mass power cuts in eastern states",
-    "Mbappé sorry for 'ill-judged' Mao remark after backlash in China",
-    "Serbian Students, Victorious and Leaderless, Go After the Media",
-    "This Salon Will Scratch That Itch — Literally!",
-    "Conspiracy Theorists vs. Traffic Lights: The Battle for Devon!",
-    "High-speed train crash kills at least 68 people in Spain",
     "Rivals in Israel Election Strike Tone of Triumph, but Outcome Is Far From Clear",
     "Africa's 'unprecedented' Ebola outbreak could reach UK, says top health official",
     "Flávio Bolsonaro Lands in Miami After Fleeing Brazil",
@@ -19,10 +12,16 @@
     "Africa's 'unprecedented' Ebola outbreak could reach UK, says top health official",
     "Russian drone attack on Ukrainian train station kills at least 14, officials say",
     "Qatar's 13-Year-Old Volleyball Giant Is Already Taller Than Your Dad",
-    "Fire, Dragons, and Incense: Hong Kong's Dazzling Mid-Autumn Tradition"
+    "Fire, Dragons, and Incense: Hong Kong's Dazzling Mid-Autumn Tradition",
+    "US approves sale of 500 Patriot missiles to Ukraine",
+    "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
+    "Could El Salvador's Bukele Be Haiti's Savior?",
+    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
+    "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job",
+    "Men Are Shaving Off Their Eyelashes to Look More Masculine 🪒👀",
+    "A Giant Squid Museum Exists — and It's Amazing 🦑"
   ],
   "quote_authors": [
-    "Carl Sagan",
     "Alfred Korzybski",
     "Robert Anton Wilson",
     "Meister Eckhart",
@@ -41,10 +40,10 @@
     "H.P. Lovecraft",
     "Wangari Maathai",
     "J.M. Barrie",
-    "Bertrand Russell"
+    "Bertrand Russell",
+    "Martin Heidegger"
   ],
   "poem_titles": [
-    "Song: I Gaed a Waefu’ Gate Yestreen",
     "That Nature Is a Heraclitean Fire and of the Comfort of the Resurrection",
     "Stanzas Written in Passing the Ambracian Gulf",
     "i carry your heart with me",
@@ -63,7 +62,8 @@
     "Hope is the Thing with Feathers",
     "Lines to a Lady Weeping",
     "Summer Dawn",
-    "The Rose"
+    "The Rose",
+    "Sonnet 81: Or I shall live your epitaph to make"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -130,6 +130,8 @@
     "hays|head of partnerships relationship management hays",
     "spglobal|senior commercial director asean",
     "cocacola|plant general manager singapore",
-    "mastercard|director fraud decisioning solutions regional product management"
+    "mastercard|director fraud decisioning solutions regional product management",
+    "spglobalinc|asean commercial director energy markets growth",
+    "lviassociates|regional director energy commercial partnerships"
   ]
 }
