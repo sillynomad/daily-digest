@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Trump and His Aides Helped Bolsonaro Flee Brazil and Enter U.S.",
-    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
-    "Africa's 'unprecedented' Ebola outbreak could reach UK, says top health official",
-    "Russian drone attack on Ukrainian train station kills at least 14, officials say",
-    "Qatar's 13-Year-Old Volleyball Giant Is Already Taller Than Your Dad",
-    "Fire, Dragons, and Incense: Hong Kong's Dazzling Mid-Autumn Tradition",
-    "US approves sale of 500 Patriot missiles to Ukraine",
     "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
     "Could El Salvador's Bukele Be Haiti's Savior?",
     "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
@@ -19,7 +12,14 @@
     "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
     "Poland Deploys Riot Police in Standoff Over Country's Top Court",
     "This Salon Will Scratch Your Stress Away 🐾",
-    "Conspiracy Theorists vs. Traffic Lights 🚦"
+    "Conspiracy Theorists vs. Traffic Lights 🚦",
+    "Ukraine air raid app apparently hacked as users receive false radiation threat, Air Force says",
+    "Putin Breaks Down His Isolation, With a Big Assist From Trump",
+    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
+    "Where Do Israel's Arab Parties Stand?",
+    "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
+    "Blind Man Drives 150 Miles on the Highway — While Drunk 🚗😳",
+    "This Museum Is Totally Kraken Us Up 🦑"
   ],
   "quote_authors": [
     "Robert Anton Wilson",
@@ -44,7 +44,6 @@
     "Stanley Kubrick"
   ],
   "poem_titles": [
-    "Stanzas Written in Passing the Ambracian Gulf",
     "i carry your heart with me",
     "While Summer Suns O'er the Gay Prospect Play'd",
     "Still I Rise",
@@ -63,7 +62,8 @@
     "Summer Dawn",
     "The Rose",
     "Sonnet 81: Or I shall live your epitaph to make",
-    "These Things That Poets Said"
+    "These Things That Poets Said",
+    "On Napoleon's Escape from Elba"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -135,6 +135,7 @@
     "lviassociates|regional director energy commercial partnerships",
     "suntoryglobalspirits|general manager singapore brand trade p l lead",
     "spglobalinc|senior commercial director asean",
-    "statestreet|apac markets head of client engagement growth"
+    "statestreet|apac markets head of client engagement growth",
+    "kornferry|general manager singapore malaysia"
   ]
 }
