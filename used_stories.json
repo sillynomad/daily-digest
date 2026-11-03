@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Crypto giant Binance attempting to recover $6.3bn stolen in hack linked to North Korea",
-    "Could El Salvador's Bukele Be Haiti's Savior?",
-    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
-    "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job",
-    "Men Are Shaving Off Their Eyelashes to Look More Masculine 🪒👀",
-    "A Giant Squid Museum Exists — and It's Amazing 🦑",
-    "'We came back from hell', say Ukrainians after years in Russia-occupied front-line city",
     "Clashes Erupt Again in France, After Festive Start to Day of Protest",
     "North Korean Hackers Stole Billions, the F.B.I. Says. It's Not Their First Heist.",
     "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
@@ -19,10 +12,16 @@
     "Where Do Israel's Arab Parties Stand?",
     "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
     "Blind Man Drives 150 Miles on the Highway — While Drunk 🚗😳",
-    "This Museum Is Totally Kraken Us Up 🦑"
+    "This Museum Is Totally Kraken Us Up 🦑",
+    "US strikes Iran ahead of midterm elections",
+    "Russian Strike on Ukraine Humanitarian Hub Kills Dozens",
+    "Shop freezers in seven European countries hit by cyber-attack",
+    "Russia Senses Opportunity in Polish Political Turmoil",
+    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
+    "The 13-Year-Old Volleyball Giant You Have to See to Believe 🏐",
+    "London's Tiniest Shop Is Packed With Wonders 🔮"
   ],
   "quote_authors": [
-    "Robert Anton Wilson",
     "Meister Eckhart",
     "Nicholas Negroponte",
     "Niels Bohr",
@@ -41,10 +40,10 @@
     "J.M. Barrie",
     "Bertrand Russell",
     "Martin Heidegger",
-    "Stanley Kubrick"
+    "Stanley Kubrick",
+    "Meister Eckhart"
   ],
   "poem_titles": [
-    "i carry your heart with me",
     "While Summer Suns O'er the Gay Prospect Play'd",
     "Still I Rise",
     "Oh! Weep for Those",
@@ -63,7 +62,8 @@
     "The Rose",
     "Sonnet 81: Or I shall live your epitaph to make",
     "These Things That Poets Said",
-    "On Napoleon's Escape from Elba"
+    "On Napoleon's Escape from Elba",
+    "Epitaph. For One Who Would Not Be Buried in Westminster Abbey."
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -136,6 +136,7 @@
     "suntoryglobalspirits|general manager singapore brand trade p l lead",
     "spglobalinc|senior commercial director asean",
     "statestreet|apac markets head of client engagement growth",
-    "kornferry|general manager singapore malaysia"
+    "kornferry|general manager singapore malaysia",
+    "temasekholdingslimited|managing director general manager"
   ]
 }
