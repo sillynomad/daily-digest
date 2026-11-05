@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Putin Breaks Down His Isolation, With a Big Assist From Trump",
-    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
-    "Where Do Israel's Arab Parties Stand?",
-    "Sinkholes, scarred land and scapegoats: the scourge of illegal gold mining in Johannesburg",
-    "Blind Man Drives 150 Miles on the Highway — While Drunk 🚗😳",
-    "This Museum Is Totally Kraken Us Up 🦑",
-    "US strikes Iran ahead of midterm elections",
     "Russian Strike on Ukraine Humanitarian Hub Kills Dozens",
     "Shop freezers in seven European countries hit by cyber-attack",
     "Russia Senses Opportunity in Polish Political Turmoil",
@@ -19,7 +12,14 @@
     "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job",
     "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
     "Men Are Shaving Off Their Eyelashes to Look More Masculine 😳✂️",
-    "These Tiny Dutch Houses Are Built Right Into a Medieval Wall 🏰🏠"
+    "These Tiny Dutch Houses Are Built Right Into a Medieval Wall 🏰🏠",
+    "'This is a disaster': Angry Republicans blame Trump for midterms defeat",
+    "Ukraine says bodycam video shows deadly Russian double-tap bombing",
+    "British healthcare worker with Ebola evacuated from DR Congo to UK",
+    "ANC faces anger over poor services as South Africans vote in local elections",
+    "For Israelis, U.S. Midterms Show How Far Their Star Has Fallen in America",
+    "This Scratching Salon Will Have You Feeling Absolutely Purrfect 🐱✨",
+    "Conspiracy Theorists vs. Traffic Lights: A Battle for the Ages 🚦😅"
   ],
   "quote_authors": [
     "Meister Eckhart",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "Still I Rise",
     "Oh! Weep for Those",
     "Fragment: 'Alas! This Is Not What I Thought Life Was'",
     "To Frances S. Osgood",
@@ -63,7 +62,8 @@
     "These Things That Poets Said",
     "On Napoleon's Escape from Elba",
     "Epitaph. For One Who Would Not Be Buried in Westminster Abbey.",
-    "Summer in the South"
+    "Summer in the South",
+    "The Road Not Taken"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -139,6 +139,7 @@
     "kornferry|general manager singapore malaysia",
     "temasekholdingslimited|managing director general manager",
     "westermonetworktechnologies|asia managing director growth strategy lead",
-    "nielsen|managing director apac platform digital"
+    "nielsen|managing director apac platform digital",
+    "honeywell|general manager regional lob bms"
   ]
 }
