@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Russian Strike on Ukraine Humanitarian Hub Kills Dozens",
-    "Shop freezers in seven European countries hit by cyber-attack",
-    "Russia Senses Opportunity in Polish Political Turmoil",
-    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
-    "The 13-Year-Old Volleyball Giant You Have to See to Believe 🏐",
-    "London's Tiniest Shop Is Packed With Wonders 🔮",
-    "Spanish transport minister resigns days after deadly train crash",
     "Europe on alert after supermarket freezers hit by cyber-attacks in 10 countries",
     "Poland Beefs Up Security at Border With Russia",
     "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job",
@@ -19,7 +12,14 @@
     "ANC faces anger over poor services as South Africans vote in local elections",
     "For Israelis, U.S. Midterms Show How Far Their Star Has Fallen in America",
     "This Scratching Salon Will Have You Feeling Absolutely Purrfect 🐱✨",
-    "Conspiracy Theorists vs. Traffic Lights: A Battle for the Ages 🚦😅"
+    "Conspiracy Theorists vs. Traffic Lights: A Battle for the Ages 🚦😅",
+    "Global tech stocks plunge as US midterms add to AI slowdown fears",
+    "Bolsonaro's Escape From Brazil Was Aided by Milei Adviser at Argentine Airport",
+    "Iran is Reviewing 'Concrete Proposals' on Nuclear Program, Officials Say",
+    "British healthcare worker with Ebola evacuated from DR Congo to UK",
+    "ANC faces anger over poor services as South Africans vote in local elections",
+    "Blind, Drunk, and 150 Miles Later… He Made It? 🚗😲",
+    "This 13-Year-Old Is Nearly 7 Feet Tall and Playing Pro Volleyball 🏐😮"
   ],
   "quote_authors": [
     "Meister Eckhart",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "Oh! Weep for Those",
     "Fragment: 'Alas! This Is Not What I Thought Life Was'",
     "To Frances S. Osgood",
     "Imitated from Catullus: To Ellen",
@@ -63,7 +62,8 @@
     "On Napoleon's Escape from Elba",
     "Epitaph. For One Who Would Not Be Buried in Westminster Abbey.",
     "Summer in the South",
-    "The Road Not Taken"
+    "The Road Not Taken",
+    "Fragment: To Italy"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -140,6 +140,7 @@
     "temasekholdingslimited|managing director general manager",
     "westermonetworktechnologies|asia managing director growth strategy lead",
     "nielsen|managing director apac platform digital",
-    "honeywell|general manager regional lob bms"
+    "honeywell|general manager regional lob bms",
+    "honeywelltechnologies|general manager regional lob bms"
   ]
 }
