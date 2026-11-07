@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Europe on alert after supermarket freezers hit by cyber-attacks in 10 countries",
-    "Poland Beefs Up Security at Border With Russia",
-    "Sudanese diaspora and human rights groups denounce UAE nominee for UN top job",
-    "Egypt fines prominent editor Lina Attalah and shuts independent news outlet Mada Masr",
-    "Men Are Shaving Off Their Eyelashes to Look More Masculine 😳✂️",
-    "These Tiny Dutch Houses Are Built Right Into a Medieval Wall 🏰🏠",
-    "'This is a disaster': Angry Republicans blame Trump for midterms defeat",
     "Ukraine says bodycam video shows deadly Russian double-tap bombing",
     "British healthcare worker with Ebola evacuated from DR Congo to UK",
     "ANC faces anger over poor services as South Africans vote in local elections",
@@ -19,7 +12,14 @@
     "British healthcare worker with Ebola evacuated from DR Congo to UK",
     "ANC faces anger over poor services as South Africans vote in local elections",
     "Blind, Drunk, and 150 Miles Later… He Made It? 🚗😲",
-    "This 13-Year-Old Is Nearly 7 Feet Tall and Playing Pro Volleyball 🏐😮"
+    "This 13-Year-Old Is Nearly 7 Feet Tall and Playing Pro Volleyball 🏐😮",
+    "AI stocks climb after trillions wiped from market values",
+    "Guarded Optimism, and Some Jokes, in Ukraine Over Trump's Midterm Wipeout",
+    "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
+    "Bomb Threats in Europe Probably a Coordinated Campaign, Ireland Says",
+    "ANC faces bruising defeat in South African local elections with 80% of ballots counted",
+    "This Fugitive Went on the Run… and Reinvented Himself for 8 Years! 🕵️‍♀️😮",
+    "Nova Scotia's Gentle Giant: The Grave of the Cape Breton Giant 🪦🏔️"
   ],
   "quote_authors": [
     "Meister Eckhart",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "Fragment: 'Alas! This Is Not What I Thought Life Was'",
     "To Frances S. Osgood",
     "Imitated from Catullus: To Ellen",
     "Written After Swimming from Sestos to Abydos",
@@ -63,7 +62,8 @@
     "Epitaph. For One Who Would Not Be Buried in Westminster Abbey.",
     "Summer in the South",
     "The Road Not Taken",
-    "Fragment: To Italy"
+    "Fragment: To Italy",
+    "The Song of Death"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -141,6 +141,8 @@
     "westermonetworktechnologies|asia managing director growth strategy lead",
     "nielsen|managing director apac platform digital",
     "honeywell|general manager regional lob bms",
-    "honeywelltechnologies|general manager regional lob bms"
+    "honeywelltechnologies|general manager regional lob bms",
+    "nutanix|managing director md asean sales",
+    "schneiderelectric|general manager lv electrical panel partner quality excellence"
   ]
 }
