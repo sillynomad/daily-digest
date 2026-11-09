@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Bolsonaro's Escape From Brazil Was Aided by Milei Adviser at Argentine Airport",
-    "Iran is Reviewing 'Concrete Proposals' on Nuclear Program, Officials Say",
-    "British healthcare worker with Ebola evacuated from DR Congo to UK",
-    "ANC faces anger over poor services as South Africans vote in local elections",
-    "Blind, Drunk, and 150 Miles Later… He Made It? 🚗😲",
-    "This 13-Year-Old Is Nearly 7 Feet Tall and Playing Pro Volleyball 🏐😮",
-    "AI stocks climb after trillions wiped from market values",
     "Guarded Optimism, and Some Jokes, in Ukraine Over Trump's Midterm Wipeout",
     "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
     "Bomb Threats in Europe Probably a Coordinated Campaign, Ireland Says",
@@ -19,7 +12,14 @@
     "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
     "ANC faces bruising defeat in South African local elections with 80% of ballots counted",
     "Trim, Trim, Snip! Men Are Shaving Off Their Eyelashes for a 'Masculine' Look ✂️👀",
-    "A 26-Foot God Statue… Made From Trash?! 🗿♻️"
+    "A 26-Foot God Statue… Made From Trash?! 🗿♻️",
+    "Collision of two trains in Egypt kills at least seven",
+    "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes",
+    "Iran executes three men for 'armed unrest' after January protests",
+    "In Argentina, Pope Leo Tells President Milei Economy Must Serve the Needy",
+    "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
+    "This Salon Will Scratch That Itch… Literally! 🤭✋",
+    "Watch Out — Those Traffic Lights Are DANGEROUS! 🚦😂"
   ],
   "quote_authors": [
     "Meister Eckhart",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "Imitated from Catullus: To Ellen",
     "Written After Swimming from Sestos to Abydos",
     "March the Third (the Author's Birthday)",
     "Hope is the Thing with Feathers",
@@ -63,7 +62,8 @@
     "The Road Not Taken",
     "Fragment: To Italy",
     "The Song of Death",
-    "Amoretti LXXIV: Most Happy Letters"
+    "Amoretti LXXIV: Most Happy Letters",
+    "Still I Rise"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -146,6 +146,9 @@
     "schneiderelectric|general manager lv electrical panel partner quality excellence",
     "boeing|regional managing director bgs asia pacific sales",
     "nutanixinc|asean managing director growth leader hybrid",
-    "airwallex|apac director of strategic partnerships"
+    "airwallex|apac director of strategic partnerships",
+    "theboeingcompany|regional managing director bgs asia pacific sales",
+    "stripe|head of customer success management china market",
+    "airwallex|director strategic partnerships"
   ]
 }
