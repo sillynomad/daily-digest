@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Guarded Optimism, and Some Jokes, in Ukraine Over Trump's Midterm Wipeout",
-    "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
-    "Bomb Threats in Europe Probably a Coordinated Campaign, Ireland Says",
-    "ANC faces bruising defeat in South African local elections with 80% of ballots counted",
-    "This Fugitive Went on the Run… and Reinvented Himself for 8 Years! 🕵️‍♀️😮",
-    "Nova Scotia's Gentle Giant: The Grave of the Cape Breton Giant 🪦🏔️",
-    "At Least 6 Dead in Poland After Gunman Opens Fire in Krakow, Police Say",
     "Eisenkot Seeks to Oust Netanyahu as Prime Minister. Here's How.",
     "More Than 50 Killed in Yemen in One of the Deadliest 24 Hours of the War",
     "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
@@ -19,7 +12,14 @@
     "In Argentina, Pope Leo Tells President Milei Economy Must Serve the Needy",
     "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
     "This Salon Will Scratch That Itch… Literally! 🤭✋",
-    "Watch Out — Those Traffic Lights Are DANGEROUS! 🚦😂"
+    "Watch Out — Those Traffic Lights Are DANGEROUS! 🚦😂",
+    "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
+    "Ukraine Peace Talks Resume This Week in Abu Dhabi",
+    "France Blames Iran for Cyberattack on Refrigeration Systems",
+    "Immigrants Are Being Systematically Returned Home Despite Court Orders",
+    "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
+    "🏀 This 13-Year-Old Volleyball Player Is Nearly 7 Feet Tall! 😲",
+    "🍺 Blind, Drunk, and 150 Miles Down the Highway… 😳🚗"
   ],
   "quote_authors": [
     "Meister Eckhart",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "Written After Swimming from Sestos to Abydos",
     "March the Third (the Author's Birthday)",
     "Hope is the Thing with Feathers",
     "The Princess: A Medley: Home they Brought her Warrior Dead",
@@ -63,7 +62,8 @@
     "Fragment: To Italy",
     "The Song of Death",
     "Amoretti LXXIV: Most Happy Letters",
-    "Still I Rise"
+    "Still I Rise",
+    "A man went before a strange God"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -149,6 +149,7 @@
     "airwallex|apac director of strategic partnerships",
     "theboeingcompany|regional managing director bgs asia pacific sales",
     "stripe|head of customer success management china market",
-    "airwallex|director strategic partnerships"
+    "airwallex|director strategic partnerships",
+    "profileexecutivesearch|asia regional director wholesale distributor growth"
   ]
 }
