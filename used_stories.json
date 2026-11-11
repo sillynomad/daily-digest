@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Eisenkot Seeks to Oust Netanyahu as Prime Minister. Here's How.",
-    "More Than 50 Killed in Yemen in One of the Deadliest 24 Hours of the War",
-    "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
-    "ANC faces bruising defeat in South African local elections with 80% of ballots counted",
-    "Trim, Trim, Snip! Men Are Shaving Off Their Eyelashes for a 'Masculine' Look ✂️👀",
-    "A 26-Foot God Statue… Made From Trash?! 🗿♻️",
-    "Collision of two trains in Egypt kills at least seven",
     "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes",
     "Iran executes three men for 'armed unrest' after January protests",
     "In Argentina, Pope Leo Tells President Milei Economy Must Serve the Needy",
@@ -19,7 +12,14 @@
     "Immigrants Are Being Systematically Returned Home Despite Court Orders",
     "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
     "🏀 This 13-Year-Old Volleyball Player Is Nearly 7 Feet Tall! 😲",
-    "🍺 Blind, Drunk, and 150 Miles Down the Highway… 😳🚗"
+    "🍺 Blind, Drunk, and 150 Miles Down the Highway… 😳🚗",
+    "US Soldier Is Arrested in UK on Suspicion of Spying for Russia",
+    "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
+    "Novaya Gazeta, Russia's Bravest Newspaper, Closes",
+    "Gaza Floods Kill 4",
+    "'It can kill us': Kenyans fear impact of El Niño with floods predicted",
+    "These Lampposts Had One Too Many! 🍺💡",
+    "On the Run? Just Change Everything! 🕵️"
   ],
   "quote_authors": [
     "Meister Eckhart",
@@ -44,7 +44,6 @@
     "Meister Eckhart"
   ],
   "poem_titles": [
-    "March the Third (the Author's Birthday)",
     "Hope is the Thing with Feathers",
     "The Princess: A Medley: Home they Brought her Warrior Dead",
     "i carry your heart with me",
@@ -63,7 +62,8 @@
     "The Song of Death",
     "Amoretti LXXIV: Most Happy Letters",
     "Still I Rise",
-    "A man went before a strange God"
+    "A man went before a strange God",
+    "Still I Rise"
   ],
   "job_urls": [
     "https://www.asana.com/jobs/apply/8161860",
@@ -150,6 +150,9 @@
     "theboeingcompany|regional managing director bgs asia pacific sales",
     "stripe|head of customer success management china market",
     "airwallex|director strategic partnerships",
-    "profileexecutivesearch|asia regional director wholesale distributor growth"
+    "profileexecutivesearch|asia regional director wholesale distributor growth",
+    "boeingsingaporepteltd|regional managing director bgs asia pacific sales",
+    "starchargeapac|singapore energy e mobility country lead",
+    "noatumlogistics|regional director of contract logistics asia"
   ]
 }
