@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Aramco Tower hit in heart of Saudi capital as Houthis launch fresh strikes",
-    "Iran executes three men for 'armed unrest' after January protests",
-    "In Argentina, Pope Leo Tells President Milei Economy Must Serve the Needy",
-    "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
-    "This Salon Will Scratch That Itch… Literally! 🤭✋",
-    "Watch Out — Those Traffic Lights Are DANGEROUS! 🚦😂",
-    "Trump says FBI investigating Nvidia boss's affair with alleged Chinese spy",
     "Ukraine Peace Talks Resume This Week in Abu Dhabi",
     "France Blames Iran for Cyberattack on Refrigeration Systems",
     "Immigrants Are Being Systematically Returned Home Despite Court Orders",
@@ -19,10 +12,16 @@
     "Gaza Floods Kill 4",
     "'It can kill us': Kenyans fear impact of El Niño with floods predicted",
     "These Lampposts Had One Too Many! 🍺💡",
-    "On the Run? Just Change Everything! 🕵️"
+    "On the Run? Just Change Everything! 🕵️",
+    "Workers in Spain Stage a General Strike for the First Time in 14 Years",
+    "Democrat Scott Colom seals historic win in Mississippi Senate race",
+    "Nvidia Scandal Unveils a Fierce Spy War Raging Behind Trump and Xi's Diplomacy",
+    "Russia-Ukraine talks turn to post-war security but end without breakthrough",
+    "Kidnapper, 74, escapes from house arrest in Argentina by abseiling from balcony",
+    "Trim Those Lashes for Macho Points? 😂✂️",
+    "The Invisible Lamplighter of The Hague 🕯️👻"
   ],
   "quote_authors": [
-    "Meister Eckhart",
     "Nicholas Negroponte",
     "Niels Bohr",
     "Bertrand Russell",
@@ -41,10 +40,10 @@
     "Bertrand Russell",
     "Martin Heidegger",
     "Stanley Kubrick",
-    "Meister Eckhart"
+    "Meister Eckhart",
+    "Alan Watts"
   ],
   "poem_titles": [
-    "Hope is the Thing with Feathers",
     "The Princess: A Medley: Home they Brought her Warrior Dead",
     "i carry your heart with me",
     "Song VI: Cherish Life that Abideth",
@@ -63,10 +62,10 @@
     "Amoretti LXXIV: Most Happy Letters",
     "Still I Rise",
     "A man went before a strange God",
-    "Still I Rise"
+    "Still I Rise",
+    "Some Eyes Condemn"
   ],
   "job_urls": [
-    "https://www.asana.com/jobs/apply/8161860",
     "bloomberg|managing director advertising apac bloomberg media",
     "fcscareerspteltd|country manager",
     "windsorconsultingpteltd|general manager coo education group",
@@ -153,6 +152,9 @@
     "profileexecutivesearch|asia regional director wholesale distributor growth",
     "boeingsingaporepteltd|regional managing director bgs asia pacific sales",
     "starchargeapac|singapore energy e mobility country lead",
-    "noatumlogistics|regional director of contract logistics asia"
+    "noatumlogistics|regional director of contract logistics asia",
+    "sumologic|regional director of sales",
+    "lvmh|apac domestic markets regional commercial director",
+    "redesignhealth|senior managing director southeast asia"
   ]
 }
