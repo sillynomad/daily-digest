@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Ukraine Peace Talks Resume This Week in Abu Dhabi",
-    "France Blames Iran for Cyberattack on Refrigeration Systems",
-    "Immigrants Are Being Systematically Returned Home Despite Court Orders",
-    "Kenyan doomsday sect leader jailed for 200 years for murder of 190 children",
-    "🏀 This 13-Year-Old Volleyball Player Is Nearly 7 Feet Tall! 😲",
-    "🍺 Blind, Drunk, and 150 Miles Down the Highway… 😳🚗",
-    "US Soldier Is Arrested in UK on Suspicion of Spying for Russia",
     "Three Iran-backed suspects plotted attacks including RAF Fairford incident, US says",
     "Novaya Gazeta, Russia's Bravest Newspaper, Closes",
     "Gaza Floods Kill 4",
@@ -19,7 +12,14 @@
     "Russia-Ukraine talks turn to post-war security but end without breakthrough",
     "Kidnapper, 74, escapes from house arrest in Argentina by abseiling from balcony",
     "Trim Those Lashes for Macho Points? 😂✂️",
-    "The Invisible Lamplighter of The Hague 🕯️👻"
+    "The Invisible Lamplighter of The Hague 🕯️👻",
+    "Scandal-hit Nvidia CEO Jensen Huang quits, plunging AI chipmaking giant into turmoil",
+    "A.I. Weapons Need Data for Their Training. Ukraine Has a Lot to Offer.",
+    "They Left Iran, but Now the Regime Is Seizing Their Assets to Silence Them",
+    "Russian warship hit by Ukrainian drone in Gulf of Finland",
+    "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
+    "💆 Pay Someone to Scratch Your Back… Literally! 🤑",
+    "🦏 Surprise! There's a Rhino in Dublin's River! 🌊"
   ],
   "quote_authors": [
     "Nicholas Negroponte",
@@ -44,7 +44,6 @@
     "Alan Watts"
   ],
   "poem_titles": [
-    "The Princess: A Medley: Home they Brought her Warrior Dead",
     "i carry your heart with me",
     "Song VI: Cherish Life that Abideth",
     "Hope is the Thing with Feathers",
@@ -63,12 +62,10 @@
     "Still I Rise",
     "A man went before a strange God",
     "Still I Rise",
-    "Some Eyes Condemn"
+    "Some Eyes Condemn",
+    "Hope is the Thing with Feathers"
   ],
   "job_urls": [
-    "bloomberg|managing director advertising apac bloomberg media",
-    "fcscareerspteltd|country manager",
-    "windsorconsultingpteltd|general manager coo education group",
     "leansixsearchsupplychainrecruitment|managing director southeast asia",
     "stripe|head of communications apac",
     "3imembers|regional director singapore",
@@ -155,6 +152,9 @@
     "noatumlogistics|regional director of contract logistics asia",
     "sumologic|regional director of sales",
     "lvmh|apac domestic markets regional commercial director",
-    "redesignhealth|senior managing director southeast asia"
+    "redesignhealth|senior managing director southeast asia",
+    "johnsoncontrols|regional commercial director apac",
+    "atkinsralis|commercial director",
+    "pillar|general manager singapore"
   ]
 }
