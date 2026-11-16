@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "A.I. Weapons Need Data for Their Training. Ukraine Has a Lot to Offer.",
-    "They Left Iran, but Now the Regime Is Seizing Their Assets to Silence Them",
-    "Russian warship hit by Ukrainian drone in Gulf of Finland",
-    "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
-    "💆 Pay Someone to Scratch Your Back… Literally! 🤑",
-    "🦏 Surprise! There's a Rhino in Dublin's River! 🌊",
-    "'Miracle on Mississippi' - All passengers rescued after New Orleans cruise ship collision",
     "Microsoft 'deeply sorry' for global outage as it reports broad recovery",
     "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine",
     "After Xi Purges China's Generals, a Military Inquisitor Rises",
@@ -19,10 +12,16 @@
     "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
     "A 'Generational Clash' Is Fueling Europe's Protests",
     "🏐 This 13-Year-Old Volleyball Player is ALMOST 7 Feet Tall! 😲",
-    "🚦 Watch Out! Those Traffic Lights Are... Assault Weapons?! 😂"
+    "🚦 Watch Out! Those Traffic Lights Are... Assault Weapons?! 😂",
+    "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
+    "Iran Attacks Bahrain for the Second Time in Days",
+    "Saudi-Backed Forces Retreat in Yemen, Leaving Key Strait in Houthi Control",
+    "South Korea's top scorer in tax accountancy exam admits cheating",
+    "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
+    "💅 Men Are Now Shaving Off Their Eyelashes to Look 'More Masculine' 😂",
+    "🚗 Blind, Drunk & Somehow Drove 150 Miles?! 😳"
   ],
   "quote_authors": [
-    "Nicholas Negroponte",
     "Niels Bohr",
     "Bertrand Russell",
     "Stephen King",
@@ -41,10 +40,10 @@
     "Martin Heidegger",
     "Stanley Kubrick",
     "Meister Eckhart",
-    "Alan Watts"
+    "Alan Watts",
+    "Joseph Campbell"
   ],
   "poem_titles": [
-    "Hope is the Thing with Feathers",
     "Lines to a Lady Weeping",
     "Summer Dawn",
     "The Rose",
@@ -63,7 +62,8 @@
     "Some Eyes Condemn",
     "Hope is the Thing with Feathers",
     "How Springs Came First",
-    "Epitaph. On Sir William Trumbull."
+    "Epitaph. On Sir William Trumbull.",
+    "From the Portuguese. \"Tu Mi Chamas\""
   ],
   "job_urls": [
     "stripe|head of marketing southeast asia",
