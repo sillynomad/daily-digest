@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Microsoft 'deeply sorry' for global outage as it reports broad recovery",
-    "Rosenberg: Uncompromising Putin ups demands for peace with Ukraine",
-    "After Xi Purges China's Generals, a Military Inquisitor Rises",
-    "Study Hard, Get a Career and Get Ahead? It's Not What It Used to Be.",
-    "🦕 This T-Rex Is Built Different… Literally! 🚜",
-    "👟 The World's Oldest Shoe Just Dropped! (5,500 Years Ago!) 👀",
-    "Copper wire upgrade caused nationwide flight suspension, US transport secretary says",
     "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
     "'Get Focused on London': How Iran's Agents Attacked European Targets",
     "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
@@ -19,7 +12,14 @@
     "South Korea's top scorer in tax accountancy exam admits cheating",
     "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
     "💅 Men Are Now Shaving Off Their Eyelashes to Look 'More Masculine' 😂",
-    "🚗 Blind, Drunk & Somehow Drove 150 Miles?! 😳"
+    "🚗 Blind, Drunk & Somehow Drove 150 Miles?! 😳",
+    "Five EU states announce plans for immigration 'return hubs' in Rwanda",
+    "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
+    "Houthi rebel advance in Yemen may further destabilise global economy",
+    "Bahrain Convicts Dozens of Shiite Clerics in Sweeping Terrorism Trial",
+    "US basketball player arrested with 75lb of marijuana at Nigerian airport, say authorities",
+    "😌 This Salon Will Scratch Your Stress Away... Literally! 🤲",
+    "🏰 Two Empires, One Epic Citadel in Vietnam! 🇻🇳"
   ],
   "quote_authors": [
     "Niels Bohr",
@@ -44,7 +44,6 @@
     "Joseph Campbell"
   ],
   "poem_titles": [
-    "Lines to a Lady Weeping",
     "Summer Dawn",
     "The Rose",
     "Sonnet 81: Or I shall live your epitaph to make",
@@ -63,10 +62,10 @@
     "Hope is the Thing with Feathers",
     "How Springs Came First",
     "Epitaph. On Sir William Trumbull.",
-    "From the Portuguese. \"Tu Mi Chamas\""
+    "From the Portuguese. \"Tu Mi Chamas\"",
+    "While Summer Suns O'er the Gay Prospect Play'd"
   ],
   "job_urls": [
-    "stripe|head of marketing southeast asia",
     "bloomberglp|managing director advertising apac bloomberg media singapore sgp posted today",
     "stripe|global partnerships lead greater china hong kong singapore",
     "taulia|general manager asia pacific",
@@ -155,6 +154,7 @@
     "pillar|general manager singapore",
     "deliveryhero|director subscription and loyalty",
     "wise|commercial director marketplaces",
-    "jengacorppteltd|managing director commercial"
+    "jengacorppteltd|managing director commercial",
+    "checkpointsoftwaretechnologies|regional director asean"
   ]
 }
