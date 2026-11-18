@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "US has floated Ukraine ceding Donbas for Nato membership, Zelensky says",
-    "'Get Focused on London': How Iran's Agents Attacked European Targets",
-    "'Can you believe it?': SpaceX catches part of its Starship rocket on return to Earth",
-    "A 'Generational Clash' Is Fueling Europe's Protests",
-    "🏐 This 13-Year-Old Volleyball Player is ALMOST 7 Feet Tall! 😲",
-    "🚦 Watch Out! Those Traffic Lights Are... Assault Weapons?! 😂",
-    "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history'",
     "Iran Attacks Bahrain for the Second Time in Days",
     "Saudi-Backed Forces Retreat in Yemen, Leaving Key Strait in Houthi Control",
     "South Korea's top scorer in tax accountancy exam admits cheating",
@@ -19,10 +12,16 @@
     "Bahrain Convicts Dozens of Shiite Clerics in Sweeping Terrorism Trial",
     "US basketball player arrested with 75lb of marijuana at Nigerian airport, say authorities",
     "😌 This Salon Will Scratch Your Stress Away... Literally! 🤲",
-    "🏰 Two Empires, One Epic Citadel in Vietnam! 🇻🇳"
+    "🏰 Two Empires, One Epic Citadel in Vietnam! 🇻🇳",
+    "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+    "Nvidia says it won't reinstate Huang as firm reports bumper results",
+    "Cash Hidden in Forests? Hungary Goes After Corruption Under Orban",
+    "Five EU states announce plans for immigration 'return hubs' in Rwanda",
+    "Congo Ebola Outbreak: How Fear and Mistrust Drive Community Spread",
+    "🪟 Sand + Fire = Pure Magic in the Mountains! ✨",
+    "🧑‍🚀 There's an Astronaut Chilling in a Spanish Roundabout! 🛸"
   ],
   "quote_authors": [
-    "Niels Bohr",
     "Bertrand Russell",
     "Stephen King",
     "Martin Heidegger",
@@ -41,10 +40,10 @@
     "Stanley Kubrick",
     "Meister Eckhart",
     "Alan Watts",
-    "Joseph Campbell"
+    "Joseph Campbell",
+    "Erwin Schrödinger"
   ],
   "poem_titles": [
-    "Summer Dawn",
     "The Rose",
     "Sonnet 81: Or I shall live your epitaph to make",
     "These Things That Poets Said",
@@ -63,12 +62,10 @@
     "How Springs Came First",
     "Epitaph. On Sir William Trumbull.",
     "From the Portuguese. \"Tu Mi Chamas\"",
-    "While Summer Suns O'er the Gay Prospect Play'd"
+    "While Summer Suns O'er the Gay Prospect Play'd",
+    "The Birch-Tree at Loschwitz"
   ],
   "job_urls": [
-    "bloomberglp|managing director advertising apac bloomberg media singapore sgp posted today",
-    "stripe|global partnerships lead greater china hong kong singapore",
-    "taulia|general manager asia pacific",
     "richemontluxury|regional director se asia oceania luxury growth lead",
     "relx|regional director research sales sea anz",
     "pricewaterhousecoopers|deals strategic capital solutions scs director managing director",
@@ -155,6 +152,9 @@
     "deliveryhero|director subscription and loyalty",
     "wise|commercial director marketplaces",
     "jengacorppteltd|managing director commercial",
-    "checkpointsoftwaretechnologies|regional director asean"
+    "checkpointsoftwaretechnologies|regional director asean",
+    "moneygraminternational|senior regional commercial director",
+    "deliveryhero|regional director of local shops and retail partnerships",
+    "hextrust|vp head of partnerships"
   ]
 }
