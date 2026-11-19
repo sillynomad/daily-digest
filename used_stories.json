@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Iran Attacks Bahrain for the Second Time in Days",
-    "Saudi-Backed Forces Retreat in Yemen, Leaving Key Strait in Houthi Control",
-    "South Korea's top scorer in tax accountancy exam admits cheating",
-    "Zimbabwean author Simbarashe Kundizeza cleared of using AI to write prize-winning story",
-    "💅 Men Are Now Shaving Off Their Eyelashes to Look 'More Masculine' 😂",
-    "🚗 Blind, Drunk & Somehow Drove 150 Miles?! 😳",
-    "Five EU states announce plans for immigration 'return hubs' in Rwanda",
     "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
     "Houthi rebel advance in Yemen may further destabilise global economy",
     "Bahrain Convicts Dozens of Shiite Clerics in Sweeping Terrorism Trial",
@@ -19,7 +12,14 @@
     "Five EU states announce plans for immigration 'return hubs' in Rwanda",
     "Congo Ebola Outbreak: How Fear and Mistrust Drive Community Spread",
     "🪟 Sand + Fire = Pure Magic in the Mountains! ✨",
-    "🧑‍🚀 There's an Astronaut Chilling in a Spanish Roundabout! 🛸"
+    "🧑‍🚀 There's an Astronaut Chilling in a Spanish Roundabout! 🛸",
+    "'The drones don't fly here' - BBC reports from Ukraine's new front line",
+    "Russia Vows to Rebuild Destroyed Crimea Bridge. It Could Take Years.",
+    "Fears grow that US will put Nobel-winning judge under sanctions after Myanmar genocide ruling",
+    "Iran Fires Missiles and Drones at Gulf Arab States as Peace Talks Falter",
+    "Five EU states announce plans for immigration 'return hubs' in Rwanda",
+    "🏐 Is This Kid Actually 13?! Qatar's Volleyball Giant Stuns the Court! 😲",
+    "🚦 Watch Out! These Traffic Lights Are... Weapons?! 😂"
   ],
   "quote_authors": [
     "Bertrand Russell",
@@ -44,7 +44,6 @@
     "Erwin Schrödinger"
   ],
   "poem_titles": [
-    "The Rose",
     "Sonnet 81: Or I shall live your epitaph to make",
     "These Things That Poets Said",
     "On Napoleon's Escape from Elba",
@@ -63,12 +62,10 @@
     "Epitaph. On Sir William Trumbull.",
     "From the Portuguese. \"Tu Mi Chamas\"",
     "While Summer Suns O'er the Gay Prospect Play'd",
-    "The Birch-Tree at Loschwitz"
+    "The Birch-Tree at Loschwitz",
+    "i carry your heart with me"
   ],
   "job_urls": [
-    "richemontluxury|regional director se asia oceania luxury growth lead",
-    "relx|regional director research sales sea anz",
-    "pricewaterhousecoopers|deals strategic capital solutions scs director managing director",
     "stripe|head of risk programs apac",
     "standardcharteredbank|managing director global head ai experimentation partnerships",
     "ripplinginc|general manager of asia pacific",
@@ -155,6 +152,9 @@
     "checkpointsoftwaretechnologies|regional director asean",
     "moneygraminternational|senior regional commercial director",
     "deliveryhero|regional director of local shops and retail partnerships",
-    "hextrust|vp head of partnerships"
+    "hextrust|vp head of partnerships",
+    "iterativehealth|general manager asia pacific",
+    "stripe|global partnerships lead greater china hong kong singapore",
+    "razer|country manager singapore"
   ]
 }
