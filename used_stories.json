@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
-    "Houthi rebel advance in Yemen may further destabilise global economy",
-    "Bahrain Convicts Dozens of Shiite Clerics in Sweeping Terrorism Trial",
-    "US basketball player arrested with 75lb of marijuana at Nigerian airport, say authorities",
-    "😌 This Salon Will Scratch Your Stress Away... Literally! 🤲",
-    "🏰 Two Empires, One Epic Citadel in Vietnam! 🇻🇳",
-    "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
     "Nvidia says it won't reinstate Huang as firm reports bumper results",
     "Cash Hidden in Forests? Hungary Goes After Corruption Under Orban",
     "Five EU states announce plans for immigration 'return hubs' in Rwanda",
@@ -19,7 +12,14 @@
     "Iran Fires Missiles and Drones at Gulf Arab States as Peace Talks Falter",
     "Five EU states announce plans for immigration 'return hubs' in Rwanda",
     "🏐 Is This Kid Actually 13?! Qatar's Volleyball Giant Stuns the Court! 😲",
-    "🚦 Watch Out! These Traffic Lights Are... Weapons?! 😂"
+    "🚦 Watch Out! These Traffic Lights Are... Weapons?! 😂",
+    "Myanmar committed genocide against Rohingya minority, top UN court rules",
+    "Trump, Xi and Putin Seek to Project Power at Their First Summit",
+    "Fears grow that US will put Nobel-winning judge under sanctions after Myanmar genocide ruling",
+    "Anthropic becomes one of world's most valuable public companies in stock market debut",
+    "One in four women globally unable to refuse sex within marriage, says UN",
+    "🫙 This Croatian Village is for the Birds... Literally! 🦢",
+    "💪 Men Are Now Shaving Their Eyelashes to Look Tough?! 😂"
   ],
   "quote_authors": [
     "Bertrand Russell",
@@ -44,7 +44,6 @@
     "Erwin Schrödinger"
   ],
   "poem_titles": [
-    "Sonnet 81: Or I shall live your epitaph to make",
     "These Things That Poets Said",
     "On Napoleon's Escape from Elba",
     "Epitaph. For One Who Would Not Be Buried in Westminster Abbey.",
@@ -63,12 +62,10 @@
     "From the Portuguese. \"Tu Mi Chamas\"",
     "While Summer Suns O'er the Gay Prospect Play'd",
     "The Birch-Tree at Loschwitz",
+    "i carry your heart with me",
     "i carry your heart with me"
   ],
   "job_urls": [
-    "stripe|head of risk programs apac",
-    "standardcharteredbank|managing director global head ai experimentation partnerships",
-    "ripplinginc|general manager of asia pacific",
     "relxinternational|regional director research sales sea anz",
     "elsevier|regional director research sales sea anz",
     "gehealthcare|regional service commercial director",
@@ -155,6 +152,9 @@
     "hextrust|vp head of partnerships",
     "iterativehealth|general manager asia pacific",
     "stripe|global partnerships lead greater china hong kong singapore",
-    "razer|country manager singapore"
+    "razer|country manager singapore",
+    "ocbc|managing director of energy management ocbc",
+    "checkpoint|regional director asean",
+    "moodys|managing director of finance moody s"
   ]
 }
