@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Nvidia says it won't reinstate Huang as firm reports bumper results",
-    "Cash Hidden in Forests? Hungary Goes After Corruption Under Orban",
-    "Five EU states announce plans for immigration 'return hubs' in Rwanda",
-    "Congo Ebola Outbreak: How Fear and Mistrust Drive Community Spread",
-    "🪟 Sand + Fire = Pure Magic in the Mountains! ✨",
-    "🧑‍🚀 There's an Astronaut Chilling in a Spanish Roundabout! 🛸",
-    "'The drones don't fly here' - BBC reports from Ukraine's new front line",
     "Russia Vows to Rebuild Destroyed Crimea Bridge. It Could Take Years.",
     "Fears grow that US will put Nobel-winning judge under sanctions after Myanmar genocide ruling",
     "Iran Fires Missiles and Drones at Gulf Arab States as Peace Talks Falter",
@@ -19,7 +12,14 @@
     "Anthropic becomes one of world's most valuable public companies in stock market debut",
     "One in four women globally unable to refuse sex within marriage, says UN",
     "🫙 This Croatian Village is for the Birds... Literally! 🦢",
-    "💪 Men Are Now Shaving Their Eyelashes to Look Tough?! 😂"
+    "💪 Men Are Now Shaving Their Eyelashes to Look Tough?! 😂",
+    "Russian missile hits Poland as Ukraine's allies hold military exercise, says Tusk",
+    "Britain and Brussels Have Begun a Brexit Rollback. How Far Will It Go?",
+    "In a year of AI solving maths problems, Anthropic may have just solved the biggest",
+    "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
+    "One in four women globally unable to refuse sex within marriage, says UN",
+    "🛁 Pay Someone to Scratch Your Back... Literally! 😌",
+    "🎭 Finland's Wax Museum is Hilariously Bad — and That's the Point! 😂"
   ],
   "quote_authors": [
     "Bertrand Russell",
@@ -44,7 +44,6 @@
     "Erwin Schrödinger"
   ],
   "poem_titles": [
-    "These Things That Poets Said",
     "On Napoleon's Escape from Elba",
     "Epitaph. For One Who Would Not Be Buried in Westminster Abbey.",
     "Summer in the South",
@@ -63,12 +62,10 @@
     "While Summer Suns O'er the Gay Prospect Play'd",
     "The Birch-Tree at Loschwitz",
     "i carry your heart with me",
-    "i carry your heart with me"
+    "i carry your heart with me",
+    "Still I Rise"
   ],
   "job_urls": [
-    "relxinternational|regional director research sales sea anz",
-    "elsevier|regional director research sales sea anz",
-    "gehealthcare|regional service commercial director",
     "richemontluxury|chief executive officer seao",
     "elsevier|regional director research sales sea anz growth leader",
     "pageexecutive|general manager sales asia i water technology",
@@ -155,6 +152,9 @@
     "razer|country manager singapore",
     "ocbc|managing director of energy management ocbc",
     "checkpoint|regional director asean",
-    "moodys|managing director of finance moody s"
+    "moodys|managing director of finance moody s",
+    "leansixsearchgroup|general manager operations",
+    "haworthinternational|east asia managing director growth leader strategy",
+    "ingrammicro|general manager marketing"
   ]
 }
