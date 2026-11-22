@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Russia Vows to Rebuild Destroyed Crimea Bridge. It Could Take Years.",
-    "Fears grow that US will put Nobel-winning judge under sanctions after Myanmar genocide ruling",
-    "Iran Fires Missiles and Drones at Gulf Arab States as Peace Talks Falter",
-    "Five EU states announce plans for immigration 'return hubs' in Rwanda",
-    "🏐 Is This Kid Actually 13?! Qatar's Volleyball Giant Stuns the Court! 😲",
-    "🚦 Watch Out! These Traffic Lights Are... Weapons?! 😂",
-    "Myanmar committed genocide against Rohingya minority, top UN court rules",
     "Trump, Xi and Putin Seek to Project Power at Their First Summit",
     "Fears grow that US will put Nobel-winning judge under sanctions after Myanmar genocide ruling",
     "Anthropic becomes one of world's most valuable public companies in stock market debut",
@@ -19,7 +12,14 @@
     "Gen Z Is Driving Global Political Change, Aiding Far Left and Far Right",
     "One in four women globally unable to refuse sex within marriage, says UN",
     "🛁 Pay Someone to Scratch Your Back... Literally! 😌",
-    "🎭 Finland's Wax Museum is Hilariously Bad — and That's the Point! 😂"
+    "🎭 Finland's Wax Museum is Hilariously Bad — and That's the Point! 😂",
+    "Zelensky says Crimean Bridge strikes 'fair response' as he meets UK's Streeting",
+    "Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts",
+    "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+    "Pentagon Issued Memo Limiting 'Social Activities' With Canadian Military",
+    "One in four women globally unable to refuse sex within marriage, says UN",
+    "🚗 Blind, Drunk, No License... And He Drove 150 Miles?! 😱",
+    "🗿 Norway's Ancient Rock Art is 7,000 Years Old — and You Can Walk Right Up to It! 🦌"
   ],
   "quote_authors": [
     "Bertrand Russell",
@@ -44,7 +44,6 @@
     "Erwin Schrödinger"
   ],
   "poem_titles": [
-    "On Napoleon's Escape from Elba",
     "Epitaph. For One Who Would Not Be Buried in Westminster Abbey.",
     "Summer in the South",
     "The Road Not Taken",
@@ -63,12 +62,10 @@
     "The Birch-Tree at Loschwitz",
     "i carry your heart with me",
     "i carry your heart with me",
-    "Still I Rise"
+    "Still I Rise",
+    "Lines to a Reviewer"
   ],
   "job_urls": [
-    "richemontluxury|chief executive officer seao",
-    "elsevier|regional director research sales sea anz growth leader",
-    "pageexecutive|general manager sales asia i water technology",
     "charleskeithgroup|regional director wholesale market growth",
     "jacrecruitmentpteltd|chief revenue officer saas",
     "msdinternationalgmbh|executive director ap commercial operations strategy",
@@ -155,6 +152,9 @@
     "moodys|managing director of finance moody s",
     "leansixsearchgroup|general manager operations",
     "haworthinternational|east asia managing director growth leader strategy",
-    "ingrammicro|general manager marketing"
+    "ingrammicro|general manager marketing",
+    "google|managing director global strategic initiatives apac",
+    "stripe|head of risk programs apac",
+    "ebury|head of desk"
   ]
 }
