@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Top Drug Kingpin Is Captured by Mexican Army as Gunfire Erupts",
-    "Fight over fossil fuels leaves COP31 climate talks in deadlock",
-    "Pentagon Issued Memo Limiting 'Social Activities' With Canadian Military",
-    "One in four women globally unable to refuse sex within marriage, says UN",
-    "🚗 Blind, Drunk, No License... And He Drove 150 Miles?! 😱",
-    "🗿 Norway's Ancient Rock Art is 7,000 Years Old — and You Can Walk Right Up to It! 🦌",
-    "COP31 fails to reach major climate deal as talks expose deep divisions",
     "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
     "China's Spies Set Sights on A.I. Chips Years Before Nvidia Scandal",
     "South Korea's Education Minister Resigns Over Anti-A.I. Cheating Rules",
@@ -19,7 +12,14 @@
     "Netanyahu Wants to Attack Iran. Does That Serve Israel or Him?",
     "Drone Attack Hits Colombian City as Unmanned Explosives Transform Conflict",
     "✂️ Men Are Shaving Off Their Eyelashes to Look More Masculine?! 😳",
-    "🎸 A Steel Factory Became Mexico's Hottest Techno Venue! 🏭"
+    "🎸 A Steel Factory Became Mexico's Hottest Techno Venue! 🏭",
+    "Russia's own figures show almost 500,000 deaths in war in Ukraine",
+    "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
+    "For China, Jensen Huang's Return to Nvidia Is a Mixed Blessing",
+    "Iranian Singer Receives 74 Lashes for Performing With No Hijab",
+    "Japan's Leader, in Break with U.S., Defends International Criminal Court",
+    "😌 This Chinese Entrepreneur is Making Bank by Scratching People! 🤲",
+    "🦕 This Buddhist Temple Has a Dinosaur Pulpit — and It's the Only One in the World! 🙏"
   ],
   "quote_authors": [
     "Martin Heidegger",
@@ -44,7 +44,6 @@
     "Coco Chanel"
   ],
   "poem_titles": [
-    "The Road Not Taken",
     "Fragment: To Italy",
     "The Song of Death",
     "Amoretti LXXIV: Most Happy Letters",
@@ -63,10 +62,10 @@
     "Still I Rise",
     "Lines to a Reviewer",
     "The Road Not Taken",
-    "i carry your heart with me"
+    "i carry your heart with me",
+    "A Poison Tree"
   ],
   "job_urls": [
-    "msdinternationalgmbh|executive director ap commercial operations strategy",
     "threebondsingaporepteltd|managing director",
     "bloomberg|gfanz regional director apac 12 month contract",
     "kaplansingapore|general manager",
@@ -155,6 +154,7 @@
     "stripe|head of risk programs apac",
     "ebury|head of desk",
     "googlellc|managing director global strategic initiatives apac",
-    "rollsroycemotorcarslimited|regional general manager sales regional office"
+    "rollsroycemotorcarslimited|regional general manager sales regional office",
+    "gitlab|director of success architects"
   ]
 }
