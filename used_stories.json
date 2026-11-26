@@ -1,12 +1,5 @@
 {
   "story_titles": [
-    "Russian warship sinks in Benghazi after suspected Ukrainian drone attack",
-    "China's Spies Set Sights on A.I. Chips Years Before Nvidia Scandal",
-    "South Korea's Education Minister Resigns Over Anti-A.I. Cheating Rules",
-    "Race to replant five South African baobabs after export blocked",
-    "🏐 This 13-Year-Old Volleyball Player is Nearly 7 Feet Tall?! 😲",
-    "🚦 These Conspiracy Theorists Think Traffic Lights Are Secret Weapons! 😂",
-    "Trump faces backlash after saying he 'convinced' Nvidia to reinstate CEO Jensen Huang",
     "Ukraine confirms it used naval drones to strike two Russian ships off Libya",
     "Over 700,000 Russian Soldiers Have Died in Ukraine, Analysis Indicates",
     "Netanyahu Wants to Attack Iran. Does That Serve Israel or Him?",
@@ -19,7 +12,14 @@
     "Iranian Singer Receives 74 Lashes for Performing With No Hijab",
     "Japan's Leader, in Break with U.S., Defends International Criminal Court",
     "😌 This Chinese Entrepreneur is Making Bank by Scratching People! 🤲",
-    "🦕 This Buddhist Temple Has a Dinosaur Pulpit — and It's the Only One in the World! 🙏"
+    "🦕 This Buddhist Temple Has a Dinosaur Pulpit — and It's the Only One in the World! 🙏",
+    "US announces new tariffs on host of countries including China",
+    "Thirty-one killed in massive fire as fuel tanker crashes on Cairo highway",
+    "Judges in Israel Suggest Dropping Key Corruption Case Against Netanyahu",
+    "Hungary Threw Open Its Secret Police Files. Let the Finger Pointing Begin.",
+    "Swiss tourist killed and British and Americans injured by elephants in Cameroon",
+    "😵 A Blind, Drunk Man With No License Just Drove 150 Miles on the Highway! 🚗",
+    "🪞 A Spiegeltent Is Secretly Hiding on the 14th Floor of a Chicago Building! ✨"
   ],
   "quote_authors": [
     "Martin Heidegger",
@@ -44,7 +44,6 @@
     "Coco Chanel"
   ],
   "poem_titles": [
-    "Fragment: To Italy",
     "The Song of Death",
     "Amoretti LXXIV: Most Happy Letters",
     "Still I Rise",
@@ -63,10 +62,10 @@
     "Lines to a Reviewer",
     "The Road Not Taken",
     "i carry your heart with me",
-    "A Poison Tree"
+    "A Poison Tree",
+    "Sonnet 13"
   ],
   "job_urls": [
-    "threebondsingaporepteltd|managing director",
     "bloomberg|gfanz regional director apac 12 month contract",
     "kaplansingapore|general manager",
     "michaelpage|general manager sales asia i water technology",
@@ -155,6 +154,7 @@
     "ebury|head of desk",
     "googlellc|managing director global strategic initiatives apac",
     "rollsroycemotorcarslimited|regional general manager sales regional office",
-    "gitlab|director of success architects"
+    "gitlab|director of success architects",
+    "suntoryglobalspirits|general manager singapore"
   ]
 }
